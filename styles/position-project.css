@@ -1,0 +1,167 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+section:last-of-type{
+    padding-bottom: 160px;
+}
+
+.blue{
+    background-color: var(--blue);
+}
+
+.red{
+    background-color: var(--red);
+}
+
+.green{
+    background-color: var(--green);
+}
+
+#one h2{
+    color: var(--blue);
+}
+
+#two h2{
+    color: var(--red);
+}
+
+#three h2{
+    color: var(--green);
+}
+
+header, footer{
+    color: var(--white);
+    text-align: center;
+    height: 100px;
+    padding-top: 10px;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    font-size: 2.5rem;
+}
+
+footer{
+    background-color: var(--iron);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+article{
+    margin: 50px 15% 0;
+}
+
+p{
+    margin-block-start: 20px;
+    text-align: justify;
+    color: var(--iron);
+}
+
+a, a:visited{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.home a{
+    position: fixed;
+    height: 70px;
+    width: 100px;
+    top: 15px;
+    left: 10px;
+    z-index: 2;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 5px double var(--white);
+    box-sizing: border-box;
+    background-color: var(--blue-home) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: dotted;
+    text-decoration-color: var(--orange);
+    text-decoration-line: overline;
+}
+
+.icon-box{
+    height: 450px;
+    margin-left: 1vw;
+    position: fixed;
+    top: 100px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;  
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 5px;
+}
+
+#icon-1{
+    background-color:var(--yellow);
+}
+#icon-2{
+    background-color: var(--orange);
+}
+#icon-3{
+    background-color: var(--purple);
+}
+#icon-4{
+    background-color: var(--grey);
+}
+
+@media(width < 800px){
+    header{
+        font-size: 1.5rem;
+        height: 70px;
+    }
+    
+    p{
+        font-size: 0.8rem;
+    }
+    
+    article{
+        margin: 50px 10% 0 20%;
+    }
+
+    footer{
+        height: 70px;
+        font-size: 1rem;
+    }
+
+    .home a{
+        top: 10px;
+        height: 50px;
+        width: 80px;
+        font-size: 0.8rem;
+    }
+}

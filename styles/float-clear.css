@@ -1,0 +1,53 @@
+*{
+    letter-spacing: 1px;
+}
+p{
+    text-align: justify;
+}
+main{
+    margin: 0 20%;
+}
+
+h1{
+    background-color: var(--mid-blue);
+    color: white;
+    text-align: center;
+}
+h2{
+    background-color:var(--mid-blue);
+    color: white;
+    margin-left: 0;
+    margin-block: 0em;
+    text-align: left;
+    padding-left: 10px;
+    
+}
+.block{
+    width: 20vw;
+    height: 20vw;
+    background-color: rgb(59, 59, 59);
+    color: antiquewhite;
+    padding: 1rem;
+    text-align: center;
+}
+
+.left{
+    float: left;
+    margin: 1vh 5vw 5vh 0;
+}
+.right{
+    float: right;
+    margin: 1vh 0  5vh 5vw;
+}
+
+.clear{
+    clear: both;
+}
+
+.overflow-auto{
+    overflow: auto;
+}
+
+.flow-root{
+    display: flow-root;
+}

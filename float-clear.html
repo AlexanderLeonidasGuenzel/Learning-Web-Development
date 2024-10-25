@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/global-colors.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/float-clear.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <title>Float-Clear</title>
+</head>
+<body id="top">
+    <main>
+    <h1>Float & Clear</h1>
+    <div class="block left">Float left</div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore neque magni fugit adipisci? Obcaecati cum suscipit quia tempora dolorem asperiores.</p>
+    <p>Quos perferendis doloremque repudiandae quae officia nulla quam unde atque iure laborum, omnis nostrum ullam, molestiae, itaque odit delectus eum.</p>
+    <p>Animi rem rerum, saepe id laborum assumenda cumque tenetur magnam voluptatum, illo, iusto voluptates! Ratione non ipsam beatae impedit cupiditate.</p>
+    <div class="block right">Float right</div>
+    <p>Natus provident itaque dolor quis soluta neque iure sequi accusantium, eos tenetur asperiores rerum quo earum, ut ea porro possimus!</p>
+    <p>Est, natus repellat consequuntur commodi impedit inventore voluptates hic laboriosam consectetur aliquid deserunt minus dolorum iusto cumque repudiandae dignissimos delectus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio expedita ducimus mollitia corrupti odio consequuntur rem! Eos quam aliquam ipsum.</p>
+    <h2>With Section and Clear</h2>
+    <h3>Clear and long paragraph</h3>
+    <section>
+        <div class="block left">Float left</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magni, quibusdam commodi non tempore blanditiis dolore sint voluptates quod labore!</p>
+    </section>
+    <div class="clear"></div>
+    <p><b>After clear with long paragraph before.</b> Assumenda blanditiis illo accusantium. Quibusdam, libero molestiae asperiores aut temporibus quidem, incidunt animi corrupti totam doloribus cupiditate id aliquam.</p>
+    <p>Ipsa provident at, molestiae ab commodi in reprehenderit eligendi itaque illo quibusdam deleniti optio laborum rem! Assumenda consequuntur nulla nobis.</p>
+    <h3>Clear and short paragraph</h3>
+    <section>
+        <div class="block left">Float left</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+    <div class="clear"></div>
+    <p><b>After clear with short paragraph before.</b> Assumenda blanditiis illo accusantium. Quibusdam, libero molestiae asperiores aut temporibus quidem, incidunt animi corrupti totam doloribus cupiditate id aliquam.</p>
+    <p>Ipsa provident at, molestiae ab commodi in reprehenderit eligendi itaque illo quibusdam deleniti optio laborum rem! Assumenda consequuntur nulla nobis.</p>
+    <h3>No Clear and long paragraph</h3>
+    <section>
+        <div class="block left">Float left</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magni, quibusdam commodi non tempore blanditiis dolore sint voluptates quod labore!</p>
+    </section>
+    <p><b>No clear with long paragraph before.</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta accusamus quod dolorem obcaecati numquam? Libero expedita quibusdam consequatur fugiat quas.</p>
+    <p>Veritatis aperiam possimus unde ex? Cupiditate qui repudiandae delectus eaque, numquam maxime rerum! Aperiam amet sequi labore quisquam molestias explicabo!</p>
+    <p>Qui possimus, nobis aut quo ea incidunt pariatur aspernatur consequatur minima, unde illo hic dolores ducimus, iure ipsam doloribus suscipit.</p>
+    <h3>No Clear and short paragraph</h3>
+    <section>
+        <div class="block left">Float left</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+    <p><b>No clear with short paragraph before.</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta accusamus quod dolorem obcaecati numquam? Libero expedita quibusdam consequatur fugiat quas.</p>
+    <p>Veritatis aperiam possimus unde ex? Cupiditate qui repudiandae delectus eaque, numquam maxime rerum! Aperiam amet sequi labore quisquam molestias explicabo!</p>
+    <p>Qui possimus, nobis aut quo ea incidunt pariatur aspernatur consequatur minima, unde illo hic dolores ducimus, iure ipsam doloribus suscipit.</p>
+    <h2>Overflow Auto</h2>
+    <section class="overflow-auto">
+        <div class="block left ">Float left</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+    <p><b>No clear with short paragraph before and overflow: auto. This is often used in legacy code and and old way to fix the problem.</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta accusamus quod dolorem obcaecati numquam? Libero expedita quibusdam consequatur fugiat quas.</p>
+    <p>Veritatis aperiam possimus unde ex? Cupiditate qui repudiandae delectus eaque, numquam maxime rerum! Aperiam amet sequi labore quisquam molestias explicabo!</p>
+    <p>Qui possimus, nobis aut quo ea incidunt pariatur aspernatur consequatur minima, unde illo hic dolores ducimus, iure ipsam doloribus suscipit.</p>
+    <h2>Flow Root</h2>
+    <section class="flow-root">
+        <div class="block left ">Float left</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+    <p><b>No clear with short paragraph before and display: flow-root. This is the correct way as noted by MDN.</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta accusamus quod dolorem obcaecati numquam? Libero expedita quibusdam consequatur fugiat quas.</p>
+    <p>Veritatis aperiam possimus unde ex? Cupiditate qui repudiandae delectus eaque, numquam maxime rerum! Aperiam amet sequi labore quisquam molestias explicabo!</p>
+    <p>Qui possimus, nobis aut quo ea incidunt pariatur aspernatur consequatur minima, unde illo hic dolores ducimus, iure ipsam doloribus suscipit.</p>
+    </main>
+    <hr>
+    <footer>
+        <div class="nav-container">
+            <nav aria-label="links-for-list-styles" class="link-nav">
+                <a href="index.html">HOME</a>
+                <a href="#top">TOP</a>
+                <a href="https://www.youtube.com/watch?v=QkvFxXqElQ4&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=12" target="_blank">CSS Floats and Clears Tutorial</a>
+            </nav>    
+        </div>
+    </footer>
+</body>
+</html>

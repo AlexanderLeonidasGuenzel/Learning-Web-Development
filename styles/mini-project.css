@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --border-radius-btm: 0 0 2rem 2rem;
+    --border-radius-top: 2rem 2rem 0 0 ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    background-color: var(--main-bg);
+    overflow: auto;
+    padding: 4rem;
+}
+    
+
+main nav{
+    border: 1px solid var(--iron);
+    border-radius: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+    padding: 0;
+}
+
+footer{
+    background-color:var(--iron);
+    display: inline-block;
+    width: 100%;
+}
+.nav-container{
+    margin: 4rem; 
+}
+
+
+h2 {
+    padding: 1rem;
+    background-color: var(--menu-gold);
+    border-radius: var(--border-radius-top);
+    color: var(--iron);
+    margin-left: 0;
+    margin-block: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul, ol {
+    color: var(--iron);
+    margin-left: 0;
+}
+
+li {
+    border-top:  1px solid var(--iron);
+}
+
+li a{
+    display: block;
+    background-color: var(--bg-menu);
+}
+
+li a, li a:visited {
+    text-decoration: none;
+    color: var(--iron);
+}
+
+li a:hover, li a:focus {
+    background-color: var(--iron);
+    color: var(--menu-hover);
+    cursor: pointer;
+}
+
+li:last-child a { 
+    border-radius: var(--border-radius-btm);
+}

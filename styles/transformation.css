@@ -1,0 +1,77 @@
+:root{
+    --width: 100px;
+    --mb: 30px;
+}
+
+body{
+    height: 200vh;
+    padding: 0;
+    margin: 0;
+    background-color: yellow;
+}
+.triangle1{
+   width: var(--width);
+   aspect-ratio: 1;
+   clip-path:  polygon(0 0, 50% 0, 30% 30%);
+   background-color: red;
+   padding: 3px;
+   margin-bottom: var(--mb);
+   position: absolute;
+   top: 0px;
+   left: 300px;
+}
+
+.triangle2{
+    width: var(--width);
+    aspect-ratio: 1;
+   clip-path:  polygon(0 0, 50% 50%, 0 100%);
+   background-color: yellow;
+   margin-bottom: var(--mb);
+   position: absolute;
+   top: 0px;
+   left: 300px;
+   
+}
+
+.triangle3{
+    width: var(--width);
+    aspect-ratio: 1;
+   clip-path:  polygon(
+    /*outer points*/
+    0 0, 100% 100%, 0 100%, 0 0,
+    /*inner points*/    
+    5% 10%, 5% 95%, 90% 95%, 5% 10%
+    );
+   background: linear-gradient(90deg, yellow, lightblue);
+   position: absolute;
+   bottom: 0;
+   margin: 20px auto;
+}
+
+.head{
+  height: 15vh;
+  width: 100%;
+  background-color: rgb(240, 248, 255);
+  position: sticky;
+  top: 0;
+}
+
+.main{
+    position: relative;
+    top: 10px;
+    background-color: orange;
+    height: 300px;
+    z-index: -1;
+}
+
+footer{
+    background-color: grey;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 1.4rem;
+}

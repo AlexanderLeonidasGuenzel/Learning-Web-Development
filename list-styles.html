@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/global-colors.css">
+    <link rel="stylesheet" href="styles/liste-styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <title>List Styles</title>
+</head>
+<body>
+    <article id="list-styles">
+        <h2>List Styles</h2>
+        <section>
+            <h3>Ordered List</h3>
+            <ol>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ol>
+            <p>For the ordered list the default list style type is "decimal".</p>
+            <h3>Unordered List</h3>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>                            
+            </ul>
+            <p>For the unordered list the default list style type is "disc".</p>
+            <h3>Change List Style Types</h3>
+            <code>
+                ol { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: lower-alpha; <br>
+                } <br><br>
+                ol { <br> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: decimal-leading-zero; <br>
+                } <br><br>
+                ol { <br> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: upper-roman; <br>
+                } <br>
+            </code> <br>
+            <div class="flexbox-change-list-style-types">
+                <ol style="list-style-type: lower-alpha;">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ol> 
+                <ol style="list-style-type: decimal-leading-zero;">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ol>  
+                <ol style="list-style-type: upper-roman;">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ol> 
+                <ol start="3" style="list-style-type: upper-roman;">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ol>   
+                <ol start="3" reversed style="list-style-type: upper-roman;">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ol> 
+            </div>
+            <p>With the attribute "start", you can set the starting value like start="3".
+                Additional attribute is "reversed". It is used to turn the order arround.
+            </p>
+            <code>
+                .second-child li:nth-child(2){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+                } <br>
+                .odd li:nth-child(odd){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;color: orange; <br>
+                } <br>
+            </code>
+            <code>
+                .green-hooks{ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: disc; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;line-height: 2; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;list-style-image: url("../assets/img/green.png"); <br>
+                } <br>
+            </code> 
+            <div class="flexbox-change-list-style-types">
+                <ul class="second-child">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li> 
+                    <li>Four</li>                           
+                </ul>
+                <ul class="odd">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li> 
+                    <li>Four</li>                           
+                </ul>   
+                <ul class="green-hooks">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>                            
+                </ul>  
+                <ul id="only-5-dollars">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ul>
+            </div>
+            <p>You can make further changes with text-align: center; list-style-position: outside; Changing the "color" property, changes color of the text and marker.</p>
+        </section>
+        <hr>
+        <nav aria-label="links-for-list-styles" class="link-nav">
+            <a href="index.html">HOME</a>
+            <a href="#top">TOP</a>
+            <a href="https://www.youtube.com/watch?v=jcThx0U066w&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=9" target="_blank">List Styles - CSS Tutorial</a>
+        </nav>
+    </article>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.uppercase{
+    text-transform: uppercase;
+    color: #ffd280;
+    font-weight: 600;
+}
+
+.text-underline{
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-thickness: calc(2px);
+    text-decoration-style: double;
+    text-decoration-color: var(--aqua-green);
+}
+
+.inheritance-body-html{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}

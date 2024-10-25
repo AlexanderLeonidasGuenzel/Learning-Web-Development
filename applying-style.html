@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/global-colors.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/applying-styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <title>Applying Style</title>
+</head>
+<body>
+    <article id="applying-style">
+        <h2>Applying Style</h2>
+        <section>
+            <h3>Stylesheets</h3>
+            <ul class="ul-star-marker">
+                <li>External</li>
+                <li>Internal</li>
+                <li>Inline</li>
+            </ul>
+            <p>The cascading order can change if you put the &lt;link&gt; tag after the &lt;style&gt; tag.
+            Try to avoid inline css. Best way is to use external stylesheet.
+            </p>
+            <h3>External</h3>
+            <p>Style is in a separte .css file and linked via:</p>
+            <code>
+                &lt;link rel="stylesheet" href=""&gt;
+            </code>
+            <h3>Internal</h3>
+            <p>Style is in the .html file in the head. </p>
+            <code>
+                &lt;head&gt;<br>
+                &nbsp; &lt;style&gt;<br>
+                &nbsp;&nbsp; p { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color: limegreen; <br>
+                &nbsp;&nbsp;&nbsp;}<br>
+                &nbsp; &lt;/style&gt;<br>
+                &lt;/head&gt;<br>
+            </code>                     
+            <h3>Inline</h3>
+            <p>Style as an attribute.</p>
+            <code>
+                &lt;p style="color: blue"&gt;&lt;/p&gt;
+            </code>
+        </section> 
+        <hr>
+        <nav aria-label="links-for-css-introduction" class="link-nav">
+            <a href="index.html">HOME</a>
+            <a href="#top">TOP</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" alt="Link to MDN CSS Basics" target="_blank">MDN CSS Basics</a> 
+            <a href="https://www.youtube.com/watch?v=0W6qz0-aDaM&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=1" alt="Link to Video CSS Introduction" target="_blank">Introduction - CSS Tutorial for Beginners</a> 
+        </nav>
+    </article>
+</body>
+</html>

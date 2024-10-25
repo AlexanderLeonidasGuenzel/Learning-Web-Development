@@ -1,0 +1,42 @@
+.flexbox-change-list-style-types {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin: 20px 0;
+}
+
+.flexbox-change-list-style-types ol li::marker{
+    color: #f1803e;
+}
+
+.flexbox-change-list-style-types ul{
+    list-style-type: square;
+}
+
+
+
+.green-hooks{
+    list-style-type: disc; 
+    line-height: 2; 
+    list-style-image: url("../assets/img/green.png");
+}
+
+.second-child li:nth-child(2){
+    color: red;
+}
+
+.odd li:nth-child(odd){
+    color: orange;
+}
+
+#only-5-dollars{
+    color: blue;
+}
+
+#only-5-dollars ::marker{
+    color: red;
+    font-family: fantasy;
+    line-height: 2em;
+    content: "Only $5 >>  ";
+}
+

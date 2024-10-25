@@ -1,0 +1,5 @@
+.ul-star-marker li::marker {
+    content: '★ '; 
+    color: var(--aqua-green);
+    font-size: 1.2em; 
+  }

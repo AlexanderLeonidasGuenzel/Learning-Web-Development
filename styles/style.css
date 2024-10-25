@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 20px 40px;
+    min-width: fit-content;
+    min-height: 100vh;
+}
+
+article{
+    border: 3px solid var(--mid-blue);
+    padding: 10px 20px;
+    margin: 10px 0;  
+}
+
+section{
+    background-color: var(--section-blue);
+    padding:  5px  50px  25px;
+    margin: 10px 0;
+}
+
+nav{
+    padding: 10px 0;
+}
+
+h1, p {
+    color: var(--mid-blue);
+}
+
+p{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+h2 {
+    color: var(--mid-blue);
+    text-align: center;
+    margin-left: 15px;
+}
+
+h3 {
+    color: var(--header-h3-blue);
+    margin-block-start: 1.33em;
+    margin-block-end: 0.5em;
+}
+
+h4 {
+    color: var(--header-h4-blue);
+    margin-block-start: 1.33em;
+    margin-block-end: 0.5em;
+}
+
+code{
+    color: var(--code-color);
+    font-size: 0.8em;
+}
+
+mark{
+    color: #ffffff;
+    background-color: #ffd17d;
+    padding: 2px 4px;
+}
+
+ul, ol {
+    color: var(--mid-blue);
+    margin-left: 2.5rem;
+}
+
+table, tr, td, th {
+    border: 2px solid var(--table-border);
+    color: var(--mid-blue);
+    border-collapse: collapse;
+    padding: 0.5em;
+}
+
+table {
+    min-width: 50%;
+}
+
+img {
+    margin: 1em auto;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+.columns-1 {
+    column-count: 4;
+}
+.columns-2 {
+    column-count: 4;
+    column-width: 250px;
+}
+.columns-3 {
+    column-count: 4;
+    column-width: 250px;
+    column-rule: 2px solid #333;
+}
+
+p{
+    text-align: justify;
+    margin: 0 1rem;
+}
+h1 {
+    color: var(--columns-header);
+    text-align: center;
+    border: 2px solid rgb(12, 112, 201);
+}
+
+h2 {
+    background-color: rgb(195, 224, 250);
+    color: rgb(11, 93, 165);
+    padding: 10px 5px ;
+    text-align: center;
+    margin: 0;
+}
+
+h3{
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.no-top-margin p,h2 {
+    margin-top: 0;
+}
+
+.break-inside{
+    break-inside: avoid;
+}
+
+.columns-3 .quote {
+    font-size: 3rem;
+    text-align: center;
+    column-span: all;
+    margin-top: 2rem;
+}
+
+.nowrap{
+    white-space: nowrap;
+}

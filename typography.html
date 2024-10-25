@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/global-colors.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <title>Typography</title>
+</head>
+<body>
+    <article id="typography">
+        <h2>Typography</h2>
+        <!--a href="typography-link.html"><div class="background-typography-link"></div></a-->
+        <section class="typography-with-form">
+            <h3>CSS Typography</h3>
+            <p>Typography is the way that text is arranged and presented.</p>
+            <p>The form doesn't inherit the font size from the body!</p>
+            <form>
+                <label for="yourName">Name:</label>
+                <input type="text" name="yourName" id="yourName" placeholder="Your Name">
+                <button>Submit</button>
+            </form>
+        </section>
+        <section class="font-families">
+            <h3>Font Families</h3>
+            <ul>
+                <li style="font-family: serif;">serif</li>
+                <li style="font-family: sans-serif;">sans-serif</li>
+                <li style="font-family: monospace;">monospace</li>
+                <li style="font-family: cursive;">cursive</li>
+                <li style="font-family: fantasy;">fantasy</li>
+            </ul>
+            <p>These are generic families which are usually used as a fallback. 
+            As an example:</p>
+            <code>
+                font-family: 'Courier New', Courier, monospace <br>
+            </code>
+            <p>First it should take Courier New, but if the device doesn't have this, it looks for Courier, and finally for monospace, if the other fonts are not available.</p>
+            <h3>External Fonts</h3>
+            <p>Go to Website like Google Fonts. Search for a font like "Roboto". Then select the font-weight and font style. You can just use one like Regular 400, or more.</p>
+            <h4>With Link</h4>
+            <code>
+                &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt; <br>
+                &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt; <br>
+                &lt;link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"&gt; 
+            </code>
+            <p>Put these in the &lt;head&gt; of your html file. Important: Insert it above the link to your own stylesheet.</p>
+            <p>After that go to your css and apply the new font.</p>
+            <code>
+                .roboto-regular { <br>
+                &nbsp;&nbsp;&nbsp;font-family: "Roboto", sans-serif; <br>
+                &nbsp;&nbsp;&nbsp;font-weight: 400; <br>
+                &nbsp;&nbsp;&nbsp;font-style: normal; <br>
+                } <br>
+            </code>
+            <p>If you choose more than one style, your embedded link gets longer and more css rules are to apply.</p>
+            <p>Notice: The more font styles you attempt to load in from google the longer your page will take to load.</p>
+            <h4>With @import</h4>
+            <p>You can also chooose to use @import and apply the font directly into your css. It is much shorter than via link tag.</p>
+            <code>
+                &lt;style&gt; <br>
+                &nbsp;&nbsp;&nbsp; @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); <br>
+                &lt;/style&gt; <br>  
+            </code>
+        </section>
+        <hr>
+        <nav aria-label="links-for-typography" class="link-nav">
+            <a href="index.html">HOME</a>
+            <a href="#top">TOP</a>
+            <a href="https://www.youtube.com/watch?v=klXyJWlIzuY&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=7" target="_blank">Box Model - CSS Tutorial</a>
+            <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+        </nav>
+    </article>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/global-colors.css">
+    <link rel="stylesheet" href="styles/display-types-style.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <title>Display Types</title>
+</head>
+<body>
+    <main>
+        <h1>Display Types</h1>
+        <section class="display-types-list">
+          <ul>
+            <li>display: block</li>
+            <li>display: inline</li>
+            <li>display: inline-block</li>
+            <li>display: none</li>
+        </ul>  
+        <p>There are even more display types.</p>
+        </section>
+        <section>
+            <h2>Block Elements</h2>
+            <p>Some elements like main, div, p, h1 are block elements by default.
+                They have 100% width of there parent element and get a new line.
+            </p>
+            <div class="box paragraph-colored">
+                <p>This is a paragraph.</p>
+                <p>This is another a paragraph.</p>
+            </div>
+            <p>The margin is: 100px 50px. The top and bottom margin is outside the box.</p>
+            <section class="paragraph-colored">
+                <p id="first-paragraph">This is a paragraph.</p>
+                <p>This is an <span class="opposite-block">block</span> element.</p>  
+            </section>
+        </section>
+        <h2>Inline Element</h2>
+        <p>You <u>can't</u> apply a top or bottom margin or a height to an inline element! 
+            Also padding works differently. If the padding is big enough, it will overlapp other elements.
+        </p>
+        <section class="paragraph-colored">
+            <p id="first-paragraph">This is a paragraph.</p>
+            <p>This is an <span class="opposite-inline">inline</span> element.</p>  
+        </section>
+        <section class="paragraph-colored">
+            <h2>Inline Block</h2>
+            <p id="first-paragraph">This is a paragraph.</p>
+            <p >This is an <span class="opposite">inline-block</span> element with maring-top and padding and a height.</p>  
+        </section>
+    </main>  
+    <h3>Navigation with Inline Block</h3>
+    <nav>
+        <ul>
+            <li><a href="#">Intro</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <footer>
+        <div class="nav-container">
+            <nav aria-label="links-for-list-styles" class="link-nav">
+                <a href="index.html">HOME</a>
+                <a href="#top">TOP</a>
+            </nav>    
+        </div>
+    </footer>
+</body>
+</html>

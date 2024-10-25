@@ -1,0 +1,119 @@
+body{
+    min-height: 200vh;
+    min-width: 80vw;
+    color: var(--iron);
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin: 100px;
+    border: 1px solid black;
+}
+
+h1, h2, h3, h4{
+    text-align: left; 
+    color: var(--iron);
+    margin: 0;
+}
+
+p{
+    color: var(--iron);
+}
+
+.box p, .box h3{
+    display: flex;
+    align-self: center;
+    margin-inline: 15px;
+    color: var(--white);
+}
+
+.outer-container{
+    background-color: var(--light-blue);
+    width: 75vw;
+    min-height: 85vh;
+    border: 3px dashed var(--iron);
+    margin: 40px auto;
+}
+
+.outer-container2{
+    background-color: var(--light-blue);
+    position: relative;
+    width: 75vw;
+    height: 85vh;
+    border: 3px dashed var(--iron);
+    margin: 40px auto;
+}
+
+.outer-container2 > p{
+    position: absolute;
+    margin-inline-start: 20px;
+}
+
+.inner-container{
+    border: 2px solid var(--iron);
+    width: 40vw;
+    min-width: 250px;
+    height: 50vh;
+    margin: 200px auto;
+    background-color: white;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8em;
+    border-radius: 10px;
+}
+
+.box h3{
+    margin-block: 1em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0;
+}
+
+.static{
+    background-color: var(--iron-transparent);
+}
+
+.absolute{
+    background-color: var(--blue-transparent);
+    position: absolute;
+    left: 0; 
+    bottom: 0;
+}
+
+.relative{
+    background-color: var(--dark-red-transparent);
+    position: relative;
+    top: 50px; 
+    left: 200px;
+    margin-bottom: 50px;
+}
+
+.fixed{
+    background-color: var(--green-transparent);
+    position: fixed;
+    top: 20px;
+    right: 150px;
+    z-index: 2;
+}
+
+.sticky{
+    background-color: var(--yellow);
+    position: sticky;
+    top: 0;
+}
+
+.explanation{
+    width: 75vw;
+    margin: 50px auto;
+    border: 1px solid var(--iron);
+    border-radius: 20px;
+}
+
+.text-container{
+    display: inline-block;
+    margin: 50px;
+    text-align: justify;
+}
+

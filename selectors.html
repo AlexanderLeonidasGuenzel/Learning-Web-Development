@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/global-colors.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/selectors.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <title>Selectors</title>
+</head>
+<body>
+    <article id="css-selectors">
+        <h2>CSS Selectors</h2>
+        <section>
+            <h3>Overview</h3>
+            <ul>
+                <li>Element Selector</li>
+                <li>Class</li>
+                <li>ID</li>
+            </ul>
+            <h3>Element Selector</h3>
+            <code>
+                <mark>body, p, h1, section, ...</mark><br>
+                {<br>
+                &nbsp;&nbsp;property: value;<br>
+                }
+            </code>                    
+            <h3>Class Selector</h3>
+            <code>
+                <mark>.className</mark><br>
+                {property: value;}
+            </code>
+            <p>Classes are more specific and overrule the element selector.
+            They are the most common type of selector with css.</p>
+            <h3>ID Selector</h3>
+            <code>
+                <mark>#idName</mark><br>
+                {property: value;}
+            </code>
+            <p>Most specific and should only exist once in an html document, beeing unique.
+            Rarely use it for CSS, best for JavaScript to address an element.</p>  
+        </section>
+        <section>
+            <h3>Multiple Selection and Inheritance</h3>
+            <h4>Grouping</h4>
+            <p>You can address multiple selectors at once, with a comma between.</p>
+            <code>
+                h1, h2, ...  <br>
+                {property: value;}
+            </code>
+            <h4>Nesting</h4>
+            <p>All &lt;span&gt; in a &lt;p&gt; are selected.</p>
+            <code>
+                p span  <br>
+                {property: value;}
+            </code>
+            <h4>Universal Selector</h4>
+            <p>It selects <span class="uppercase">everything</span> on the page!</p>
+            <code>
+                * <br>
+                {property: value;}
+            </code> 
+            <p>It is typically used for a <span class="uppercase">css reset</span>.</p>
+            <h4>Inheritance</h4>
+            <p>An element can inherit the settings or properties from its parent elment.
+            All other elements inherit the font-size from body. <br>
+            <span class="text-underline"> Anything related to font or typography is inherited!</span> 
+            E.g. color, line height, alignment. <br>
+            Other properties like a border, are not inherited.</p>
+            <div class="inheritance-body-html">
+                <code>
+                    body { <br>
+                    &nbsp;&nbsp;&nbsp;font-size: 22px; <br>
+                    }<br> 
+                </code>
+                <code>
+                    body { <br>
+                    &nbsp;&nbsp;&nbsp;font-size: 22px; <br>
+                    }<br> 
+                </code>
+            </div>    
+        </section>
+        <hr>
+        <nav aria-label="links-for-css-selectors" class="link-nav">
+            <a href="index.html">HOME</a>
+            <a href="#top">TOP</a>
+            <a href="https://specificity.keegan.st/" alt="css specificity Calculator" target="_blank">Specificity Calculator</a>
+            <a href="https://www.youtube.com/watch?v=QgxkYbGr2II&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=2" target="_blank">Selectors - CSS Tutorial for Beginners</a> 
+            <a href="https://www.youtube.com/watch?v=Sp9ZfSvpf7A" alt="Video Inspecting Cascade & Specificity MDN" target="_blank">Inspecting Cascade & Specificity MDN</a>
+            <a href="https://www.w3.org/TR/selectors-4/#overview" alt="Reference Guide for W3 Selectors" target="_blank">W3 Selectors</a>
+        </nav>
+    </article>
+</body>
+</html>
