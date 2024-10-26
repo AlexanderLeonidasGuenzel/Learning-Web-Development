@@ -29,22 +29,15 @@ const videos = [
 ];
 
 const checklist = document.getElementById('checklist');
-console.log("hier test");
 
 videos.forEach(video => {
     const videoId = extractVideoId(video.url);
     const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`; // Mittlere Auflösung
 
     const listItem = document.createElement('li');
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.id = video.id;
 
     const label = document.createElement('label');
     label.htmlFor = video.id;
-
-    //const label2 = document.createElement('label');
-    //label2.className = "custom-checkbox";
 
     const thumbnail = document.createElement('img');
     thumbnail.src = thumbnailUrl;
@@ -55,15 +48,9 @@ videos.forEach(video => {
     link.target = '_blank';
     link.textContent = video.title;
 
-    const checkmark = document.createElement('span');
-    checkmark.className = "checkmark";
-
     label.appendChild(thumbnail); // Thumbnail zuerst hinzufügen
     label.appendChild(link);
     listItem.appendChild(label);
-    //label2.appendChild(checkbox);
-    //label2.appendChild(checkmark);
-    //listItem.appendChild(label2);
     checklist.appendChild(listItem);
 
     // Funktion zur Extrahierung der YouTube-Video-ID aus der URL

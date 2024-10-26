@@ -39,42 +39,4 @@ input[type="checkbox"] {
     max-height: 45.6px;
     overflow-y: hidden;
 }
-
-.custom-checkbox input[type="checkbox"] {
-    /* Versteckt die eigentliche Checkbox */
-    display: none;
-  }
-  
-  .custom-checkbox .checkmark {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: #f0f0f0;
-    border: 2px solid #ccc;
-    border-radius: 4px; /* Optional für runde Ecken */
-    cursor: pointer;
-  }
-  
-  .custom-checkbox input[type="checkbox"]:checked + .checkmark {
-    background-color: #fff; 
-    border-color: rgb(34, 117, 226);
-    transform: scale(1);
-  }
-  
-  .custom-checkbox .checkmark::after {
-    content: "";
-    display: none;
-    position: absolute;
-    left: 7px;
-    bottom: 5px;
-    width: 10px;
-    height: 20px;
-    border: solid rgb(34, 117, 226);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
-  
-  .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
-    display: block;
-  }
   
