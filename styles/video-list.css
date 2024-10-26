@@ -33,9 +33,11 @@ input[type="checkbox"] {
     margin: 5px 0 0 5px;
 }
 
-a{
+.video-list a{
     display: block;
     max-width: var(--max-width);
+    max-height: 45.6px;
+    overflow-y: hidden;
 }
 
 .custom-checkbox input[type="checkbox"] {
