@@ -1,8 +1,8 @@
 :root{
     --aqua-green: #00ffbb;
     --bg-menu: rgba(255, 255, 255, 0.521);
-    --blue: rgb(87, 156, 236);
     --blue: rgb(40, 88, 175);
+    --blue2: rgb(87, 156, 236);
     --blue-transparent: rgba(87, 156, 236, 0.664);
     --code-color: #749abb;
     --columns-header: #0c70c9;
