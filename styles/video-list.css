@@ -2,26 +2,33 @@
     --max-width: 200px;
 }
 
+.video-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    gap: 10px;
 }
 
 li {
-    margin: 5px 0;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 img {
-    margin-right: 10px;
     max-width: var(--max-width);
     height: auto;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 label {
@@ -29,8 +36,28 @@ label {
     flex-direction: column;
 }
 
-input[type="checkbox"] {
-    margin: 5px 0 0 5px;
+section{
+  padding: 0;
+}
+
+.video-list button {
+  height: fit-content;
+  padding: 10px 15px;
+  margin: 30px;
+  border: 1px solid var(--nav-blue);
+  border-radius: 50%;
+  color: white;
+  background-color: var(--nav-blue);
+}
+
+.video-list button:hover{
+  background-color: var(--white);
+  color: var(--nav-blue);
+  border: 1px solid var(--nav-blue);
+}
+
+#prev, #next{
+  font-size: 1rem;
 }
 
 .video-list a{
@@ -38,43 +65,11 @@ input[type="checkbox"] {
     max-width: var(--max-width);
     max-height: 45.6px;
     overflow-y: hidden;
+    margin: 0;
 }
 
-.custom-checkbox input[type="checkbox"] {
-    /* Versteckt die eigentliche Checkbox */
-    display: none;
+@media (width < 840px) {
+  ul{
+    flex-direction: column;
   }
-  
-  .custom-checkbox .checkmark {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: #f0f0f0;
-    border: 2px solid #ccc;
-    border-radius: 4px; /* Optional für runde Ecken */
-    cursor: pointer;
-  }
-  
-  .custom-checkbox input[type="checkbox"]:checked + .checkmark {
-    background-color: #fff; 
-    border-color: rgb(34, 117, 226);
-    transform: scale(1);
-  }
-  
-  .custom-checkbox .checkmark::after {
-    content: "";
-    display: none;
-    position: absolute;
-    left: 7px;
-    bottom: 5px;
-    width: 10px;
-    height: 20px;
-    border: solid rgb(34, 117, 226);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
-  
-  .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
-    display: block;
-  }
-  
+}

@@ -29,47 +29,75 @@ const videos = [
 ];
 
 const checklist = document.getElementById('checklist');
-console.log("hier test");
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
 
-videos.forEach(video => {
-    const videoId = extractVideoId(video.url);
-    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`; // Mittlere Auflösung
+let currentIndex = 0;
+const videosPerPage = 3;
 
-    const listItem = document.createElement('li');
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.id = video.id;
+// Funktion zum Rendern der Videos
+function renderVideos() {
+    // Leeren der aktuellen Video-Liste
+    checklist.innerHTML = '';
 
-    const label = document.createElement('label');
-    label.htmlFor = video.id;
+    // Videos für die aktuelle Seite auswählen
+    const videosToShow = videos.slice(currentIndex, currentIndex + videosPerPage);
 
-    //const label2 = document.createElement('label');
-    //label2.className = "custom-checkbox";
+    // Wenn weniger als 8 Videos vorhanden sind, leere Elemente hinzufügen
+    for (let i = 0; i < videosPerPage; i++) {
+        const video = videosToShow[i];
+        const listItem = document.createElement('li');
 
-    const thumbnail = document.createElement('img');
-    thumbnail.src = thumbnailUrl;
-    thumbnail.alt = video.title;
+        if (video) {
+            const videoId = extractVideoId(video.url);
+            const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
 
-    const link = document.createElement('a');
-    link.href = video.url;
-    link.target = '_blank';
-    link.textContent = video.title;
+            const label = document.createElement('label');
+            label.htmlFor = video.id;
 
-    const checkmark = document.createElement('span');
-    checkmark.className = "checkmark";
+            const thumbnail = document.createElement('img');
+            thumbnail.src = thumbnailUrl;
+            thumbnail.alt = video.title;
 
-    label.appendChild(thumbnail); // Thumbnail zuerst hinzufügen
-    label.appendChild(link);
-    listItem.appendChild(label);
-    //label2.appendChild(checkbox);
-    //label2.appendChild(checkmark);
-    //listItem.appendChild(label2);
-    checklist.appendChild(listItem);
+            const link = document.createElement('a');
+            link.href = video.url;
+            link.target = '_blank';
+            link.textContent = video.title;
 
-    // Funktion zur Extrahierung der YouTube-Video-ID aus der URL
-    function extractVideoId(url) {
-        const regex = /(?:\?v=|\/embed\/|\.be\/|\/v\/|\/watch\?v=|\/watch\?[^#]*v=|\/shorts\/)([a-zA-Z0-9_-]{11})/;
-        const match = url.match(regex);
-        return match ? match[1] : null;
+            label.appendChild(thumbnail);
+            label.appendChild(link);
+            listItem.appendChild(label);
+        } else {
+            listItem.textContent = ''; // Leeres Element, wenn kein Video vorhanden
+        }
+
+        checklist.appendChild(listItem);
+    }
+
+    // Buttons aktivieren/deaktivieren basierend auf der Position im Karussell
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex + videosPerPage >= videos.length;
+}
+
+function extractVideoId(url) {
+    const regex = /(?:\?v=|\/embed\/|\.be\/|\/v\/|\/watch\?v=|\/watch\?[^#]*v=|\/shorts\/)([a-zA-Z0-9_-]{11})/;
+    const match = url.match(regex);
+    return match ? match[1] : null;
+}
+
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex -= videosPerPage;
+        renderVideos();
     }
 });
+
+nextButton.addEventListener('click', () => {
+    if (currentIndex + videosPerPage < videos.length) {
+        currentIndex += videosPerPage;
+        renderVideos();
+    }
+});
+
+// Erste Anzeige der Videos
+renderVideos();
