@@ -1,33 +1,34 @@
 :root{
     --max-width: 200px;
 }
-section{
-  padding: 0;
+
+.video-list{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+
+
+
 ul {
     list-style-type: none;
-    padding: 0 1vw;
+    padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     gap: 10px;
-    background-color: red;
 }
 
 li {
-    margin: 5px 0;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 img {
     max-width: var(--max-width);
     height: auto;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 label {
@@ -35,23 +36,24 @@ label {
     flex-direction: column;
 }
 
-input[type="checkbox"] {
-    margin: 5px 0 0 5px;
-}
-
-.video-list{
-  display: flex;
-  align-items: center;
+section{
+  padding: 0;
 }
 
 .video-list button {
   height: fit-content;
   padding: 10px 15px;
-  margin: 10px;
-  border-style: none;
+  margin: 30px;
+  border: 1px solid var(--nav-blue);
   border-radius: 50%;
   color: white;
   background-color: var(--nav-blue);
+}
+
+.video-list button:hover{
+  background-color: var(--white);
+  color: var(--nav-blue);
+  border: 1px solid var(--nav-blue);
 }
 
 #prev, #next{
@@ -63,5 +65,11 @@ input[type="checkbox"] {
     max-width: var(--max-width);
     max-height: 45.6px;
     overflow-y: hidden;
+    margin: 0;
 }
-  
+
+@media (width < 840px) {
+  ul{
+    flex-direction: column;
+  }
+}
