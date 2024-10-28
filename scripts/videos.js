@@ -27,5 +27,3 @@ export const videos = [
     { id: "video26", title: "How to use the CSS :has selector", url: "https://www.youtube.com/watch?v=XdtZWVK3y_Q&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=27&pp=iAQB" },
     { id: "video27", title: "Why Flexbox?", url: "https://www.youtube.com/watch?v=e9Fx2hRT-UQ&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=28&pp=iAQB" },
 ];
-
-console.log("videos geladen");

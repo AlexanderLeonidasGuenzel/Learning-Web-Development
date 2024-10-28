@@ -7,15 +7,12 @@ const nextButton = document.getElementById('next');
 let currentIndex = 0;
 const videosPerPage = 3;
 
-// Funktion zum Rendern der Videos
 function renderVideos() {
-    // Leeren der aktuellen Video-Liste
+
     checklist.innerHTML = '';
 
-    // Videos für die aktuelle Seite auswählen
     const videosToShow = videos.slice(currentIndex, currentIndex + videosPerPage);
 
-    // Wenn weniger als 8 Videos vorhanden sind, leere Elemente hinzufügen
     for (let i = 0; i < videosPerPage; i++) {
         const video = videosToShow[i];
         const listItem = document.createElement('li');
@@ -40,7 +37,7 @@ function renderVideos() {
             label.appendChild(link);
             listItem.appendChild(label);
         } else {
-            listItem.textContent = ''; // Leeres Element, wenn kein Video vorhanden
+            listItem.textContent = ''; 
         }
 
         checklist.appendChild(listItem);
@@ -57,14 +54,16 @@ function extractVideoId(url) {
     return match ? match[1] : null;
 }
 
-prevButton.addEventListener('click', () => {
+prevButton.addEventListener('click', (event) => {
+    event.preventDefault();
     if (currentIndex > 0) {
         currentIndex -= videosPerPage;
         renderVideos();
     }
 });
 
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener('click', (event) => {
+    event.preventDefault();
     if (currentIndex + videosPerPage < videos.length) {
         currentIndex += videosPerPage;
         renderVideos();
