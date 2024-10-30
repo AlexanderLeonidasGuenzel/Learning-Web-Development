@@ -5,7 +5,7 @@ const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 
 let currentIndex = 0;
-const videosPerPage = 3;
+const videosPerPage = 6;
 
 function renderVideos() {
 
