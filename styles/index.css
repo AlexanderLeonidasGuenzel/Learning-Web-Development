@@ -1,0 +1,18 @@
+:root{
+    --footer-height: 200px;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: var(--footer-height);
+}
+
+footer{
+    height: var(--footer-height);
+    background-color: var(--dark-blue);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
