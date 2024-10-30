@@ -9,6 +9,11 @@ body{
     border: 1px solid var(--iron);
     line-height: 1;
     display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    align-content: flex-start;  
 }
 
 .box{
@@ -18,4 +23,12 @@ body{
     color: var(--white);
     font-size: 2rem;
     padding: 0.5rem;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-5, #box-6{
+    background-color: rgb(158, 46, 46);
 }
