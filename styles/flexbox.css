@@ -1,0 +1,21 @@
+body{
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid var(--iron);
+    line-height: 1;
+    display: flex;
+}
+
+.box{
+    min-width: 100px;
+    min-height: 100px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 0.5rem;
+}
