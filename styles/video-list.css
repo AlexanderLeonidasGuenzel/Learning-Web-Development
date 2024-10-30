@@ -17,7 +17,6 @@ ul {
     gap: 10px;
     max-width: 620px;
     flex-wrap: wrap;
-    background-color: purple;
     align-content: center;
 }
 
