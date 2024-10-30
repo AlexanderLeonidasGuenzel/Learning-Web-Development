@@ -6,9 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px; 
 }
-
-
 
 ul {
     list-style-type: none;
@@ -16,6 +15,10 @@ ul {
     margin: 0;
     display: flex;
     gap: 10px;
+    max-width: 620px;
+    flex-wrap: wrap;
+    background-color: purple;
+    align-content: center;
 }
 
 li {
@@ -68,8 +71,9 @@ section{
     margin: 0;
 }
 
-@media (width < 840px) {
+@media (width < 954px) {
   ul{
     flex-direction: column;
+    gap: 0;
   }
 }
