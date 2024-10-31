@@ -54,3 +54,14 @@ body{
     flex-shrink: 2;
     background-color: rgb(182, 252, 77);
 }
+
+#container-3 .box{
+    background-color: grey
+}
+
+#box-11{
+    flex: 2 2 200px;
+}
+#box-12{
+    flex: 1 1 200px;
+}
