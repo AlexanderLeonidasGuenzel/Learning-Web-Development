@@ -1,17 +1,37 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 5vh 10vw;
+    font-size: 1rem;
 }
 
 section {
     margin-bottom: 40px;
 }
 
+h1{
+    font-size: 2.2rem;
+    color: orange;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-align: center;
+}
+
 h2 {
     margin-top: 40px;
     border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
+}
+
+h3{
+    margin-bottom: 1vh;
+}
+
+legend {
+    font-size: 1em;
+    color: grey;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .flex-container {
@@ -28,15 +48,34 @@ h2 {
     margin: 5px;
     text-align: center;
     font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.overview{
+    border: 1px solid grey;
 }
 
 /* 2. flex-direction */
 .direction-row {
     flex-direction: row;
 }
+.direction-row-reverse {
+    flex-direction: row-reverse;
+}
 
 .direction-column {
     flex-direction: column;
+    height: 250px;
+}
+.direction-column-reverse {
+    flex-direction: column-reverse;
+    height: 250px;
+}
+
+.wrap-container{
+    align-items: flex-start;
+    height: 200px;
+    align-content: flex-start;
 }
 
 /* 3. flex-wrap */
@@ -53,16 +92,13 @@ h2 {
 }
 
 /* Set a width to cause wrapping */
-.nowrap .flex-item,
-
-.wrap .flex-item,
-
-.wrap-reverse .flex-item {
-    flex: 0 0 30%;
+.wrap-container .flex-item {
+    flex: 0 1 30%;
 }
 
 .flex-item:first-of-type{
     color: orange;
+    font-weight: 800;
 } 
 
 /* 4. justify-content */
@@ -91,6 +127,10 @@ h2 {
 }
 
 /* 5. align-items */
+.align-container{
+    height: 200px;
+}
+
 .align-stretch {
     align-items: stretch;
 }
@@ -119,23 +159,38 @@ h2 {
     height: 50px;
 }
 
+.align-content-container{
+    height: 250px; 
+}
+
 /* 6. align-content */
 .align-content-flex-start {
     align-content: flex-start;
-    height: 200px; /* Set height to demonstrate align-content */
 }
-
-.align-content-flex-start .box {
-    flex: 0 0 30%;
+.align-content-flex-end {
+    align-content: flex-end; 
+}
+.align-content-center {
+    align-content: center; 
+}
+.align-content-s-around{
+    align-content: space-around; 
+}
+.align-content-s-between{
+    align-content: space-between; 
+}
+.align-content-s-evenly{
+    align-content: space-evenly; 
 }
 
 .box {
-    background-color: #4CAF50;
+    background-color: rgb(31, 131, 170);
     padding: 20px;
     margin: 5px;
     color: white;
     text-align: center;
     font-size: 1.2em;
+    flex: 0 0 20%;
 }
 
 /* 7. order */
@@ -156,8 +211,11 @@ h2 {
 }
 
 /* 8. flex-grow, flex-shrink, flex-basis */
-.grow-example .flex-item {
+.grow-container .flex-item {
     flex-basis: 100px;
+}
+.shrink-container .flex-item {
+    flex-basis: 400px;
 }
 
 .grow1 {
@@ -167,14 +225,21 @@ h2 {
 .grow2 {
     flex-grow: 2;
 }
+.shrink1 {
+    flex-shrink: 1;
+}
+
+.shrink2 {
+    flex-shrink: 2;
+}
 
 /* 9. align-self */
-.align-self-example {
+.align-self-container {
     align-items: flex-start; /* Set default for comparison */
     height: 200px;
 }
 
-.align-self-example .flex-item {
+.align-self-container .flex-item {
     flex: 1;
     margin: 5px;
 }
