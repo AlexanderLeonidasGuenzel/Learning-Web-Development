@@ -40,19 +40,30 @@ h2 {
 }
 
 /* 3. flex-wrap */
-.wrap {
-    flex-wrap: wrap;
-}
-
 .nowrap {
     flex-wrap: nowrap;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
 /* Set a width to cause wrapping */
+.nowrap .flex-item,
+
 .wrap .flex-item,
-.nowrap .flex-item {
+
+.wrap-reverse .flex-item {
     flex: 0 0 30%;
 }
+
+.flex-item:first-of-type{
+    color: orange;
+} 
 
 /* 4. justify-content */
 .justify-start {
