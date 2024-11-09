@@ -1,0 +1,48 @@
+section{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.1fr 5fr 0.1fr;
+}
+
+.garden{
+    grid-column: 2;
+    grid-row: 2;
+    min-height: 800px;
+    min-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20%);
+    margin: 0 auto;
+}
+
+.grid-items{
+    border: 1px solid rgba(202, 202, 202, 0.555);
+    padding: 10px;
+    background-color: white;
+}
+
+.water{
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20%);
+}
+
+.water-items{
+    border: 1px solid rgba(134, 134, 134, 0.61);
+    padding: 10px;
+    color: white;
+}
+
+#w-item-1{
+    grid-column: 2;
+    grid-row: 2 / 5;
+    background-color: rgb(188, 220, 248);
+}
+#w-item-2{
+    background-color: rgb(138, 188, 233);
+    grid-column: 4;
+    grid-row: 3;
+}
