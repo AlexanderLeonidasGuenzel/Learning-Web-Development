@@ -20,7 +20,8 @@
             <hr>
             </header>
             <main>
-                <section>
+                <section id="section-1">
+                    <h2>grid-auto-flow: column</h2>
                     <div class="container">
                         <div class="box">1</div>
                         <div class="box">2</div>
@@ -29,7 +30,88 @@
                         <div class="box">5</div>
                         <div class="box">6</div>
                     </div>
-                </section>            
+                </section> 
+                <section id="section-2">
+                    <h2>grid-template-columns: repeat(3, 1fr)</h2>
+                    <div class="container">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                    </div>
+                </section>
+                <section id="section-3">
+                    <h2>grid-template-columns: repeat(2, 2fr 1fr)</h2>
+                    <div class="container">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                    </div>
+                </section>
+                <section id="section-4">
+                    <h2>grid-auto-rows: minmax(100px, auto)</h2>
+                    <div class="container">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                    </div>
+                </section> 
+                <section id="section-5">
+                    <h2>grid-column: 1 / 4</h2>
+                    <p>Starts at grid-line 1 and ends at grid-line 4. <br>
+                        Shorthand for: 
+                        grid-column-start: 1; 
+                        grid-column-end: 4;
+                    </p>
+                    <div class="container">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                    </div>
+                </section>
+                <section id="section-6">
+                    <h2>grid-row: 1 / 3</h2>
+                    <p>Starts at grid-line 1 and ends at grid-line 4. <br>
+                        Shorthand for: 
+                        grid-column-start: 1; 
+                        grid-column-end: 4;
+                    </p>
+                    <div class="container">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                        <div class="box">6</div>
+                    </div>
+                </section>
+                <section>
+                    <h2>additional content</h2>
+                    <h3>Gap</h3>
+                    <p>
+                        <ul id="outer-list">
+                            <li>row-gap</li>
+                            <li>column-gap</li>
+                            <li>gap</li>
+                            <ul id="inner-list">
+                                <li>gap: 5px</li>
+                                <li>gap: 5px 10px</li>
+                            </ul>
+                        </ul>
+                    </p>
+                </section>                 
             </main>
             <hr>
             <footer>
