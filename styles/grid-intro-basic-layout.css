@@ -1,0 +1,13 @@
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.box{
+    background-color: var(--mid-blue);
+    color: white;
+    font-size: 1.2em;
+    padding: 0.4em;
+}
