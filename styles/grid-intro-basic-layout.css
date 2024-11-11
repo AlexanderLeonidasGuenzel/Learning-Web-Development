@@ -41,9 +41,17 @@ h3{
 .container{
     max-width: 600px;
     margin: 30px;
+    grid-column: 2 / 3;
     display: grid;
     gap: 5px;
-    grid-column: 2 / 3;
+}
+
+.box{
+    background-color: var(--mid-blue);
+    color: white;
+    font-size: 1.2em;
+    padding: 0.4em;
+    border-radius: 10px;
 }
 
 #section-1 .container{
@@ -54,12 +62,7 @@ h3{
     grid-template-columns: repeat(3, 1fr);
 }
 
-#section-3 .container,
-#section-4 .container, 
-#section-5 .container,
-#section-6 .container,
-#section-7 .container,
-#section-8 .container
+:is(#section-3, #section-4, #section-5, #section-6, #section-7, #section-8) .container
 {
     grid-template-columns: repeat(2, 1fr 2fr);
 }
@@ -76,9 +79,7 @@ h3{
     grid-column-end: 4;
 }
 
-#section-6 .box:first-child,
-#section-7 .box:first-child,
-#section-8 .box:first-child
+:is(#section-6, #section-7, #section-8) .box:first-child
 {
     background-color: rgb(190, 218, 37);
     grid-column: 1 / 4; 
@@ -90,23 +91,13 @@ h3{
     place-content: center;
 }
 
-#section-7 .box:nth-child(2),
-#section-8 .box:nth-child(2)
+:is(#section-7, #section-8) .box:nth-child(2)
 {
     background-color: rgb(250, 155, 13);
     grid-column: 1 / 5;
 }
 
-#section-7 .container:nth-of-type(2) .box:nth-child(2),
-#section-8 .box:nth-child(2)
+:is(#section-7 .container:nth-of-type(2), #section-8) .box:nth-child(2)
 {
     grid-row: 3 / 4;
-}
-
-.box{
-    background-color: var(--mid-blue);
-    color: white;
-    font-size: 1.2em;
-    padding: 0.4em;
-    border-radius: 10px;
 }
