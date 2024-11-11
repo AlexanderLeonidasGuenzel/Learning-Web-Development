@@ -4,10 +4,12 @@ article{
 
 section{
     padding: 20px;
+}
+
+section:not(:last-child){
     display: grid;
     grid-template-columns: 2fr 3fr;
 }
-
 
 h2, h3{
     margin-block-start: 0;
@@ -32,10 +34,6 @@ h3{
     font-size: 1rem;
 }
 
-#inner-list li{
-    list-style-type: square;
-}
-
 .container{
     max-width: 600px;
     margin: 30px;
@@ -51,6 +49,7 @@ h3{
 #section-2 .container{
     grid-template-columns: repeat(3, 1fr);
 }
+
 #section-3 .container,
 #section-4 .container, 
 #section-5 .container,
