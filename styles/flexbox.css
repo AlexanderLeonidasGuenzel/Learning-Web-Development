@@ -1,6 +1,18 @@
 body{
     min-height: 100vh;
 }
+
+.container-properties-list {
+    list-style-type: none;
+    margin-inline-start: 0;
+    line-height: 2;
+}
+
+.container-properties-list b{
+    text-transform: uppercase;
+    color: rgb(226, 152, 16);
+}
+
 .container{
     max-width: 600px;
     min-height: 400px;

@@ -45,19 +45,18 @@ ul{
 }
 nav ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     row-gap: 10px;
     column-gap: 5px;
 }
 nav li{
-    width: 250px;
+    flex-basis: 250px; 
 }
 nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
     height: 70px;
     box-sizing: border-box;
     padding: 10px 20px;
@@ -114,9 +113,9 @@ img{
     }
     nav li{
         width: 100%;
+        flex: 1 1 0;
     }
     .left-content{
-       
        padding: 10px 20px;
        max-height: fit-content;
     }

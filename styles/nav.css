@@ -1,3 +1,8 @@
+.link-nav{
+    margin-block-start: 1.2rem;
+    margin-block-end: 1.2rem;
+}
+
 .link-nav a, .link-nav a:visited{
     color: var(--nav-blue);
     background-color: var(--nav-white);
@@ -13,9 +18,5 @@
     background-color: var(--nav-blue);
 }
 
-.link-nav{
-    width: 100%;
-    margin-block-start: 1.2rem;
-    margin-block-end: 1.2rem;
-}
+
 
