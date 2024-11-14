@@ -5,6 +5,11 @@ body{
     font-family: "Nunito", sans-serif;
     min-height: 100vh;
 }
+h1{
+    text-align: center;
+    margin-block-start: 1rem;
+    font-size: 3rem;
+}
 
 .example{
     margin: 1rem;
@@ -13,16 +18,19 @@ body{
 }
 
 .example p{
-    display: flex;
     font-size: 1.1rem;
+    max-width: 400px;
 }
 
 .example img{
     width: 25%; /*25% of container size not image size*/
     height: auto;
     display: block;
+    margin-right: 1.5rem;
+}
 
-    margin-right: 10px;
+.content-container{
+    display: flex;
 }
 
 .container{
@@ -39,7 +47,7 @@ body{
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: rgba(240, 248, 255, 0.295);
+    background-color: rgba(240, 248, 255, 0.452);
 }
 
 .h1{
