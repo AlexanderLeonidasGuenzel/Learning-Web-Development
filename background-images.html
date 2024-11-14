@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Images</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/background-images.css">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <h1>Background Images</h1>
+    <nav>
+        <a href="index.html">home</a>
+    </nav>
+    <section class="example">
+        <h2>The Beach</h2>
+        <div class="content-container">
+            <img src="assets/img/beach-woman-sm.jpg" alt="picture beach woman" srcset="" width="497" height="332">
+            <p>
+                Images are initially displayed inline to fit with text. To remove the margin beneath, use display: block. <br>
+                Set width and height in the HTML tag for stability. <br><br>
+                For responsiveness, apply: <br><br>
+                <code>
+                    img{ <br>
+                        &nbsp;&nbsp;with: in percentage; <br>
+                        &nbsp;&nbsp;height: auto; <br>
+                    }
+                </code>
+            </p>
+        </div>
+    </section>
+    <div class="container">
+        <section class="hero"> 
+            <figure class="profile-pic-figure">
+                <img src="assets/img/young-programmer.jpg" alt="Random Image 800x800" width="800" height="800">
+                <figcaption class="offscreen">Picsum</figcaption>
+            </figure>
+            <h1 class="h1">
+                <span class="nowrap">Hello👋</span>
+                <span class="nowrap">I'm Alex</span>
+            </h1>
+        </section>
+    </div>
+    <section class="container-gradient">
+    </section>
+    <section class="clip-container">
+        <div class="clip">
+            Alex
+        </div>
+    </section>
+</body>
+</html>
