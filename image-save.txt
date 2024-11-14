@@ -1,0 +1,10 @@
+background-image: url("https://picsum.photos/seed/cvm/800"); /*highway*/
+    background-image: url("https://picsum.photos/seed/a/800"); /*cloudy desert*/
+    background-image: url("https://picsum.photos/seed/c/800"); /*red sky*/
+    background-image: url("https://picsum.photos/seed/42/800"); /*lake and mountains*/
+    background-image: url("https://picsum.photos/seed/e/800"); /*street*/
+    background-image: url("https://picsum.photos/seed/vp/800"); /*stars*/
+    background-image: url("https://picsum.photos/seed/o/800");
+    background-image: url("https://picsum.photos/seed/gj/800");
+    background-image: url("https://picsum.photos/seed/cvm/800");
+ 
