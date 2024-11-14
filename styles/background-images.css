@@ -23,7 +23,7 @@ h1{
 }
 
 .example img{
-    width: 25%; /*25% of container size not image size*/
+    width: 40%; /*25% of container size not image size*/
     height: auto;
     display: block;
     margin-right: 1.5rem;
@@ -103,4 +103,22 @@ h1{
 
 .clip-container{
     background-color: rgb(29, 29, 29);
+}
+
+nav{
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: rgb(53, 53, 53);
+}
+
+a, a:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.2rem;
+}
+
+a:hover, a:focus{
+    text-decoration: underline;
+    font-weight: 700 ;
 }
