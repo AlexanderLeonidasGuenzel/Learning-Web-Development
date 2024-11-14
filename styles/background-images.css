@@ -21,7 +21,56 @@ body{
     width: 25%; /*25% of container size not image size*/
     height: auto;
     display: block;
+
     margin-right: 10px;
 }
 
+.container{
+    background-color: rgb(111, 191, 228);
+    background-image: url("https://picsum.photos/seed/42/800");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.hero{
+    border-bottom: 2px solid black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: rgba(240, 248, 255, 0.295);
+}
+
+.h1{
+    font-size: 500%;
+    color: white;
+    text-shadow: 1px 2px 5px rgb(1, 16, 66);
+    display: flex;
+    flex-direction: column;
+    padding:  1rem 4rem;
+    border-radius: 5%;
+}
+
+.profile-pic-figure{
+    width: 35%;
+}
+
+.profile-pic-figure img{
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double rgba(8, 49, 102, 0.719);
+    border-radius: 50%;
+}
+
+/*Utility Classes*/
+.nowrap{
+    white-space: nowrap;
+}
+
+.offscreen{
+    position: absolute;
+    left: -1000000px;
+}
+/*End Utility Classes*/
 
