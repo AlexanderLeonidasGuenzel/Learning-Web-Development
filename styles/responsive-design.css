@@ -5,4 +5,91 @@ body{
     font-size: 1.4rem;
     line-height: 1.5;
     scroll-behavior: smooth;
+    background-image: radial-gradient(whitesmoke, grey);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+header, nav, main, footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer{
+    position: sticky;
+    background-color: #333;
+    color: white;
+}
+
+header{
+    top: 0;
+}
+
+nav{
+    background-color: #fff;
+    color: black;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+
+}
+
+footer{
+    bottom: 0;
+}
+
+main{
+    flex-grow: 1;
+}
+
+/*|| SMALL*/
+/*Mobile First Design - from smallest to largest*/
+@media screen and (min-width: 576px){
+    body{
+        background-color: green;
+        background-image: radial-gradient(whitesmoke, greenyellow);
+    }
+    
+    nav{
+        display: none;
+    }
+}
+/*|| MEDIUM*/
+@media screen and (min-width: 768px){
+    body{
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke, gold);
+    }
+}
+/*|| LARGE*/
+@media screen and (min-width: 992px){
+    body{
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke, firebrick);
+    }
+}
+/*|| EXTRA LARGE*/
+@media screen and (min-width: 1200px){
+    body{
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple);
+    }
+}
+/*|| MOBILE DEVICE LANDSCAPE*/
+@media screen and (max-height: 424px) and (min-aspect-ratio: 7/4){
+    body{
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue);
+    }
+
+    h1, h2{
+        font-size: 1.5;
+    }
+
+    nav{
+        display: none;
+    }
+}
+
