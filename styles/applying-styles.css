@@ -1,5 +1,14 @@
+html{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+} 
+
 .ul-star-marker li::marker {
     content: '★ '; 
-    color: var(--aqua-green);
+    color: var(--yellow);
     font-size: 1.2em; 
   }
