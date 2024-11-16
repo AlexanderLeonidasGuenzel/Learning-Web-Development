@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/global-colors.css">
-    <link rel="stylesheet" href="styles/liste-styles.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/list-styles.css">
     <title>List Styles</title>
 </head>
 <body>
@@ -41,32 +42,34 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: upper-roman; <br>
                 } <br>
             </code> <br>
-            <div class="flexbox-change-list-style-types">
-                <ol style="list-style-type: lower-alpha;">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                </ol> 
-                <ol style="list-style-type: decimal-leading-zero;">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                </ol>  
-                <ol style="list-style-type: upper-roman;">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                </ol> 
-                <ol start="3" style="list-style-type: upper-roman;">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                </ol>   
-                <ol start="3" reversed style="list-style-type: upper-roman;">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                </ol> 
+            <div class="container">
+                <div class="flexbox-change-list-style-types" id="grid-auto">
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ol> 
+                    <ol style="list-style-type: decimal-leading-zero;">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ol>  
+                    <ol style="list-style-type: upper-roman;">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ol> 
+                    <ol start="3" style="list-style-type: upper-roman;">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ol>   
+                    <ol start="3" reversed style="list-style-type: upper-roman;">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ol> 
+                </div>
             </div>
             <p>With the attribute "start", you can set the starting value like start="3".
                 Additional attribute is "reversed". It is used to turn the order arround.
@@ -86,29 +89,31 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;list-style-image: url("../assets/img/green.png"); <br>
                 } <br>
             </code> 
-            <div class="flexbox-change-list-style-types">
-                <ul class="second-child">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li> 
-                    <li>Four</li>                           
-                </ul>
-                <ul class="odd">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li> 
-                    <li>Four</li>                           
-                </ul>   
-                <ul class="green-hooks">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>                            
-                </ul>  
-                <ul id="only-5-dollars">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                </ul>
+            <div class="container">
+                <div class="flexbox-change-list-style-types only">
+                    <ul class="second-child">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li> 
+                        <li>Four</li>                           
+                    </ul>
+                    <ul class="odd">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li> 
+                        <li>Four</li>                           
+                    </ul>   
+                    <ul class="green-hooks">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>                            
+                    </ul>  
+                    <ul id="only-5-dollars">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ul>
+                </div>
             </div>
             <p>You can make further changes with text-align: center; list-style-position: outside; Changing the "color" property, changes color of the text and marker.</p>
         </section>
