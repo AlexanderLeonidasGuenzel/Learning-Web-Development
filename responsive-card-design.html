@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/global-colors.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/responsive-card-design.css">
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/global-colors.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/responsive-card-design.css" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <title>Card Design</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>our staff</h1>
-        <nav>
-            <a href="#profile1">Jane</a>
-            <a href="#profile2">Matt</a>
-            <a href="#profile3">Julia</a>
-        </nav>
+      <h1>our staff</h1>
+      <nav>
+        <a href="#profile1">Jane</a>
+        <a href="#profile2">Matt</a>
+        <a href="#profile3">Julia</a>
+      </nav>
     </header>
-    <main id="profile1" class="card">
-        <figure><img src="assets/img/Jane.png" alt="Jane Fox"></figure>
+    <main>
+      <article id="profile1" class="card">
+        <figure>
+          <img
+            src="assets/img/Jane-md.png"
+            alt="Jane Coder"
+            width="512"
+            height="512"
+          />
+          <figcaption>Jane Coder</figcaption>
+        </figure>
+        <p><q>I like coding.</q></p>
+      </article>
+      <article id="profile2" class="card">
+        <figure>
+          <img
+            src="assets/img/Matt.png"
+            alt="Matt Designer"
+            width="672"
+            height="672"
+          />
+          <figcaption>Matt Designer</figcaption>
+        </figure>
+        <p><q>I design webpages.</q></p>
+      </article>
+      <article id="profile3" class="card">
+        <figure>
+          <img
+            src="assets/img/Julia-md.png"
+            alt="Julia Dev Rel"
+            width="510"
+            height="515"
+          />
+          <figcaption><span class="nowrap">Julia Dev Rel</span></figcaption>
+        </figure>
+        <p><q>I teach stuff.</q></p>
+      </article>
     </main>
-</body>
+    <footer>
+      <p>&copy; Me GmbH</p>
+    </footer>
+  </body>
 </html>

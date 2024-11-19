@@ -1,0 +1,152 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  background-color: #475569;
+  background-image: radial-gradient(whitesmoke, #475569);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a,
+nav a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  color: hsla(0, 0%, 20%, 0.6);
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: #333;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+header {
+  top: -1px;
+}
+
+nav {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-bottom: 2px solid black;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer {
+  bottom: -1px;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+/*|| PROFILE CARD*/
+.card {
+  scroll-margin-top: 8rem;
+  width: min(100%, 350px);
+  background-color: #e6e7e7;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card figure {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card img {
+  border: 5px double #333;
+  border-radius: 50%;
+}
+
+.card figcaption {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+/*|| SMALL*/
+/*Mobile First Design - from smallest to largest*/
+@media screen and (min-width: 576px) {
+  body {
+    background-color: green;
+    background-image: radial-gradient(whitesmoke, greenyellow);
+  }
+
+  /* nav {
+    display: none;
+  } */
+}
+/*|| MEDIUM*/
+@media screen and (min-width: 768px) {
+  body {
+    background-color: gold;
+    background-image: radial-gradient(whitesmoke, gold);
+  }
+}
+/*|| LARGE*/
+@media screen and (min-width: 992px) {
+  body {
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke, firebrick);
+  }
+}
+/*|| EXTRA LARGE*/
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  }
+}
+/*|| MOBILE DEVICE LANDSCAPE*/
+@media screen and (max-height: 424px) and (min-aspect-ratio: 7/4) {
+  body {
+    background-color: dodgerblue;
+    background-image: radial-gradient(whitesmoke, dodgerblue);
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5;
+  }
+
+  nav {
+    display: none;
+  }
+}
