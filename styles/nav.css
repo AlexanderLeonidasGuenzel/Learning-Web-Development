@@ -1,25 +1,29 @@
-nav{
-    padding: 10px 0;
-}
-.link-nav{
-    margin-block-start: 1.2rem;
-    margin-block-end: 1.2rem;
+nav {
+  padding: 10px 0;
 }
 
-.link-nav a, .link-nav a:visited{
-    color: var(--nav-blue);
-    background-color: var(--nav-white);
-    display: inline-table;
-    text-decoration: none;
-    padding: 5px 10px;
-    margin: 5px 0;
-    border: 1px solid var(--nav-border);
+a {
+  font-size: min(1.4rem, 24px);
 }
 
-.link-nav a:hover, .link-nav a:focus{
-    color: var(--nav-white);
-    background-color: var(--nav-blue);
+.link-nav {
+  margin-block-start: 1.2rem;
+  margin-block-end: 1.2rem;
 }
 
+.link-nav a,
+.link-nav a:visited {
+  color: var(--nav-blue);
+  background-color: var(--nav-white);
+  display: inline-table;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px solid var(--nav-border);
+}
 
-
+.link-nav a:hover,
+.link-nav a:focus {
+  color: var(--nav-white);
+  background-color: var(--nav-blue);
+}
