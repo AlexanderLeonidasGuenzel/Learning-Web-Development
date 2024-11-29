@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="stylesheet" href="styles/global-colors.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/animations-overview.css" />
+    <title>Animations Overview</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Transformation & Animations</h1>
+        <section>
+          <h2>Transformation</h2>
+          <ul>
+            <li>translate</li>
+            <li>rotate</li>
+            <li>scale</li>
+            <li>skew</li>
+          </ul>
+          <p>
+            transform: translateX(300px); <br />
+          transform: rotateX(45deg); <br />
+          transform: scaleX(0.5); <br />
+          transform: skewX(-10deg); <br />
+          </p>
+          <h2>Transition</h2>
+          <p>
+          transition-property: background-color; <br />
+          transition-duration: 2s;<br />
+          transition-delay: 0.5s;<br />
+          transition-timing-function: linear; (default is: ease) <br />
+          <h3>Shorthand</h3>
+          <p>transition: all 3s 0.5s</p>
+          </p>
+        </section>
+        <section>
+          <h2>Animation</h2>
+          <ul>
+            <li>animation-name: slide;</li>
+            <li>animation-duration: 5s;</li>
+            <li>animation-timing-function: ease-in-out;</li>
+            <li>animation-delay: 1s;</li>
+            <li>animation-iteration-count: 2;</li>
+            <li>animation-direction: alternate;</li>
+            <li>animation-fill-mode: forwards;</li>
+          </ul>
+          <h3>Shorthand</h3>
+          <p>animation: 5s ease-in-out 1s 2 normal forwards slide;</p>
+          <p>
+            @keyframes slide { <br>
+              &nbsp; 0% { <br>
+              &nbsp; &nbsp;&nbsp;  transform: translateX(0);<br>
+              &nbsp;}<br>
+              &nbsp;33% { <br>
+              &nbsp;&nbsp;&nbsp;  transform: translateX(300px);<br>
+              &nbsp;}<br>
+              &nbsp;66% {<br>
+              &nbsp;&nbsp;&nbsp;  transform: translateX(-300px);<br>
+              &nbsp; &nbsp; }<br>
+              &nbsp;}<br>&nbsp;
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <nav class="link-nav">
+        <a href="index.html">HOME</a>
+        <a href="animations-beginners.html">Animations for Beginners</a>
+        <a href="animations-menu.html">Animated Navbar</a>
+      </nav>
+    </footer>
+  </body>
+</html>

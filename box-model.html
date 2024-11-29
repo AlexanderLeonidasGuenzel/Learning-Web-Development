@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/global-colors.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/box-model.css">
@@ -18,13 +19,18 @@
             <h2>What is the CSS box model?</h2>
             <p>The CSS Box Model is a fundamental concept that defines the structure and layout of HTML elements.</p>
             <h4>Four main components</h4>
-            <ul class="list-box-model-overview ">
-                <li style="color: rgb(12, 126, 202)">Content</li>
-                <li style="color: rgb(12, 199, 105)">Padding</li>
-                <li style="color: rgb(240, 203, 41)">Border</li>
-                <li style="color: rgb(255, 145, 0)">Margin</li>
-            </ul>             
-            <img src="assets/img/boxmodel.png" alt="picture of box model" width="224" height="171">
+            <div class="list-box-model-overview">
+                <ul>
+                    <li style="color: rgb(12, 126, 202)">Content</li>
+                    <li style="color: rgb(12, 199, 105)">Padding</li>
+                    <li style="color: rgb(240, 203, 41)">Border</li>
+                    <li style="color: rgb(255, 145, 0)">Margin</li>
+                </ul>     
+                <figure>
+                    <img src="assets/img/boxmodel.png" alt="picture of box model" width="224" height="171">
+                    <figcaption>Box Model</figcaption>        
+                </figure>
+            </div>
             <h3>Box Sizing</h3>
             <h4>Content Box</h4>
             <p>You can see the box model in the browser's inspector in the computed section.

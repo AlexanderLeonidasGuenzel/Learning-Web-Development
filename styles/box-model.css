@@ -1,10 +1,21 @@
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+figcaption{
+    font-size: 1rem;
+}
+
+
 .list-box-model-overview{
     display: flex;
-    flex-wrap: wrap; 
     justify-content: space-between;
-    font-weight: 500; 
-    column-gap: 2rem;
-    max-width: 30%; 
+    max-width: 500px;
+    padding: 1rem;
 }
 
 .list-box-model-overview ::marker {

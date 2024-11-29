@@ -1,20 +1,20 @@
-.columns-1 {
-    column-count: 4;
+body{
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.5;
 }
-.columns-2 {
-    column-count: 4;
-    column-width: 250px;
-}
-.columns-3 {
-    column-count: 4;
-    column-width: 250px;
-    column-rule: 2px solid #333;
+
+section{
+    display: block;
 }
 
 p{
     text-align: justify;
     margin: 0 1rem;
 }
+
 h1 {
     color: var(--columns-header);
     text-align: center;
@@ -36,8 +36,17 @@ h3{
     text-align: center;
 }
 
-body {
-    background-color: aliceblue;
+.columns-1 {
+    column-count: 4;
+}
+.columns-2 {
+    column-count: 4;
+    column-width: 250px;
+}
+.columns-3 {
+    column-count: 4;
+    column-width: 250px;
+    column-rule: 2px solid #333;
 }
 
 .no-top-margin p,h2 {
