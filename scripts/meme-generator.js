@@ -6,6 +6,9 @@ const widthSlider = document.getElementById("widthSlider");
 const heightSlider = document.getElementById("heightSlider");
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
+let generated = false;
+
+const topText = "";
 
 imageInput.addEventListener("change", (event) => {
   const file = event.target.files[0];
@@ -35,15 +38,42 @@ heightSlider.addEventListener("input", () => {
 });
 
 function drawImage() {
+  // Clear canvas and set canvas dimensions to fit the image
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(uploadedImage, 0, 0, canvas.width, canvas.height);
+}
+
+function resizeCanvas() {
+  canvasWidth = widthSlider.value;
+  canvasHeight = heightSlider.value;
+
+  canvas.width = canvasWidth;
+  canvas.height = canvasHeight;
+
+  canvas.width = widthSlider.value;
+  canvas.height = heightSlider.value;
+
+  drawImage();
+}
+
+function generateMeme() {
   if (uploadedImage) {
-    // Clear canvas and set canvas dimensions to fit the image
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(uploadedImage, 0, 0, canvas.width, canvas.height);
+    drawImage();
+    addText();
+    generated = true;
+  } else {
+    alert("Upload Image!");
+  }
+}
 
-    // Get text values
-    const topText = document.getElementById("topText").value;
-    const bottomText = document.getElementById("bottomText").value;
+function addText() {
+  // Get text values
+  const topText = document.getElementById("topText").value;
+  const bottomText = document.getElementById("bottomText").value;
 
+  if (topText === "" && bottomText === "") {
+    alert("Fill out at least one text field!");
+  } else {
     // Set text styles
     ctx.font = "40px Impact";
     ctx.fillStyle = "white";
@@ -61,33 +91,13 @@ function drawImage() {
   }
 }
 
-function resizeCanvas() {
-  canvasWidth = widthSlider.value;
-  canvasHeight = heightSlider.value;
-
-  canvas.width = canvasWidth; // Breite des Canvas aktualisieren
-  canvas.height = canvasHeight; // Höhe des Canvas aktualisieren
-
-  if (widthSlider.value <= 600 && heightSlider.value <= 500) {
-    canvas.width = widthSlider.value;
-    canvas.height = heightSlider.value;
-    drawImage();
-  } else {
-    alert("No no!");
-  }
-}
-
-function generateMeme() {
-  drawImage();
-}
-
 function downloadMeme() {
-  if (uploadedImage) {
+  if (generated) {
     const link = document.createElement("a");
     link.download = "meme.png";
     link.href = canvas.toDataURL();
     link.click();
   } else {
-    alert("No Way!");
+    alert("Generate first!");
   }
 }

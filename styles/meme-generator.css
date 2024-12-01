@@ -184,11 +184,15 @@ section {
 .controls {
   display: flex;
   justify-content: space-between;
+  background-color: rgba(101, 146, 185, 0.527);
+  padding: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid rgb(101, 146, 185);
 }
 
-.controls > * {
+/* .controls > * {
   padding: 20px;
-}
+} */
 
 input[type="range"] {
   -webkit-appearance: none;
