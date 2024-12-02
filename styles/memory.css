@@ -6,7 +6,6 @@
 
 html {
   font-size: 1rem;
-  min-height: 450px;
 }
 
 body {
@@ -34,9 +33,6 @@ body {
   background-color: aliceblue;
   background: linear-gradient(to top, aliceblue, rgb(82, 159, 228));
   flex-grow: 1;
-  display: grid;
-  grid-auto-flow: column;
-  place-content: center;
 }
 
 .footer {
@@ -56,12 +52,14 @@ body {
 
 .game-field {
   background-color: rgba(255, 255, 255, 0.404);
-  width: clamp(250px, 40vw, 700px);
-  height: clamp(250px, 40vw, 700px);
+  width: clamp(250px, 40vw, 900px);
+  height: clamp(250px, 40vw, 900px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: clamp(3px, 0.4vw, 0.9em);
+  /* margin: 0 auto; */
+  margin: clamp(5px, 20%, 50px) auto;
 }
 
 .screenOff {
