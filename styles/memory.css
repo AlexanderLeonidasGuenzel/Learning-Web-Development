@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  gap: 1rem;
+}
+
+.main {
+  background-color: aliceblue;
+  background: linear-gradient(to top, aliceblue, rgb(82, 159, 228));
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+}
+
+.screenOff {
+  display: none;
+}
