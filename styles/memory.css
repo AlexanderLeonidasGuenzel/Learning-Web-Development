@@ -1,3 +1,6 @@
+/* FONTS: Nunito + Ribeye Marrow*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Ribeye+Marrow&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +9,11 @@
 
 html {
   font-size: 1rem;
+  letter-spacing: 0.1em;
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -23,6 +31,7 @@ body {
   align-items: center;
   padding: 1.2rem;
   gap: 1rem;
+  font-family: "Ribeye Marrow", serif;
 }
 
 .header__h1 {
