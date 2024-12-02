@@ -4,10 +4,16 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1rem;
+  min-height: 450px;
+}
+
 body {
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-width: 300px;
 }
 
 .header {
@@ -18,6 +24,10 @@ body {
   align-items: center;
   padding: 1.2rem;
   gap: 1rem;
+}
+
+.header__h1 {
+  font-size: clamp(2em, 5vw, 3.5em);
 }
 
 .main {
@@ -36,6 +46,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: clamp(0.8em, 2vw, 1em);
 }
 
 .logo img {
@@ -45,8 +56,8 @@ body {
 
 .game-field {
   background-color: white;
-  width: clamp(300px, 40vw, 700px);
-  height: clamp(300px, 40vw, 700px);
+  width: clamp(250px, 40vw, 700px);
+  height: clamp(250px, 40vw, 700px);
 }
 
 .screenOff {
