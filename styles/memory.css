@@ -5,7 +5,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -24,6 +24,9 @@ body {
   background-color: aliceblue;
   background: linear-gradient(to top, aliceblue, rgb(82, 159, 228));
   flex-grow: 1;
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
 }
 
 .footer {
@@ -38,6 +41,12 @@ body {
 .logo img {
   width: 50px;
   height: auto;
+}
+
+.game-field {
+  background-color: white;
+  width: clamp(300px, 40vw, 700px);
+  height: clamp(300px, 40vw, 700px);
 }
 
 .screenOff {
