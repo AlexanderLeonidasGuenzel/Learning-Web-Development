@@ -111,9 +111,9 @@ section {
 }
 
 section > :is(h2, p, li) {
-  animation: fade 1s linear 1s both;
+  animation: fade linear both;
   animation-timeline: view();
-  animation-range: cover 20% contain 30%;
+  animation-range: entry 50% cover 50%;
 }
 
 @keyframes fade {
