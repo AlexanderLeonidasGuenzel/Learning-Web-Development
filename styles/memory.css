@@ -101,7 +101,7 @@ body {
 
 .card .front {
   background-color: white;
-  background-image: url("../assets/img/memory/memory-icon.png");
+  background-image: url("../assets/img/memory2/memory-icon.png");
 }
 
 .card .back {
@@ -118,10 +118,10 @@ body {
 }
 
 #back-card-1 {
-  background-image: url("/assets/img/memory/ball.png");
+  background-image: url("/assets/img/memory2/ball.png");
 }
 #back-card-2 {
-  background-image: url("/assets/img/memory/dog-food.png");
+  background-image: url("/assets/img/memory2/dog-food.png");
 }
 #back-card-3 {
   background-image: url("../assets/img/memory/dog-house.png");
