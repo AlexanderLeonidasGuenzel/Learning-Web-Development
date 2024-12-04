@@ -52,6 +52,7 @@ body {
   color: white;
   min-height: 10vh;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   font-size: clamp(0.8em, 2vw, 1em);
@@ -70,7 +71,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: clamp(3px, 0.4vw, 0.9em);
-  margin: clamp(5px, 20%, 50px) auto;
+  margin: clamp(5px, 20%, 20px) auto;
 }
 
 .screenOff {
@@ -114,4 +115,61 @@ body {
 
 .card.flip .back {
   transform: rotateY(0);
+}
+
+#back-card-1 {
+  background-image: url("../assets/img/memory/ball.png");
+}
+#back-card-2 {
+  background-image: url("../assets/img/memory/dog-food.png");
+}
+#back-card-3 {
+  background-image: url("../assets/img/memory/dog-house.png");
+}
+#back-card-4 {
+  background-image: url("../assets/img/memory/dog-sit.png");
+}
+#back-card-5 {
+  background-image: url("../assets/img/memory/dog-stand.png");
+}
+#back-card-6 {
+  background-image: url("../assets/img/memory/dog-treat.png");
+}
+#back-card-7 {
+  background-image: url("../assets/img/memory/foot-print.png");
+}
+#back-card-8 {
+  background-image: url("../assets/img/memory/pet-bed.png");
+}
+#back-card-9 {
+  background-image: url("../assets/img/memory/dog-sit.png");
+}
+#back-card-10 {
+  background-image: url("../assets/img/memory/dog-treat.png");
+}
+#back-card-11 {
+  background-image: url("../assets/img/memory/pet-bed.png");
+}
+#back-card-12 {
+  background-image: url("../assets/img/memory/dog-stand.png");
+}
+#back-card-13 {
+  background-image: url("../assets/img/memory/foot-print.png");
+}
+#back-card-14 {
+  background-image: url("../assets/img/memory/dog-house.png");
+}
+#back-card-15 {
+  background-image: url("../assets/img/memory/ball.png");
+}
+#back-card-16 {
+  background-image: url("../assets/img/memory/dog-food.png");
+}
+
+a:any-link {
+  color: grey;
+}
+
+a {
+  text-decoration: none;
 }
