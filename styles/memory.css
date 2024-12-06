@@ -42,6 +42,7 @@ body {
   background-color: aliceblue;
   background: linear-gradient(to top, aliceblue, rgb(82, 159, 228));
   flex-grow: 1;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,16 +63,21 @@ body {
   width: 50px;
   height: auto;
   transform: translateY(2px);
+  cursor: pointer;
+}
+
+.logo:active {
+  transform: rotateZ(-45deg);
 }
 
 .game-field {
-  width: clamp(250px, 60vw, 750px);
-  height: clamp(250px, 60vw, 750px);
+  width: clamp(250px, 80vw, 750px);
+  height: clamp(250px, 80vw, 750px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: clamp(3px, 0.4vw, 0.9em);
-  margin: clamp(5px, 20%, 20px) auto;
+  gap: 5px;
+  margin: 20px auto;
 }
 
 .screenOff {
@@ -82,8 +88,11 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  perspective: 1000px;
   cursor: pointer;
+}
+
+.card:active {
+  transform: scale(0.97);
 }
 
 .card .front,
@@ -91,16 +100,18 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
-  transition: transform 0.6s;
   border-radius: 10px;
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.527);
+  backface-visibility: hidden;
+  transition: transform 1.5s;
 }
 
 .card .front {
   background-color: white;
+  border: 1px solid rgba(3, 86, 163, 0.336);
   background-image: url("../assets/img/memory/memory-icon.png");
 }
 
@@ -117,53 +128,29 @@ body {
   transform: rotateY(0);
 }
 
-#back-card-1 {
-  background-image: url("../assets/img/memory/ball.png");
-}
-#back-card-2 {
-  background-image: url("../assets/img/memory/dog-food.png");
-}
-#back-card-3 {
-  background-image: url("../assets/img/memory/dog-house.png");
-}
-#back-card-4 {
-  background-image: url("../assets/img/memory/dog-sit.png");
-}
-#back-card-5 {
-  background-image: url("../assets/img/memory/dog-stand.png");
-}
-#back-card-6 {
-  background-image: url("../assets/img/memory/dog-treat.png");
-}
-#back-card-7 {
-  background-image: url("../assets/img/memory/foot-print.png");
-}
-#back-card-8 {
+:is(#card-1, #card-15) .back {
   background-image: url("../assets/img/memory/pet-bed.png");
 }
-#back-card-9 {
-  background-image: url("../assets/img/memory/dog-sit.png");
+:is(#card-2, #card-13) .back {
+  background-image: url("../assets/img/memory/dog-food.png");
 }
-#back-card-10 {
-  background-image: url("../assets/img/memory/dog-treat.png");
-}
-#back-card-11 {
-  background-image: url("../assets/img/memory/pet-bed.png");
-}
-#back-card-12 {
+:is(#card-3, #card-10) .back {
   background-image: url("../assets/img/memory/dog-stand.png");
 }
-#back-card-13 {
-  background-image: url("../assets/img/memory/foot-print.png");
-}
-#back-card-14 {
-  background-image: url("../assets/img/memory/dog-house.png");
-}
-#back-card-15 {
+:is(#card-4, #card-9) .back {
   background-image: url("../assets/img/memory/ball.png");
 }
-#back-card-16 {
-  background-image: url("../assets/img/memory/dog-food.png");
+:is(#card-5, #card-16) .back {
+  background-image: url("../assets/img/memory/dog-house.png");
+}
+:is(#card-6, #card-12) .back {
+  background-image: url("../assets/img/memory/foot-print.png");
+}
+:is(#card-7, #card-14) .back {
+  background-image: url("../assets/img/memory/dog-treat.png");
+}
+:is(#card-8, #card-11) .back {
+  background-image: url("../assets/img/memory/dog-sit.png");
 }
 
 a:any-link {
