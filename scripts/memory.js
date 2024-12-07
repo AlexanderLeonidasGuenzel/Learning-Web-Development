@@ -1,13 +1,43 @@
-const cards = document.querySelectorAll(".card");
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 let found = 0;
 let pairs = 8;
 
-cards.forEach((card) => {
-  card.addEventListener("click", flipCard);
+const cardData = [
+  { icon: "bed", image: "../assets/img/memory/pet-bed.png" },
+  { icon: "food", image: "../assets/img/memory/dog-food.png" },
+  { icon: "stand", image: "../assets/img/memory/dog-stand.png" },
+  { icon: "ball", image: "../assets/img/memory/ball.png" },
+  { icon: "house", image: "../assets/img/memory/dog-house.png" },
+  { icon: "foot-print", image: "../assets/img/memory/foot-print.png" },
+  { icon: "treat", image: "../assets/img/memory/dog-treat.png" },
+  { icon: "sit", image: "../assets/img/memory/dog-sit.png" },
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  createGameBoard();
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => card.addEventListener("click", flipCard));
 });
+
+function createGameBoard() {
+  const gameField = document.querySelector(".game-field");
+  const cards = [...cardData, ...cardData];
+  shuffle(cards);
+
+  cards.forEach((card, index) => {
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("card");
+    cardElement.dataset.icon = card.icon;
+
+    cardElement.innerHTML = `
+      <div class="front"></div>
+      <div class="back" style="background-image: url(${card.image})"></div>
+    `;
+    gameField.appendChild(cardElement);
+  });
+}
 
 function flipCard() {
   if (lockBoard) return;
@@ -63,4 +93,11 @@ function disableCards() {
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
+}
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
