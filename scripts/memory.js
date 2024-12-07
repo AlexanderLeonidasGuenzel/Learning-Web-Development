@@ -5,14 +5,14 @@ let found = 0;
 let pairs = 8;
 
 const cardData = [
-  { icon: "bed", image: "../assets/img/memory/pet-bed.png" },
-  { icon: "food", image: "../assets/img/memory/dog-food.png" },
-  { icon: "stand", image: "../assets/img/memory/dog-stand.png" },
-  { icon: "ball", image: "../assets/img/memory/ball.png" },
-  { icon: "house", image: "../assets/img/memory/dog-house.png" },
-  { icon: "foot-print", image: "../assets/img/memory/foot-print.png" },
-  { icon: "treat", image: "../assets/img/memory/dog-treat.png" },
-  { icon: "sit", image: "../assets/img/memory/dog-sit.png" },
+  { icon: "bed", image: "assets/img/memory/pet-bed.png" },
+  { icon: "food", image: "assets/img/memory/dog-food.png" },
+  { icon: "stand", image: "assets/img/memory/dog-stand.png" },
+  { icon: "ball", image: "assets/img/memory/ball.png" },
+  { icon: "house", image: "assets/img/memory/dog-house.png" },
+  { icon: "foot-print", image: "assets/img/memory/foot-print.png" },
+  { icon: "treat", image: "assets/img/memory/dog-treat.png" },
+  { icon: "sit", image: "assets/img/memory/dog-sit.png" },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
