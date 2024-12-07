@@ -127,31 +127,6 @@ body {
   transform: rotateY(0);
 }
 
-:is(#card-1, #card-15) .back {
-  background-image: url("../assets/img/memory/pet-bed.png");
-}
-:is(#card-2, #card-13) .back {
-  background-image: url("../assets/img/memory/dog-food.png");
-}
-:is(#card-3, #card-10) .back {
-  background-image: url("../assets/img/memory/dog-stand.png");
-}
-:is(#card-4, #card-9) .back {
-  background-image: url("../assets/img/memory/ball.png");
-}
-:is(#card-5, #card-16) .back {
-  background-image: url("../assets/img/memory/dog-house.png");
-}
-:is(#card-6, #card-12) .back {
-  background-image: url("../assets/img/memory/foot-print.png");
-}
-:is(#card-7, #card-14) .back {
-  background-image: url("../assets/img/memory/dog-treat.png");
-}
-:is(#card-8, #card-11) .back {
-  background-image: url("../assets/img/memory/dog-sit.png");
-}
-
 a:any-link {
   color: grey;
 }
