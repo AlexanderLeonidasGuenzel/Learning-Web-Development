@@ -7,7 +7,8 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+button {
   font-size: 1rem;
   letter-spacing: 0.1em;
   font-family: "Nunito", serif;
@@ -49,7 +50,7 @@ body {
 }
 
 .footer {
-  background-color: rgb(36, 36, 36);
+  background-color: #242424;
   color: white;
   min-height: 10vh;
   display: flex;
@@ -73,11 +74,11 @@ body {
 .game-field {
   width: clamp(250px, 80vw, 750px);
   height: clamp(250px, 80vw, 750px);
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 0.6rem;
   margin: 20px auto;
+  display: none;
 }
 
 .screenOff {
@@ -133,4 +134,100 @@ a:any-link {
 
 a {
   text-decoration: none;
+}
+
+.game-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh 3vw;
+  border: 2px solid #eeeeee;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  width: clamp(250px, 80vw, 500px);
+  height: clamp(300px, 50vh, 500px);
+  background-color: rgba(255, 255, 255, 0.233);
+}
+
+.game-menu,
+button {
+  font-family: "Ribeye Marrow", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(1em, 1.5em, 32px);
+}
+
+.game-menu__h2 {
+  color: white;
+  font-size: 2em;
+  margin-block-end: 1vh;
+}
+
+ul.menu-options {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.2em;
+  width: 100%;
+  height: 100%;
+  margin: 1em;
+}
+
+ul.menu-options li {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+ul.menu-options li button {
+  border: 2px solid white;
+}
+
+.menu-btn {
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+}
+
+ul.menu-options li:last-of-type button {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+ul.menu-options li:first-of-type button {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+:is(#new-game, #continue, #options, #credits):hover {
+  filter: saturate(1.5);
+}
+
+button[disabled] {
+  opacity: 0.6;
+  background-color: rgba(128, 128, 128, 0.795);
+  text-decoration: line-through;
+  pointer-events: none;
+}
+
+:is(#new-game, #continue, #options, #credits) {
+  filter: brightness(0.9);
+}
+
+#new-game {
+  background-color: #e97187;
+}
+#continue {
+  background-color: #f2cd7c;
+}
+#options {
+  background-color: #61d3a5;
+}
+#credits {
+  background-color: #61acf2;
 }
