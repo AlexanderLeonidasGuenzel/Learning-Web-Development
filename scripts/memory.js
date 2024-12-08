@@ -16,15 +16,25 @@ const cardData = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  createGameBoard();
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card) => card.addEventListener("click", flipCard));
+  const newGameButton = document.getElementById("new-game");
+  const gameMenu = document.getElementById("game-menu");
+
+  newGameButton.addEventListener("click", () => {
+    gameMenu.style.display = "none";
+
+    createGameBoard();
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => card.addEventListener("click", flipCard));
+  });
 });
 
 function createGameBoard() {
   const gameField = document.querySelector(".game-field");
   const cards = [...cardData, ...cardData];
   shuffle(cards);
+
+  gameField.style.display = "grid";
 
   cards.forEach((card, index) => {
     const cardElement = document.createElement("div");
