@@ -199,6 +199,7 @@ ul.menu-options li {
 
 ul.menu-options li button {
   border: 2px solid white;
+  height: 90%;
 }
 
 ul.menu-options li:last-of-type button {
