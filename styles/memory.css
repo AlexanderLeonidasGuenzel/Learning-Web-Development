@@ -1,5 +1,8 @@
-/* FONTS: Nunito + Ribeye Marrow*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Ribeye+Marrow&display=swap");
+/* FONTS: Delius + Nunito + Ribeye Marrow*/
+@import url("https://fonts.googleapis.com/css2?family=Delius&family=Nunito&family=Ribeye+Marrow&display=swap");
+:root {
+  --menu-border-radius: 0.5rem;
+}
 
 * {
   padding: 0;
@@ -7,9 +10,8 @@
   box-sizing: border-box;
 }
 
-html,
-button {
-  font-size: 1rem;
+html {
+  font-size: 1.2rem;
   letter-spacing: 0.1em;
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
@@ -140,27 +142,40 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2vh 3vw;
-  border: 2px solid #eeeeee;
-  border-radius: 0.5rem;
+  padding: 15px;
+  gap: 20px;
+  border: 3px solid #eeeeee;
+  border-radius: var(--menu-border-radius);
   margin: 0 auto;
   width: clamp(250px, 80vw, 500px);
-  height: clamp(300px, 50vh, 500px);
+  height: clamp(400px, 60vh, 700px);
   background-color: rgba(255, 255, 255, 0.233);
 }
 
-.game-menu,
-button {
-  font-family: "Ribeye Marrow", serif;
-  font-weight: 600;
+.menu-options button {
+  /* font-family: "Ribeye Marrow", serif;
+  font-weight: 500;
+  font-style: normal; */
+  font-size: clamp(0.5em, 8vw, 36px);
+  text-shadow: 1px 1px 1px #2424245b;
+}
+.menu-btn {
+  border: none;
+  width: 100%;
+  max-height: 98%;
+  cursor: pointer;
+  color: white;
+  font-family: "Delius", cursive;
+  font-weight: 400;
   font-style: normal;
-  font-size: clamp(1em, 1.5em, 32px);
 }
 
 .game-menu__h2 {
   color: white;
-  font-size: 2em;
-  margin-block-end: 1vh;
+  font-family: "Ribeye Marrow", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(1em, 10vw, 48px);
 }
 
 ul.menu-options {
@@ -168,17 +183,17 @@ ul.menu-options {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 0.2em;
+  align-items: center;
+  gap: 2px;
   width: 100%;
   height: 100%;
-  margin: 1em;
 }
 
 ul.menu-options li {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 
@@ -186,26 +201,19 @@ ul.menu-options li button {
   border: 2px solid white;
 }
 
-.menu-btn {
-  border: none;
-  padding: 1rem;
-  width: 100%;
-  cursor: pointer;
-  color: white;
-}
-
 ul.menu-options li:last-of-type button {
-  border-bottom-left-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: var(--menu-border-radius);
+  border-bottom-right-radius: var(--menu-border-radius);
 }
 
 ul.menu-options li:first-of-type button {
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
+  border-top-left-radius: var(--menu-border-radius);
+  border-top-right-radius: var(--menu-border-radius);
 }
 
 :is(#new-game, #continue, #options, #credits):hover {
   filter: saturate(1.5);
+  transform: scaleX(1.05);
 }
 
 button[disabled] {
@@ -216,18 +224,22 @@ button[disabled] {
 }
 
 :is(#new-game, #continue, #options, #credits) {
-  filter: brightness(0.9);
+  backdrop-filter: brightness(0.95);
 }
 
 #new-game {
   background-color: #e97187;
 }
 #continue {
-  background-color: #f2cd7c;
+  background-color: #fcd47e;
 }
 #options {
   background-color: #61d3a5;
 }
 #credits {
   background-color: #61acf2;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
