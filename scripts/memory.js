@@ -30,9 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".card");
     cards.forEach((card) => card.addEventListener("click", flipCard));
   });
-
-  const logoMenu = document.getElementById("logo");
-  logoMenu.addEventListener("click", toggleMainMenu);
 });
 
 function toggleMainMenu() {
@@ -67,6 +64,9 @@ function createGameBoard() {
     `;
     gameField.appendChild(cardElement);
   });
+
+  const logoMenu = document.getElementById("logo");
+  logoMenu.addEventListener("click", toggleMainMenu);
 }
 
 function flipCard() {
