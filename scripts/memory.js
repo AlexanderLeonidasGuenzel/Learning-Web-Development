@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameMenu = document.getElementById("game-menu");
   const gameField = document.getElementById("game-field");
 
+  const logo = document.getElementById("logo");
+  logo.classList.add("animation");
+
   newGameButton.addEventListener("click", () => {
     gameMenu.style.display = "none";
     gameField.style.display = "grid";
@@ -35,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleMainMenu() {
   const gameMenu = document.getElementById("game-menu");
   const gameField = document.getElementById("game-field");
+  gameMenu.classList.add("no-animation");
 
   if (gameMenu.style.display === "none") {
     // Show main menu
@@ -67,6 +71,9 @@ function createGameBoard() {
 
   const logoMenu = document.getElementById("logo");
   logoMenu.addEventListener("click", toggleMainMenu);
+
+  const infoText = document.getElementById("info-text");
+  infoText.style.display = "none";
 }
 
 function flipCard() {
