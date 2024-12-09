@@ -49,6 +49,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1vw;
+  padding: 1vh;
 }
 
 .footer {
