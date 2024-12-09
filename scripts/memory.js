@@ -17,24 +17,44 @@ const cardData = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const newGameButton = document.getElementById("new-game");
+
   const gameMenu = document.getElementById("game-menu");
+  const gameField = document.getElementById("game-field");
 
   newGameButton.addEventListener("click", () => {
     gameMenu.style.display = "none";
+    gameField.style.display = "grid";
 
     createGameBoard();
 
     const cards = document.querySelectorAll(".card");
     cards.forEach((card) => card.addEventListener("click", flipCard));
   });
+
+  const logoMenu = document.getElementById("logo");
+  logoMenu.addEventListener("click", toggleMainMenu);
 });
 
-function createGameBoard() {
-  const gameField = document.querySelector(".game-field");
-  const cards = [...cardData, ...cardData];
-  shuffle(cards);
+function toggleMainMenu() {
+  const gameMenu = document.getElementById("game-menu");
+  const gameField = document.getElementById("game-field");
 
-  gameField.style.display = "grid";
+  if (gameMenu.style.display === "none") {
+    // Show main menu
+    gameField.style.display = "none";
+    gameMenu.style.display = "flex";
+  } else {
+    // Show game field
+    gameMenu.style.display = "none";
+    gameField.style.display = "grid";
+  }
+}
+
+function createGameBoard() {
+  const gameField = document.getElementById("game-field");
+  const cards = [...cardData, ...cardData];
+  gameField.innerHTML = "";
+  shuffle(cards);
 
   cards.forEach((card, index) => {
     const cardElement = document.createElement("div");
