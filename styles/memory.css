@@ -2,6 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Delius&family=Nunito&family=Ribeye+Marrow&display=swap");
 :root {
   --menu-border-radius: 0.5rem;
+
+  /* COLORS*/
+  --HEADER-COLOR: #2b2b2b;
+  --FOOTER-COLOR: #333333;
+  --BG-COLOR-TOP: rgb(56, 150, 231);
+  --BG-COLOR-BTM: aliceblue;
+  --BTN-NEWGAME: #e97187;
+  --BTN-HELP: #fcd47e;
+  --BTN-OPT: #61d3a5;
+  --BTN-CRE: #61acf2;
+  --MENU-BORDER-COLOR: white;
+
+  --TEXT-COLOR: white;
+  --LINK-COLOR: grey;
+
+  --CARD-FRONT-COLOR: white;
+  --CARD-BACK-COLOR: white;
+
+  --SHADOW-COLOR: rgba(0, 0, 0, 0.726);
+  --CARD-SHADOW-COLOR: rgba(0, 0, 0, 0.329);
 }
 
 * {
@@ -24,11 +44,11 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 300px;
-  color: white;
+  color: var(--TEXT-COLOR);
 }
 
 .header {
-  background-color: rgb(43, 43, 43);
+  background-color: var(--HEADER-COLOR);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +62,12 @@ body {
 }
 
 .main {
-  background: linear-gradient(to top, aliceblue, 40%, rgb(56, 150, 231));
+  background: linear-gradient(
+    to top,
+    var(--BG-COLOR-BTM),
+    40%,
+    var(--BG-COLOR-TOP)
+  );
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -53,7 +78,7 @@ body {
 }
 
 .footer {
-  background-color: #333333;
+  background-color: var(--FOOTER-COLOR);
   height: clamp(70px, 7vh, 200px);
   display: flex;
   flex-flow: column nowrap;
@@ -65,17 +90,17 @@ body {
 .logo img {
   width: 50px;
   height: auto;
-  transform: translateY(2px) rotateZ(45deg);
+  transform: rotateZ(45deg);
   cursor: pointer;
 }
 
 .game-field {
+  display: none;
   width: clamp(250px, 80vw, 700px);
   height: clamp(250px, 80vw, 700px);
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 1vh;
-  display: none;
 }
 
 .screenOff {
@@ -102,18 +127,18 @@ body {
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.397);
+  box-shadow: 1px 1px 1px 2px var(--CARD-SHADOW-COLOR);
   backface-visibility: hidden;
   transition: transform 1s;
 }
 
 .card .front {
-  background-color: white;
+  background-color: var(--CARD-FRONT-COLOR);
   background-image: url("../assets/img/memory/memory-icon.png");
 }
 
 .card .back {
-  background-color: rgb(253, 253, 253);
+  background-color: var(--CARD-BACK-COLOR);
   transform: rotateY(180deg);
 }
 
@@ -126,7 +151,7 @@ body {
 }
 
 a:any-link {
-  color: grey;
+  color: var(--LINK-COLOR);
 }
 
 a {
@@ -139,7 +164,7 @@ a {
   align-items: center;
   padding: 15px;
   gap: 20px;
-  border: 3px solid #eeeeee;
+  border: 3px solid var(--MENU-BORDER-COLOR);
   border-radius: var(--menu-border-radius);
   margin: 0 auto;
   width: clamp(250px, 80vw, 500px);
@@ -161,7 +186,7 @@ a {
   font-family: "Ribeye Marrow", serif;
   font-family: "Delius", cursive;
   font-size: clamp(1em, 10vw, 48px);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.856);
+  text-shadow: 1px 1px 1px var(--SHADOW-COLOR);
 }
 
 .menu-options {
@@ -175,13 +200,13 @@ a {
 }
 
 .menu-options .menu-btn {
-  border: 2px solid white;
+  border: 2px solid var(--MENU-BORDER-COLOR);
   width: 100%;
-  height: 100%;
+  height: 10vh;
   font-size: clamp(0.5em, 5vw, 36px);
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px var(--SHADOW-COLOR);
+  color: var(--TEXT-COLOR);
   cursor: pointer;
-  color: white;
   font-family: "Delius", cursive;
 }
 
@@ -205,16 +230,16 @@ a {
 }
 
 #new-game {
-  background-color: #e97187;
+  background-color: var(--BTN-NEWGAME);
 }
 #help {
-  background-color: #fcd47e;
+  background-color: var(--BTN-HELP);
 }
 #options {
-  background-color: #61d3a5;
+  background-color: var(--BTN-OPT);
 }
 #credits {
-  background-color: #61acf2;
+  background-color: var(--BTN-CRE);
 }
 
 .nowrap {
@@ -233,7 +258,7 @@ a {
 }
 @keyframes rotate {
   0% {
-    transform: rotateZ(45deg) scaleZ(0.8);
+    transform: rotateZ(0deg) scaleZ(0.8);
   }
   50% {
     transform: rotateZ(900deg) scale(1.2);
@@ -252,7 +277,6 @@ a {
 }
 
 .info-text {
-  color: white;
   width: clamp(250px, 80vw, 500px);
   padding: 10px;
   font-size: clamp(0.8em, 3vw, 1.1rem);
@@ -260,10 +284,12 @@ a {
 }
 
 #little-logo {
-  width: clamp(1em, 3vh, 1.4rem);
+  width: 1rem;
   height: auto;
-  display: inline-block;
+  transform: translateY(2px) rotateZ(45deg);
 }
+
+/* MEDIA HORIZONTAL*/
 
 @media screen and (max-height: 424px) and (min-aspect-ratio: 7/4) {
   .header {
@@ -306,7 +332,7 @@ a {
 
   .card .front,
   .card .back {
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.233);
+    box-shadow: 1px 1px 1px var(--SHADOW-COLOR);
   }
   .menu-options .menu-btn,
   .game-menu__h2 {
@@ -314,7 +340,7 @@ a {
   }
   .menu-options .menu-btn {
     height: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.712);
+    border: 1px solid var(--MENU-BORDER-COLOR);
     padding: 2.5vh;
   }
 
