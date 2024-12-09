@@ -17,10 +17,16 @@ const cardData = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const newGameButton = document.getElementById("new-game");
+
   const gameMenu = document.getElementById("game-menu");
+  const gameField = document.getElementById("game-field");
+
+  const logo = document.getElementById("logo");
+  logo.classList.add("animation");
 
   newGameButton.addEventListener("click", () => {
     gameMenu.style.display = "none";
+    gameField.style.display = "grid";
 
     createGameBoard();
 
@@ -29,12 +35,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function createGameBoard() {
-  const gameField = document.querySelector(".game-field");
-  const cards = [...cardData, ...cardData];
-  shuffle(cards);
+function toggleMainMenu() {
+  const gameMenu = document.getElementById("game-menu");
+  const gameField = document.getElementById("game-field");
+  gameMenu.classList.add("no-animation");
 
-  gameField.style.display = "grid";
+  if (gameMenu.style.display === "none") {
+    // Show main menu
+    gameField.style.display = "none";
+    gameMenu.style.display = "flex";
+  } else {
+    // Show game field
+    gameMenu.style.display = "none";
+    gameField.style.display = "grid";
+  }
+}
+
+function createGameBoard() {
+  const gameField = document.getElementById("game-field");
+  const cards = [...cardData, ...cardData];
+  gameField.innerHTML = "";
+  shuffle(cards);
 
   cards.forEach((card, index) => {
     const cardElement = document.createElement("div");
@@ -47,6 +68,12 @@ function createGameBoard() {
     `;
     gameField.appendChild(cardElement);
   });
+
+  const logoMenu = document.getElementById("logo");
+  logoMenu.addEventListener("click", toggleMainMenu);
+
+  const infoText = document.getElementById("info-text");
+  infoText.style.display = "none";
 }
 
 function flipCard() {

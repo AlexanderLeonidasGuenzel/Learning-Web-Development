@@ -9,7 +9,12 @@
   </head>
   <body>
     <header class="header">
-      <section class="logo">
+      <section
+        class="logo"
+        id="logo"
+        href="https://www.flaticon.com/free-icons/memory-game"
+        title="memory game icons"
+      >
         <figure>
           <img
             src="assets/img/memory/memory-icon.png"
@@ -25,16 +30,31 @@
       <h1 class="header__h1">Memory</h1>
     </header>
     <main class="main">
+      <div class="info-text" id="info-text">
+        <p>
+          In game, you can toggle the main menu and game field by clicking on
+          the memory
+          <img
+            id="little-logo"
+            src="assets/img/memory/memory-icon.png"
+            alt="memory icon"
+            width="120"
+            height="120"
+          />
+          logo .
+        </p>
+      </div>
       <section class="game-menu" id="game-menu">
         <h2 class="game-menu__h2 nowrap">Main Menu</h2>
-        <ul class="menu-options">
-          <li><button class="menu-btn" id="new-game">New Game</button></li>
-          <li><button class="menu-btn" id="help">Help</button></li>
-          <li><button class="menu-btn" id="options">Options</button></li>
-          <li><button class="menu-btn" id="credits">Credits</button></li>
-        </ul>
+        <div class="menu-options">
+          <button class="menu-btn" id="new-game">New Game</button>
+          <button class="menu-btn" id="help">Help</button>
+          <button class="menu-btn" id="options">Options</button>
+          <button class="menu-btn" id="credits">Credits</button>
+        </div>
       </section>
-      <article class="game-field">
+
+      <article class="game-field" id="game-field">
         <!--dynamic cards-->
       </article>
     </main>
