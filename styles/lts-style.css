@@ -216,5 +216,5 @@ a:active {
   margin-top: 1em;
 }
 .main__article:last-child {
-  min-height: calc(100vh 20rem);
+  min-height: calc(100vh - 20rem);
 }
