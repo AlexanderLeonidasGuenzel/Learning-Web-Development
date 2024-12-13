@@ -32,21 +32,22 @@ textarea {
   --FS: clamp(1rem, 2.2vh, 1.5rem);
 
   /* COLORS */
-  --BGCOLOR: orange;
   --BGCOLOR-FADE: rgb(252, 220, 160);
+  --BGCOLOR: orange;
   --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
   --BODY-BGCOLOR: white;
-  --FONT-COLOR: black;
   --BORDER-COLOR: #333;
-  --HIGHLIGHT-COLOR: rgb(51, 178, 51);
-  --LINK-COLOR: black;
-  --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
-  --LINK-ACTIV: orange;
+  --BUTTON-COLOR: white;
+  --FONT-COLOR: black;
   --HEADER-BGCOLOR: rgb(31, 30, 30);
   --HEADER-COLOR: white;
-  --NAV-BGCOLOR: white;
   --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
   --HERO-COLOR: white;
+  --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+  --LINK-ACTIV: orange;
+  --LINK-COLOR: black;
+  --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
+  --NAV-BGCOLOR: white;
 
   /* BORDERS */
   --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -58,6 +59,24 @@ textarea {
 
   /* STANDARD MARGIN */
   --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR-FADE: gray;
+    --BGCOLOR: black;
+    --BODY-BGCOLOR: #333;
+    --BORDER-COLOR: whitesmoke;
+    --BUTTON-COLOR: black;
+    --FONT-COLOR: whitesmoke;
+    --HEADER-COLOR: whitesmoke;
+    --HERO-COLOR: #333;
+    --HIGHLIGHT-COLOR: whitesmoke;
+    --LINK-ACTIV: rgb(247, 210, 142);
+    --LINK-COLOR: whitesmoke;
+    --LINK-HOVER: orange;
+    --NAV-BGCOLOR: #333;
+  }
 }
 
 /* || UTILITY CLASSES */
@@ -258,7 +277,9 @@ a:active {
   padding: 0.5em;
   border-radius: var(--BORDER-RADIUS);
   background-color: var(--HIGHLIGHT-COLOR);
-  color: var(--HEADER-COLOR);
+  color: var(--BUTTON-COLOR);
+  border: none;
+  cursor: pointer;
 }
 
 /* || MENU*/
@@ -332,4 +353,20 @@ thead th:last-child {
 tfoot td {
   border-bottom-left-radius: var(--BORDER-RADIUS);
   border-bottom-right-radius: var(--BORDER-RADIUS);
+}
+
+@media screen and (min-width: 700px) {
+  .header__h1::before {
+    content: "🌮 ";
+  }
+  .header__h1::after {
+    content: " 🌮";
+  }
+
+  .menu__header,
+  .menu__cr,
+  .menu__sf,
+  .menu__cs {
+    font-size: 125%;
+  }
 }
