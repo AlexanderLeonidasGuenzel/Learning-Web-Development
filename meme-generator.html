@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator 😂</title>
+    <link rel="stylesheet" href="styles/meme-generator.css" />
+    <link rel="icon" href="assets/img/smile.png" />
+    <!-- <script>
+      let originalTitle = document.title;
+      let newTitle = "Meme Generator 😂 ";
+      let toggle = false;
+
+      setInterval(() => {
+        document.title = toggle ? originalTitle : newTitle;
+        toggle = !toggle;
+      }, 3000);
+    </script> -->
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__h1">Meme Generator 😂</h1>
+    </header>
+    <main class="main">
+      <article class="main__article">
+        <section class="file-upload">
+          <h2 class="file-upload__h2">File Upload</h2>
+          <label for="imageInput" class="image-file-upload btn-style">
+            Choose Image
+          </label>
+          <input type="file" id="imageInput" accept="image/*" />
+        </section>
+
+        <section class="text-enter">
+          <h2>Enter Text</h2>
+          <input
+            type="text"
+            id="topText"
+            placeholder="Top Text"
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            id="bottomText"
+            placeholder="Bottom Text"
+            autocomplete="off"
+          />
+        </section>
+
+        <section class="resize">
+          <h2>Resize Image</h2>
+          <div class="controls">
+            <label class="widthSlider">
+              Width:
+              <input
+                type="range"
+                id="widthSlider"
+                min="300"
+                max="600"
+                value="400"
+              />
+            </label>
+            <label class="heightSlider">
+              Height:
+              <input
+                type="range"
+                id="heightSlider"
+                min="300"
+                max="500"
+                value="400"
+              />
+            </label>
+          </div>
+        </section>
+        <section class="canvas">
+          <h2 class="canvas__h2">Result</h2>
+          <canvas id="memeCanvas" width="600" height="450"></canvas>
+        </section>
+
+        <section class="generate-download">
+          <button
+            class="generate-download__btn btn-style"
+            id="generate"
+            onclick="generateMeme()"
+          >
+            Generate
+          </button>
+          <button
+            class="generate-download__btn btn-style"
+            id="download"
+            onclick="downloadMeme()"
+          >
+            Download
+          </button>
+        </section>
+      </article>
+    </main>
+    <footer class="footer">
+      <section class="footer_link">
+        <a
+          href="https://www.freecodecamp.org/news/create-meme-generator-using-html-canvas/"
+          >Tutorial by Timothy Olanrewaju</a
+        >
+        <span class="divider">|</span>
+        <a href="">Design and Improvements by Alexander Guenzel</a>
+      </section>
+    </footer>
+    <script src="scripts/meme-generator.js"></script>
+  </body>
+</html>

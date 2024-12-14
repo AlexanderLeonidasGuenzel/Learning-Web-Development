@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* || COLORS*/
+  --BODY-BGCOLOR: #130720;
+  --HEADER-COLOR: rgb(210, 185, 224);
+  --LINK-COLOR: rgba(255, 255, 255, 0.151);
+  --BOX-BGCOLOR: #130720;
+  --CONIC-COLOR-2: #fd004c;
+  --CONIC-COLOR-1: #059ff8;
+
+  --HEADER-PADDING: 1rem;
+  --FOOTER-PADDING: 1em;
+  --BOX-SIZE: 200px;
+  --BLUR: 80px;
+  --ANIMATION-DURATION: 3s;
+  --BORDER-RADIUS: 50%;
+  --BORDER: 5px solid var(--HEADER-COLOR);
+  --ANIMATION-BORDER-PADDING: 5px;
+}
+
+body {
+  background-color: var(--BODY-BGCOLOR);
+  color: var(--HEADER-COLOR);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.header {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding: var(--HEADER-PADDING);
+}
+
+.header__h1 {
+  padding: var(--HEADER-PADDING);
+  border-bottom: var(--BORDER);
+}
+
+.main {
+  flex: 1;
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  position: relative;
+  width: var(--BOX-SIZE);
+  height: var(--BOX-SIZE);
+}
+
+.box,
+.box::before,
+.box::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--BORDER-RADIUS);
+  background-color: var(--BOX-BGCOLOR);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+.box::after,
+.box::before {
+  content: "before";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  --angle: 0deg;
+  background-image: conic-gradient(
+    from var(--angle),
+    var(--CONIC-COLOR-1),
+    var(--CONIC-COLOR-2),
+    var(--CONIC-COLOR-1),
+    var(--CONIC-COLOR-2),
+    var(--CONIC-COLOR-1)
+  );
+  animation: rotate var(--ANIMATION-DURATION) ease-in-out infinite;
+  z-index: -1;
+  padding: var(--ANIMATION-BORDER-PADDING);
+}
+
+.box::after {
+  filter: blur(var(--BLUR));
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+a:any-link {
+  color: var(--LINK-COLOR);
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--FOOTER-PADDING);
+}

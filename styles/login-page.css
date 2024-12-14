@@ -1,0 +1,188 @@
+:root {
+  /*COLORS*/
+  --TEXT-COLOR: whitesmoke;
+  --TEXT-COLOR-REGISTER: var(--THEME);
+  --TEXT-COLOR-LOGIN: var(--THEME);
+  --BG-COLOR-BODY: #010138;
+  --COLOR-THEME-1: #6c09c9;
+  --COLOR-THEME-2: #00a4e6;
+  --COLOR-THEME-3: #5ebb12e3;
+  --COLOR-THEME-4: #2432fd;
+  --COLOR-THEME-5: #960096;
+  --COLOR-THEME-6: #76a6ff;
+  --COLOR-THEME-7: #dbbc0c;
+  --GLASS: #ffffff16;
+  --REF-LINK: #bfd5ff8e;
+  --REF-LINK-HOVER: #d1d1d179;
+
+  /*FONT*/
+  --FS: 1rem;
+  --FS-LOGIN: 2rem;
+
+  /*THEME*/
+  --THEME: var(--COLOR-THEME-6);
+
+  /*STYLES*/
+  --BORDER: 2px solid var(--THEME);
+  --BTN-COLOR: var(--THEME);
+
+  /*UTILS*/
+  --BLUR: blur(4px);
+
+  --BG-IMAGE: url("../assets/img/5040007.jpg");
+
+  /*MESS*/
+  --BORDER-RADIUS-INNER: 0.375rem;
+  --BORDER-RADIUS-CARD: 0.625rem;
+  --FIELD-AND-BTN-PADDING: 0.625rem;
+  --FIELD-AND-BTN-WIDTH: 100%;
+  --CARD-WIDTH: 22rem;
+  --CARD-PADDING: 1.25rem;
+  --CARD-GAP: 1rem;
+  --REF-LINK-POS: 25px;
+}
+
+/*NORMALIZE*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+/*TEXT COLOR*/
+body,
+.field,
+.field::placeholder,
+.forgot-password-link,
+.register-text {
+  color: var(--TEXT-COLOR);
+}
+
+h1 {
+  color: var(--TEXT-COLOR-LOGIN);
+}
+
+.register-text a {
+  color: var(--TEXT-COLOR-REGISTER);
+}
+
+/*FONT SIZE*/
+body,
+.field,
+.field::placeholder,
+.forgot-password-link,
+.login-btn {
+  font-size: var(--FS);
+}
+
+h1 {
+  font-size: min(var(--FS-LOGIN), 60px);
+}
+
+.freepik a {
+  font-size: min(1rem, 30px);
+}
+
+/*LINKS*/
+a {
+  text-decoration: none;
+}
+
+.freepik a {
+  position: absolute;
+  color: var(--REF-LINK);
+  right: var(--REF-LINK-POS);
+  bottom: var(--REF-LINK-POS);
+}
+
+:is(a:hover, a:focus) {
+  text-decoration: underline;
+}
+
+.forgot-password-link {
+  align-self: flex-end;
+}
+
+.freepik :is(a:hover, a:focus) {
+  color: var(--REF-LINK-HOVER);
+}
+
+.tutorial-link {
+  display: none;
+}
+
+/**/
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-color: var(--BG-COLOR-BODY);
+  background-image: var(--BG-IMAGE);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--CARD-GAP);
+  width: var(--CARD-WIDTH);
+  padding: var(--CARD-PADDING);
+  background-color: var(--GLASS);
+  backdrop-filter: var(--BLUR);
+  border: var(--BORDER);
+  border-radius: var(--BORDER-RADIUS-CARD);
+  z-index: 2;
+}
+
+.field {
+  width: var(--FIELD-AND-BTN-WIDTH);
+  padding: var(--FIELD-AND-BTN-PADDING);
+  border: var(--BORDER);
+  border-radius: var(--BORDER-RADIUS-INNER);
+  background: none;
+  outline: none;
+}
+
+.login-btn {
+  width: var(--FIELD-AND-BTN-WIDTH);
+  padding: var(--FIELD-AND-BTN-PADDING);
+  border-radius: var(--BORDER-RADIUS-INNER);
+  background-color: var(--BTN-COLOR);
+  border: none;
+  cursor: pointer;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 380px) {
+  :root {
+    --CARD-WIDTH: 300px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  :root {
+    --CARD-WIDTH: 200px;
+  }
+}
+
+@media screen and (max-height: 21rem) {
+  .freepik {
+    display: none;
+  }
+}

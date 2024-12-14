@@ -1,87 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/global-colors.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/flexbox.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/global-colors.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/flexbox.css" />
     <title>Flexbox</title>
-</head>
-<body>
+  </head>
+  <body>
     <article id="flexbox-intro">
-        <main>
+      <main>
         <h1>Flexbox</h1>
-            <section>
-                <h2>Fundamentals</h2>
-                <h3>Container</h3>
-                <p>Its a parent elment with property <i>display: flex</i>.</p>
-                <h3>Item</h3>
-                <p>Direct child element of the container. A child could be a container as well.</p>
-            </section>
-            <section>
-                <h2>Properties</h2>
-                <h3>Container Properties</h3>
-                <ul class="container-properties-list">
-                    <li><b>flex-direction:</b> row or column</li>
-                    <li><b>flex-wrap:</b> nowrap, wrap, wrap-reverse</li>
-                    <li><b>justify-content:</b> flex-start, flex-end, center, space-between, space-around, space-evenly</li>
-                    <li><b>align-items:</b> stretch, flex-start, flex-end, center, baseline</li>
-                    <li><b>align-content:</b> flex-start, flex-end, center, space-between, space-around, space-evenly</li>
-                </ul>
-                <h3>Item Properties</h3>
-                <ul class="container-properties-list">
-                    <li><b>order:</b> can change the place of an item</li>
-                    <li><b>flex-grow:</b> ability to grow to fill available space</li>
-                    <li><b>flex-shrink:</b> ability to shrink if necessary</li>
-                    <li><b>flex-basis:</b> initial size of the item before space distribution</li>
-                    <li><b>flex:</b> shorthand for flex-grow, flex-shrink, flex-basis together</li>
-                    <li><b>align-self:</b> individual alignment of an item along the cross axis </li>
-                </ul>
-            </section>
-            <section>
-                <div class="container" id="container-1">
-                    <div class="box" id="box-1">1</div>
-                    <div class="box" id="box-2">2</div>
-                    <div class="box" id="box-3">3</div>
-                    <div class="box" id="box-4">4</div>
-                    <div class="box" id="box-5">5</div>
-                    <div class="box" id="box-6">6</div>   
-                </div>
-            </section> 
-            <section>
-                <div class="container" id="container-2">
-                    <div class="box" id="box-7">7</div>
-                    <div class="box" id="box-8">8</div>
-                    <div class="box" id="box-9">9</div>
-                    <div class="box" id="box-10">10</div>
-                </div>
-            </section>
-            <section>
-                <div class="container" id="container-3">
-                    <div class="box" id="box-11">11</div>
-                    <div class="box" id="box-12">12</div>
-                </div>
-            </section>
-        </main>
-        <hr>
-        <footer>
-            <nav aria-label="links-for-css-flexbox" class="link-nav">
-                <a href="index.html">HOME</a>
-                <a href="#top">TOP</a>
-                <a href="flexbox-detailed.html">Flexbox Detailed</a>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" alt="Link to MDN Flexbox" target="_blank">MDN Flexbox</a> 
-                <a href="https://www.youtube.com/watch?v=B8BFVzbKmPI&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=15" alt="Link to Video Flexbox" target="_blank">CSS Flexbox Intro</a> 
-                <a href="https://www.youtube.com/watch?v=wsTv9y931o8" alt="Coding2Go - Flexbox Video Link" target="_blank">Coding2Go - Flexbox</a> 
-                <a href="https://www.youtube.com/watch?v=ziYB7TXepdo" alt="Web Dev with Matt - Flexbox Video Link" target="_blank">Flexbox Tutorial</a> 
-                <a href="https://www.w3.org/TR/css-flexbox-1/#intro" alt="W3.org Flexbox" target="_blank">w3.org Flex</a> 
-                <a href="https://yoksel.github.io/flex-cheatsheet/" alt="Flexbox Cheatsheet" target="_blank">Flexbox Cheatsheet</a> 
-                <a href="https://flexboxfroggy.com/" alt="Flexbox Froggy Game" target="_blank">Froggy Game</a> 
-            </nav>
-        </footer>
+        <section>
+          <h2>Fundamentals</h2>
+          <h3>Container</h3>
+          <p>Its a parent elment with property <i>display: flex</i>.</p>
+          <h3>Item</h3>
+          <p>
+            Direct child element of the container. A child could be a container
+            as well.
+          </p>
+        </section>
+        <section>
+          <h2>Properties</h2>
+          <h3>Container Properties</h3>
+          <ul class="container-properties-list">
+            <li><b>flex-direction:</b> row or column</li>
+            <li><b>flex-wrap:</b> nowrap, wrap, wrap-reverse</li>
+            <li>
+              <b>justify-content:</b> flex-start, flex-end, center,
+              space-between, space-around, space-evenly
+            </li>
+            <li>
+              <b>align-items:</b> stretch, flex-start, flex-end, center,
+              baseline
+            </li>
+            <li>
+              <b>align-content:</b> flex-start, flex-end, center, space-between,
+              space-around, space-evenly
+            </li>
+          </ul>
+          <h3>Item Properties</h3>
+          <ul class="container-properties-list">
+            <li><b>order:</b> can change the place of an item</li>
+            <li><b>flex-grow:</b> ability to grow to fill available space</li>
+            <li><b>flex-shrink:</b> ability to shrink if necessary</li>
+            <li>
+              <b>flex-basis:</b> initial size of the item before space
+              distribution
+            </li>
+            <li>
+              <b>flex:</b> shorthand for flex-grow, flex-shrink, flex-basis
+              together
+            </li>
+            <li>
+              <b>align-self:</b> individual alignment of an item along the cross
+              axis
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Usefull</h3>
+          <p>By default it is flex: 0 1 auto</p>
+          <p>use instead flex: 1 1 0 (grow shrink basis)</p>
+        </section>
+      </main>
+      <hr />
+      <footer>
+        <h2>Examples</h2>
+        <nav aria-label="links-for-css-flexbox" class="link-nav">
+          <a href="index.html">HOME</a>
+          <a href="flexbox-detailed.html">Flexbox Examples</a>
+        </nav>
+        <h2>References and Tutorials</h2>
+        <nav aria-label="links-for-css-flexbox" class="link-nav">
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"
+            alt="Link to MDN Flexbox"
+            target="_blank"
+            >MDN Flexbox</a
+          >
+          <a
+            href="https://www.youtube.com/watch?v=B8BFVzbKmPI&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=15"
+            alt="Link to Video Flexbox"
+            target="_blank"
+            >CSS Flexbox Intro</a
+          >
+          <a
+            href="https://www.youtube.com/watch?v=wsTv9y931o8"
+            alt="Coding2Go - Flexbox Video Link"
+            target="_blank"
+            >Coding2Go - Flexbox</a
+          >
+          <a
+            href="https://www.youtube.com/watch?v=ziYB7TXepdo"
+            alt="Web Dev with Matt - Flexbox Video Link"
+            target="_blank"
+            >Flexbox Tutorial</a
+          >
+          <a
+            href="https://www.youtube.com/watch?v=ZOK-DU7vT0A"
+            alt="CSS Flex Shorthand - Flexbox Video Link"
+            target="_blank"
+            >Flex Shorthand</a
+          >
+          <a
+            href="https://www.w3.org/TR/css-flexbox-1/#intro"
+            alt="W3.org Flexbox"
+            target="_blank"
+            >w3.org Flex</a
+          >
+          <a
+            href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+            alt="css tricks"
+            target="_blank"
+            >wCSS Tricks</a
+          >
+          <a
+            href="https://yoksel.github.io/flex-cheatsheet/"
+            alt="Flexbox Cheatsheet"
+            target="_blank"
+            >Flexbox Cheatsheet</a
+          >
+          <a
+            href="https://flexboxfroggy.com/"
+            alt="Flexbox Froggy Game"
+            target="_blank"
+            >Froggy Game</a
+          >
+        </nav>
+      </footer>
     </article>
-</body>
+  </body>
 </html>

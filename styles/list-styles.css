@@ -1,0 +1,85 @@
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.flexbox-change-list-style-types {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    margin-top: 2rem;  
+    margin: 0 auto;
+    flex-grow: 0;
+}
+
+ul, ol{
+    display: grid;
+    justify-content: center;
+    width: 300px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px 1px #47474736;
+    margin-inline-start: 0;
+}
+
+li{
+    margin-inline-start: 30px;
+}
+
+#only-5-dollars li{
+    margin-inline-start: 80px;
+}
+
+.flexbox-change-list-style-types ol li::marker{
+    color: #f1803e;
+}
+
+.flexbox-change-list-style-types ul{
+    list-style-type: square;
+}
+
+.green-hooks{
+    list-style-type: disc; 
+    line-height: 2; 
+    list-style-image: url("../assets/img/green.png");
+}
+
+.second-child li:nth-child(2){
+    color: red;
+}
+
+.odd li:nth-child(odd){
+    color: orange;
+}
+
+#only-5-dollars{
+    color: black;
+}
+
+#only-5-dollars ::marker{
+    color: red;
+    font-family: fantasy;
+    line-height: 2em;
+    content: "Only $5 >> ";
+}
+
+@media screen and (min-width: 855px){
+    .flexbox-change-list-style-types{
+        flex-flow: row wrap;
+        align-items: center;
+        
+    }
+    .container{
+        min-width: 630px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        margin-top: 20px;
+    }
+}
+
