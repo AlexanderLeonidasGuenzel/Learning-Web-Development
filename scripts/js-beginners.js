@@ -142,3 +142,75 @@ if (customerIsBanned) {
   reply = "Sorry, we're out of soup.";
 }
 console.log(reply);
+
+//Tutorial Video No 8 - Switch Statements
+switch (
+  "2" //Switch  Statements need strikt matches. Has to be the same datatype!
+) {
+  case 1:
+    console.log(1);
+    break;
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("No match!");
+} //output: No match!
+
+switch (
+  Number.parseInt("2") //Switch  Statements need strikt matches. Has to be the same datatype!
+) {
+  case 1:
+    console.log(1);
+    break;
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("No match!");
+} //output: 2
+
+let randomNumber2 = Math.floor(Math.random() * 4 + 1);
+switch (randomNumber2) {
+  case 1:
+    console.log(1);
+    break;
+  case 2:
+    console.log(2);
+    break;
+  case 3:
+    console.log(3);
+    break;
+  default:
+    console.log("No match!");
+} //output: 2
+
+let playerOne = "scissors";
+let computer = "rock";
+
+switch (playerOne) {
+  case computer:
+    console.log("Tie game");
+    break;
+  case "rock":
+    if (computer === "paper") {
+      console.log("computer wins");
+    } else {
+      console.log("playerOne wins!");
+    }
+    break;
+  case "paper":
+    if (computer === "scrissors") {
+      console.log("computer wins");
+    } else {
+      console.log("playerOne wins!");
+    }
+    break;
+  default:
+    if (computer === "rock") {
+      console.log("computer wins");
+    } else {
+      console.log("playerOne wins!");
+    }
+    break;
+}
