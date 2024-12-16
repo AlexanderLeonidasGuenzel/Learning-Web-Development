@@ -118,7 +118,7 @@ console.log(Math.floor(Math.random() * 10) + 1);
 //same behaviour bedause random() is always a positive number
 //don't use Math.ceil()!
 
-//Problem Solving - JS Code Challenge
+//Tutorial Video No 6 - Problem Solving Code Challenge
 //Output: random letter from your name
 
 const myName = "Alexander";
@@ -126,3 +126,19 @@ const nameLength = myName.length;
 const randomNumber = Math.floor(Math.random() * nameLength);
 const randomLetter = myName.charAt(randomNumber);
 console.log(randomLetter.toUpperCase());
+
+//Tutorial Video No 7 - Conditionals: If-Statement
+let customerIsBanned = false;
+let soup = "Erbsensuppe";
+let reply;
+let crackers = true;
+if (customerIsBanned) {
+  reply = "No soup for you!";
+} else if (soup && crackers) {
+  reply = `Here's your order of ${soup} & crackers.`;
+} else if (soup) {
+  reply = `Here's your order of ${soup}`;
+} else {
+  reply = "Sorry, we're out of soup.";
+}
+console.log(reply);
