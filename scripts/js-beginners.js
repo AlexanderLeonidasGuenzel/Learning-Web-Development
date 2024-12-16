@@ -69,3 +69,51 @@ console.log(Number.isNaN("hi")); //output: false
 //global isNaN()
 //whether a value is NaN or not
 console.log(isNaN("hey")); //output: true
+
+//Tutorial Video No 5 - Math Methods and Random Number
+//MDN Math https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+//Math Methods and Properties
+console.log(Math.PI); //output: 3.141592653589793
+
+//trunc() vs round() vs ceil() vs floor()
+console.log(Math.trunc(Math.PI)); //output: 3
+console.log(Math.round(3.4)); //output: 3
+console.log(Math.round(3.5)); //output: 4
+console.log(Math.ceil(3.4)); //output: 4  -> rounds always up
+console.log(Math.floor(3.6)); //output: 3 -> rounds always down
+//trunc -> cuts floating point digits (same behaviour positiv and negative numbers)
+//round -> usually rounding
+//ceil -> always rounds up
+//floor -> always rounds down
+
+Math.trunc(4.9); // 4
+Math.trunc(-4.9); // -4
+
+Math.round(4.4); // 4
+Math.round(4.5); // 5
+Math.round(-4.4); // -4
+Math.round(-4.5); // -4
+
+Math.ceil(4.1); // 5
+Math.ceil(-4.1); // -4
+
+Math.floor(4.9); // 4
+Math.floor(-4.9); // -5
+
+//pow()
+console.log(Math.pow(2, 4));
+console.log(Math.pow(5, 3));
+
+//min() and max()
+console.log(Math.min(2, 14, 9, 7, 0.3, -5, 30.2)); //output: -5
+console.log(Math.max(2, 14, 9, 7, 0.3, -5, 30.2)); //output: 30
+
+//random()
+console.log(Math.random()); // 0 to < 1 e.g. 0.8775020442336741
+
+// RN From 1 to 10
+console.log(Math.trunc(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+//same behaviour bedause random() is always a positive number
+//don't use Math.ceil()!
