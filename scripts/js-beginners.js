@@ -117,3 +117,12 @@ console.log(Math.trunc(Math.random() * 10) + 1);
 console.log(Math.floor(Math.random() * 10) + 1);
 //same behaviour bedause random() is always a positive number
 //don't use Math.ceil()!
+
+//Problem Solving - JS Code Challenge
+//Output: random letter from your name
+
+const myName = "Alexander";
+const nameLength = myName.length;
+const randomNumber = Math.floor(Math.random() * nameLength);
+const randomLetter = myName.charAt(randomNumber);
+console.log(randomLetter.toUpperCase());
