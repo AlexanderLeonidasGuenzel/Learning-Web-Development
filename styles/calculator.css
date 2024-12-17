@@ -1,0 +1,94 @@
+:root {
+  --TEXT-SHADOW-COLOR: rgb(108, 207, 51);
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.2rem;
+  background: linear-gradient(to top, rgb(17, 17, 17), rgb(50, 49, 54));
+  display: grid;
+  place-content: center;
+}
+
+.main {
+  width: clamp(fit-content, 30vw, 400px);
+  height: auto;
+  background-color: rgb(17, 17, 17);
+  border-radius: 25px;
+  border: 3px solid rgb(170, 170, 170);
+  box-shadow: 0px 0px 15px 5px rgb(87, 86, 86);
+  display: grid;
+  padding: 5rem 2rem;
+}
+
+.h1 {
+  background: linear-gradient(to right, rgb(172, 2, 2), 55%, rgb(15, 15, 240));
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: max-content;
+  white-space: nowrap;
+  color: rgb(51, 54, 49);
+  margin: 3rem 0;
+  text-shadow: 0px 0px 10px var(--TEXT-SHADOW-COLOR),
+    0px 0px 20px var(--TEXT-SHADOW-COLOR), 0px 0px 40px var(--TEXT-SHADOW-COLOR),
+    0px 0px 80px var(--TEXT-SHADOW-COLOR);
+}
+
+.calculator {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.display {
+  border: none;
+  padding: 1rem;
+  font-size: 2em;
+  background-color: #333;
+  color: white;
+  text-align: end;
+  text-transform: uppercase;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Spalten */
+  gap: 10px;
+  padding: 10px;
+  color: rgb(230, 230, 230);
+}
+
+.button {
+  height: 60px;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 60px;
+
+  background-color: #1f1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(30, 177, 42, 0.397);
+  transition: background-color 0.2s ease;
+}
+
+.button:last-of-type {
+  grid-column: span 2;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #2b2a2a;
+
+  color: orange;
+}
+
+.button:active {
+  background-color: #333;
+  color: orange;
+  border: 3px solid rgba(0, 80, 0, 0.479);
+  border: 3px solid rgba(26, 78, 26, 0.479);
+}
