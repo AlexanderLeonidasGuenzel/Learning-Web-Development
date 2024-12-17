@@ -279,3 +279,28 @@ let result3 =
     ? "Computer wins!"
     : "PlayerOne wins!";
 console.log(result3);
+
+//Tutorial Video No 10 - User Input (Popups)
+// alert("Hello");
+// confirm("Ok === True\nCancel === False");
+let myBoolean = confirm("Ok === True\nCancel === False");
+console.log(myBoolean);
+let name2 = prompt("Please enter your name."); //return types (ok => string | cancel => null)
+// console.log(name2);
+// console.log(typeof name2);
+
+if (name2) {
+  // (name2.length) not working with because cancel button returns null
+  console.log(name2 ?? "You didn't enter your name!"); //?? -> knowledge coleskine operator
+} else {
+  console.log("You didn't enter your name!");
+}
+
+//whitespace handling with trim()
+if (name2) {
+  console.log(name2.length);
+  console.log(name2.trim().length);
+  console.log(name2.trim());
+} else {
+  console.log("You didn't enter your name!");
+}
