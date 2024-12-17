@@ -214,3 +214,68 @@ switch (playerOne) {
     }
     break;
 }
+
+//Tutorial Video No 9 - Ternary Operator
+//condition ? ifTrue : ifFalse;
+
+// let soup2 = "Chicken Noodle Soup";  //output: case true
+let soup2 = ""; //output: case false
+let response = soup2 ? "Yes, we have soup." : "Sorry, no soup today.";
+console.log(response);
+
+//Chaining of ternary operators
+let soup3 = "Kartoffelsuppe";
+let isCustomerBanned = false;
+let soupAccess = isCustomerBanned
+  ? "Sorry, no soup for you!"
+  : soup
+  ? `Yes, we have ${soup3} today.`
+  : "Sorry, no soup today.";
+console.log(soupAccess);
+
+//Grading Scale Example
+let testScore = 92;
+let myGrade =
+  testScore > 89
+    ? "A"
+    : testScore > 79
+    ? "B"
+    : testScore > 69
+    ? "C"
+    : testScore > 59
+    ? "D"
+    : "F";
+console.log(`My test grade is a ${myGrade}.`);
+
+//Rock, Paper, Scissors
+let playerOne2 = "rock";
+let computer2 = "paper";
+let result2 =
+  playerOne2 === computer2
+    ? "It's a tie!"
+    : playerOne2 === "scissors"
+    ? computer2 === "rock"
+      ? "Computer wins!"
+      : "PlayerOne wins!"
+    : playerOne2 === "paper"
+    ? computer2 === "scissors"
+      ? "Computer wins!"
+      : "PlayerOne wins!"
+    : computer2 === "paper"
+    ? "Computer wins!"
+    : "PlayerOne wins!";
+console.log(result2);
+
+let playerOne3 = "rock";
+let computer3 = "paper";
+let result3 =
+  playerOne3 === computer3
+    ? "It's a tie!"
+    : playerOne3 === "scissors" && computer3 === "rock"
+    ? "Computer wins!"
+    : playerOne3 === "paper" && computer3 === "scissors"
+    ? "Computer wins!"
+    : playerOne3 === "rock" && computer3 === "paper"
+    ? "Computer wins!"
+    : "PlayerOne wins!";
+console.log(result3);
