@@ -283,24 +283,71 @@ console.log(result3);
 //Tutorial Video No 10 - User Input (Popups)
 // alert("Hello");
 // confirm("Ok === True\nCancel === False");
-let myBoolean = confirm("Ok === True\nCancel === False");
-console.log(myBoolean);
-let name2 = prompt("Please enter your name."); //return types (ok => string | cancel => null)
+//let myBoolean = confirm("Ok === True\nCancel === False");
+//console.log(myBoolean);
+//let name2 = prompt("Please enter your name."); //return types (ok => string | cancel => null)
 // console.log(name2);
 // console.log(typeof name2);
 
-if (name2) {
-  // (name2.length) not working with because cancel button returns null
-  console.log(name2 ?? "You didn't enter your name!"); //?? -> knowledge coleskine operator
-} else {
-  console.log("You didn't enter your name!");
-}
+// if (name2) {
+//   // (name2.length) not working with because cancel button returns null
+//   console.log(name2 ?? "You didn't enter your name!"); //?? -> knowledge coleskine operator
+// } else {
+//   console.log("You didn't enter your name!");
+// }
 
 //whitespace handling with trim()
-if (name2) {
-  console.log(name2.length);
-  console.log(name2.trim().length);
-  console.log(name2.trim());
+// if (name2) {
+//   console.log(name2.length);
+//   console.log(name2.trim().length);
+//   console.log(name2.trim());
+// } else {
+//   console.log("You didn't enter your name!");
+// }
+
+//Tutorial Video No 11 - First Interactive Game (Rock,  Paper, Scissors)
+console.clear();
+let playGame = confirm("Shall we play rock, paper, or scissors?");
+
+if (playGame) {
+  console.log("game started");
+  let playerChoice = prompt(
+    "Please choose between:\n  R (Rock)\n  P (Paper)\n  S (Scissors)"
+  );
+
+  if (playerChoice) {
+    playerChoice = playerChoice.toUpperCase().trim();
+    if (playerChoice === "R" || playerChoice === "P" || playerChoice == "S") {
+      let choice =
+        playerChoice === "R"
+          ? "rock"
+          : playerChoice === "P"
+          ? "paper"
+          : "scissors";
+      let rng = Math.random();
+      let randomRPC = Math.floor(rng * 3);
+      let computerChoice =
+        randomRPC === 0 ? "rock" : randomRPC === 1 ? "paper" : "scissors";
+
+      let playerOne4 = choice;
+      let computer4 = computerChoice;
+      let result4 =
+        playerOne4 === computer4
+          ? "It's a tie!"
+          : playerOne4 === "scissors" && computer4 === "rock"
+          ? "Computer wins!"
+          : playerOne4 === "paper" && computer4 === "scissors"
+          ? "Computer wins!"
+          : playerOne4 === "rock" && computer4 === "paper"
+          ? "Computer wins!"
+          : "PlayerOne wins!";
+      alert(` PlayerOne:  ${playerOne4}\n Computer: ${computer4}\n ${result4}`);
+      let playAgain = confirm("Play again?");
+      playAgain ? location.reload() : alert("Ok, thanks for playing!");
+    }
+  } else {
+    alert("You didn't enter R, P, or S!");
+  }
 } else {
-  console.log("You didn't enter your name!");
+  alert("Ok, goodbye!");
 }
