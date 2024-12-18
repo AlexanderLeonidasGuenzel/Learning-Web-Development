@@ -7,11 +7,11 @@
 
 :root {
   --TEXT-SHADOW-COLOR: rgb(108, 207, 51);
-  --BOX-SHADOW-COLOR: rgba(0, 128, 28, 0.548);
+  --BOX-SHADOW-COLOR: rgba(4, 104, 25, 0.507);
   --BOX-SHADOW-PROPS: 1px;
   --INTENS-1: 10px;
   --INTENS-2: 20px;
-  --INTENS-4: 40px;
+  --INTENS-4: 60px;
   --INTENS-8: 80px;
   --BOX-SHADOW-1: inset var(--BOX-SHADOW-PROPS) var(--BOX-SHADOW-PROPS)
     var(--INTENS-1) var(--BOX-SHADOW-COLOR);
@@ -66,18 +66,21 @@ body {
 
 .display {
   background-color: #0e0d0d;
-  color: white;
+  color: rgb(61, 189, 22);
   width: calc(100% - 10px);
   padding: 20px 10px;
   font-family: "SevenSegment", sans-serif;
-  font-size: 1.5em;
+  font-size: 2.5em;
+  font-weight: 100;
   text-align: end;
   text-transform: uppercase;
   border-radius: 5px;
-  border: 3px solid var(--BOX-SHADOW-COLOR);
+  border: 3px solid rgb(30, 99, 35);
   box-shadow: var(--BOX-SHADOW);
   pointer-events: none;
   margin: 0 5px;
+  outline: 3px solid rgb(15, 63, 15);
+  outline-offset: 2px;
 }
 
 .calculator {
