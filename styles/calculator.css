@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Tourney&display=swap");
+
+@font-face {
+  font-family: "SevenSegment";
+  src: url("../fonts/SevenSegment.ttf") format("truetype"); /* Pfad zur Schriftart */
+}
+
 :root {
   --TEXT-SHADOW-COLOR: rgb(108, 207, 51);
   --BOX-SHADOW-COLOR: rgba(0, 128, 28, 0.548);
@@ -63,6 +69,7 @@ body {
   color: white;
   width: calc(100% - 10px);
   padding: 20px 10px;
+  font-family: "SevenSegment", sans-serif;
   font-size: 1.5em;
   text-align: end;
   text-transform: uppercase;
