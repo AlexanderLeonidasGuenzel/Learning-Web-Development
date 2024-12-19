@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function behaviour() {
   if (this.classList.contains("number")) {
     display(this.innerHTML);
+  } else if (this.classList.contains("point")) {
+    point(this.innerHTML);
   } else if (this.classList.contains("clear")) {
     clear();
   } else if (this.classList.contains("stepBack")) {
@@ -31,4 +33,16 @@ function stepBack() {
   console.log("back");
   const displayElement = document.querySelector(".display");
   displayElement.value = displayElement.value.slice(0, -1);
+}
+
+function point(point) {
+  console.log(".");
+  const displayElement = document.querySelector(".display");
+  const textLength = displayElement.value.length;
+  if (textLength === 0) {
+    displayElement.value = displayElement.value + "0" + point;
+  } else if (!displayElement.value.includes(".")) {
+    console.log("point");
+    displayElement.value = displayElement.value + point;
+  }
 }
