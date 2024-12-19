@@ -35,12 +35,14 @@ body {
     20%,
     rgb(22, 22, 24)
   );
-  display: grid;
+  display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
+  gap: 5vh;
 }
 .h1 {
   background: linear-gradient(to right, rgb(253, 83, 83), rgb(13, 98, 255));
-  align-content: center;
   text-align: center;
   -webkit-background-clip: text;
   background-clip: text;
@@ -49,10 +51,11 @@ body {
   z-index: -1;
   text-transform: uppercase;
   font-family: "Tourney";
-  font-size: fit-content;
+  margin-top: 10px;
+  font-size: clamp(1.2em, 5vw, 2em); /*19,2 + 3.84 =  23,04*/
 }
 .main {
-  width: clamp(150px, 90vw, 500px);
+  width: clamp(300px, 90vw, 500px);
   height: auto;
   background-color: rgb(17, 17, 17);
   border-radius: 25px;
@@ -67,10 +70,10 @@ body {
 .display {
   background-color: #0e0d0d;
   color: rgb(61, 189, 22);
-  width: calc(100% - 10px);
-  padding: 20px 10px;
+  width: calc(100% - 20px);
+  padding: 10px;
   font-family: "SevenSegment", sans-serif;
-  font-size: 2.5em;
+  font-size: 2.4em;
   font-weight: 100;
   text-align: end;
   text-transform: uppercase;
@@ -78,9 +81,14 @@ body {
   border: 3px solid rgb(30, 99, 35);
   box-shadow: var(--BOX-SHADOW);
   pointer-events: none;
-  margin: 0 5px;
+  margin: 0 10px;
   outline: 3px solid rgb(15, 63, 15);
-  outline-offset: 2px;
+  outline-offset: 1px;
+  letter-spacing: 1px;
+}
+
+.display::placeholder {
+  letter-spacing: 0;
 }
 
 .calculator {
@@ -103,7 +111,6 @@ body {
   font-size: 1.2em;
   text-align: center;
   line-height: 60px;
-
   background-color: #1f1e1e;
   border: none;
   border-radius: 5px;
