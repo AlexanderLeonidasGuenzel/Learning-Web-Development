@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "SevenSegment";
-  src: url("../fonts/SevenSegment.ttf") format("truetype"); /* Pfad zur Schriftart */
+  src: url("../fonts/SevenSegment.ttf") format("truetype");
 }
 
 :root {
@@ -33,43 +33,16 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: clamp(10px, 10vh, 70px);
   position: relative;
 }
-.background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(
-    to top,
-    rgb(9, 5, 19),
-    rgb(37, 30, 73),
-    40%,
-    rgb(22, 22, 24)
-  );
-  backdrop-filter: blur(5px);
-  z-index: 2;
-}
-.h1 {
-  background: linear-gradient(to right, rgb(253, 83, 83), rgb(13, 98, 255));
-  text-align: center;
-  -webkit-background-clip: text;
-  background-clip: text;
-  white-space: nowrap;
-  color: transparent;
-  z-index: -1;
-  text-transform: uppercase;
-  font-family: "Tourney";
-  margin-top: 10px;
-  font-size: clamp(1.2em, 5vw, 2em);
-  z-index: 10;
-}
+
 .main {
   width: clamp(300px, 90vw, 500px);
   height: auto;
   background-color: rgb(17, 17, 17);
   border-radius: 25px;
-  border: 2px solid rgba(252, 252, 252, 0.521);
+  border: 2px solid rgba(252, 252, 252, 0.726);
   box-shadow: 0px 0px 10px 5px rgba(141, 141, 141, 0.192);
   display: grid;
   padding: 50px 20px;
@@ -84,7 +57,7 @@ body {
   width: calc(100% - 20px);
   padding: 10px;
   font-family: "SevenSegment", sans-serif;
-  font-size: 2.4em;
+  font-size: 2.5em;
   font-weight: 100;
   text-align: end;
   text-transform: uppercase;
@@ -99,13 +72,14 @@ body {
 }
 
 .display::placeholder {
-  letter-spacing: 0;
+  letter-spacing: -2px;
+  color: rgb(20, 59, 8);
 }
 
 .planet {
-  background-color: rgb(46, 1, 46);
+  background-color: rgb(1, 20, 46);
   border-radius: 50%;
-  border-left: 5px solid rgba(168, 56, 224, 0.822);
+  border-left: 5px solid rgba(56, 157, 224, 0.822);
   width: 90%;
   height: auto;
   aspect-ratio: 1 / 1;
@@ -113,15 +87,13 @@ body {
   top: 0;
   right: 0;
   transform: translate(60vw, 60vh);
-  box-shadow: 10px 50px 500px 500px rgba(140, 4, 158, 0.253),
-    10px 50px 200px 200px rgba(140, 4, 158, 0.356),
-    1px 1px 50px 50px rgb(123, 44, 126),
-    inset 10px -30px 15px 25px rgb(147, 49, 212),
-    inset 20px -20px 20px 20px rgba(118, 31, 177, 0.788),
-    inset 30px -30px 30px 30px rgba(140, 31, 212, 0.966),
-    inset 100px -80px 80px 80px rgba(116, 33, 175, 0.979);
-  opacity: 0.8;
-  filter: brightness(0.6);
+  box-shadow: 10px 50px 200px 200px rgba(5, 89, 95, 0.596),
+    10px 50px 200px 200px rgba(4, 140, 158, 0.548),
+    1px 1px 50px 50px rgba(44, 96, 126, 0.911),
+    inset 10px -30px 15px 25px rgba(49, 179, 212, 0.411),
+    inset 100px -80px 80px 80px rgba(33, 106, 175, 0.911);
+  opacity: 0.5;
+  filter: brightness(1.2);
   z-index: 5;
 }
 
@@ -167,4 +139,36 @@ body {
   background-color: #333;
   color: orange;
   border: 3px solid rgba(0, 80, 0, 0.644);
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(
+    to top,
+    rgb(9, 5, 19),
+    rgba(54, 44, 104, 0.952),
+    40%,
+    rgb(13, 13, 14)
+  );
+  z-index: 2;
+}
+
+.h1 {
+  background: linear-gradient(to right, rgb(92, 1, 54), rgb(14, 53, 138));
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+  color: transparent;
+  color: rgba(255, 255, 255, 0.089);
+  text-transform: uppercase;
+  font-family: "Tourney";
+  font-size: clamp(1.2em, 7vw, 2.2em);
+  font-weight: 100;
+  z-index: 10;
+  padding: 5px;
+  letter-spacing: 2px;
+  filter: brightness(2);
 }
