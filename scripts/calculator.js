@@ -42,7 +42,7 @@ function putIntoMemory() {
 function showDigit(number) {
   // console.log(Number.parseInt(number));
   const displayElement = document.querySelector(".display");
-  const maxLength = 12;
+  const maxLength = 14;
   const lengthWhithoutWhiteSpaces = displayElement.value.replace(
     /\s+/g,
     ""
