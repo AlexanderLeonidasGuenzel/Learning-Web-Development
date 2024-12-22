@@ -11,29 +11,24 @@
   --BOX-SHADOW-PROPS: 1px;
   --INTENS-1: 100px;
   --INTENS-2: 20px;
-  --INTENS-4: 60px;
-  --INTENS-8: 80px;
   --BOX-SHADOW-1: inset var(--BOX-SHADOW-PROPS) var(--BOX-SHADOW-PROPS)
-    var(--INTENS-1) var(--BOX-SHADOW-COLOR);
-  /* --BOX-SHADOW-2: inset var(--BOX-SHADOW-PROPS) var(--BOX-SHADOW-PROPS)
-    var(--INTENS-2) var(--BOX-SHADOW-COLOR);
-  --BOX-SHADOW-4: inset var(--BOX-SHADOW-PROPS) var(--BOX-SHADOW-PROPS)
-    var(--INTENS-4) var(--BOX-SHADOW-COLOR);
-  --BOX-SHADOW-8: inset var(--BOX-SHADOW-PROPS) var(--BOX-SHADOW-PROPS)
-    var(--INTENS-8) var(--BOX-SHADOW-COLOR); */
+      var(--INTENS-1) var(--BOX-SHADOW-COLOR),
+    inset var(--BOX-SHADOW-PROPS) var(--BOX-SHADOW-PROPS) var(--INTENS-2)
+      var(--BOX-SHADOW-COLOR);
   --BOX-SHADOW: var(--BOX-SHADOW-1);
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   font-size: 1.2rem;
   background-color: rgb(21, 13, 31);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: clamp(10px, 10vh, 70px);
+  gap: clamp(5px, 8vh, 70px);
   position: relative;
+  padding: 20px;
 }
 
 .main {
@@ -56,6 +51,7 @@ body {
   width: calc(100% - 20px);
   font-family: "SevenSegment", sans-serif;
   font-size: 2.5em;
+  font-size: calc(2em, 5vw, 48px);
   font-weight: 100;
   text-align: end;
   text-transform: uppercase;
@@ -109,19 +105,21 @@ body {
   gap: 10px;
   padding: 10px;
   color: rgb(230, 230, 230);
-  height: fit-content;
+  aspect-ratio: 1 / 1;
+  width: 100%;
 }
 
 .button {
-  height: 60px;
+  height: auto;
   font-size: 1.2em;
-  text-align: center;
-  line-height: 60px;
+
+  display: grid;
+  place-content: center;
   background-color: #1f1e1e;
-  border: none;
+  border: 3px solid #1f1e1e;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(30, 177, 42, 0.397);
+  box-shadow: 0 2px 5px rgba(30, 177, 42, 0.473);
   transition: background-color 0.2s ease;
 }
 
@@ -132,13 +130,15 @@ body {
 .button:hover,
 .button:focus {
   background-color: #2b2a2a;
+  border: 3px solid #2b2a2a;
+
   color: orange;
 }
 
 .button:active {
   background-color: #333;
   color: orange;
-  border: 3px solid rgba(0, 80, 0, 0.644);
+  border: 3px solid rgb(0, 80, 0);
 }
 
 .background {
@@ -163,12 +163,11 @@ body {
   white-space: nowrap;
   color: transparent;
   color: rgba(255, 255, 255, 0.089);
+  filter: brightness(2);
   text-transform: uppercase;
   font-family: "Tourney";
   font-size: clamp(1.2em, 7vw, 2.2em);
   font-weight: 100;
+  letter-spacing: 1px;
   z-index: 10;
-  padding: 5px;
-  letter-spacing: 2px;
-  filter: brightness(2);
 }
