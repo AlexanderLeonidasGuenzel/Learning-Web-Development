@@ -128,20 +128,20 @@ const randomLetter = myName.charAt(randomNumber);
 console.log(randomLetter.toUpperCase());
 
 //Tutorial Video No 7 - Conditionals: If-Statement
-let customerIsBanned = false;
-let soup = "Erbsensuppe";
-let reply;
-let crackers = true;
-if (customerIsBanned) {
-  reply = "No soup for you!";
-} else if (soup && crackers) {
-  reply = `Here's your order of ${soup} & crackers.`;
-} else if (soup) {
-  reply = `Here's your order of ${soup}`;
-} else {
-  reply = "Sorry, we're out of soup.";
-}
-console.log(reply);
+// let customerIsBanned = false;
+// let soup = "Erbsensuppe";
+// let reply;
+// let crackers = true;
+// if (customerIsBanned) {
+//   reply = "No soup for you!";
+// } else if (soup && crackers) {
+//   reply = `Here's your order of ${soup} & crackers.`;
+// } else if (soup) {
+//   reply = `Here's your order of ${soup}`;
+// } else {
+//   reply = "Sorry, we're out of soup.";
+// }
+// console.log(reply);
 
 //Tutorial Video No 8 - Switch Statements
 switch (
@@ -221,64 +221,64 @@ switch (playerOne) {
 // let soup2 = "Chicken Noodle Soup";  //output: case true
 let soup2 = ""; //output: case false
 let response = soup2 ? "Yes, we have soup." : "Sorry, no soup today.";
-console.log(response);
+// console.log(response);
 
 //Chaining of ternary operators
-let soup3 = "Kartoffelsuppe";
-let isCustomerBanned = false;
-let soupAccess = isCustomerBanned
-  ? "Sorry, no soup for you!"
-  : soup
-  ? `Yes, we have ${soup3} today.`
-  : "Sorry, no soup today.";
-console.log(soupAccess);
+// let soup3 = "Kartoffelsuppe";
+// let isCustomerBanned = false;
+// let soupAccess = isCustomerBanned
+//   ? "Sorry, no soup for you!"
+//   : soup
+//   ? `Yes, we have ${soup3} today.`
+//   : "Sorry, no soup today.";
+// console.log(soupAccess);
 
 //Grading Scale Example
-let testScore = 92;
-let myGrade =
-  testScore > 89
-    ? "A"
-    : testScore > 79
-    ? "B"
-    : testScore > 69
-    ? "C"
-    : testScore > 59
-    ? "D"
-    : "F";
-console.log(`My test grade is a ${myGrade}.`);
+// let testScore = 92;
+// let myGrade =
+//   testScore > 89
+//     ? "A"
+//     : testScore > 79
+//     ? "B"
+//     : testScore > 69
+//     ? "C"
+//     : testScore > 59
+//     ? "D"
+//     : "F";
+// console.log(`My test grade is a ${myGrade}.`);
 
 //Rock, Paper, Scissors
-let playerOne2 = "rock";
-let computer2 = "paper";
-let result2 =
-  playerOne2 === computer2
-    ? "It's a tie!"
-    : playerOne2 === "scissors"
-    ? computer2 === "rock"
-      ? "Computer wins!"
-      : "PlayerOne wins!"
-    : playerOne2 === "paper"
-    ? computer2 === "scissors"
-      ? "Computer wins!"
-      : "PlayerOne wins!"
-    : computer2 === "paper"
-    ? "Computer wins!"
-    : "PlayerOne wins!";
-console.log(result2);
+// let playerOne2 = "rock";
+// let computer2 = "paper";
+// let result2 =
+//   playerOne2 === computer2
+//     ? "It's a tie!"
+//     : playerOne2 === "scissors"
+//     ? computer2 === "rock"
+//       ? "Computer wins!"
+//       : "PlayerOne wins!"
+//     : playerOne2 === "paper"
+//     ? computer2 === "scissors"
+//       ? "Computer wins!"
+//       : "PlayerOne wins!"
+//     : computer2 === "paper"
+//     ? "Computer wins!"
+//     : "PlayerOne wins!";
+// console.log(result2);
 
-let playerOne3 = "rock";
-let computer3 = "paper";
-let result3 =
-  playerOne3 === computer3
-    ? "It's a tie!"
-    : playerOne3 === "scissors" && computer3 === "rock"
-    ? "Computer wins!"
-    : playerOne3 === "paper" && computer3 === "scissors"
-    ? "Computer wins!"
-    : playerOne3 === "rock" && computer3 === "paper"
-    ? "Computer wins!"
-    : "PlayerOne wins!";
-console.log(result3);
+// let playerOne3 = "rock";
+// let computer3 = "paper";
+// let result3 =
+//   playerOne3 === computer3
+//     ? "It's a tie!"
+//     : playerOne3 === "scissors" && computer3 === "rock"
+//     ? "Computer wins!"
+//     : playerOne3 === "paper" && computer3 === "scissors"
+//     ? "Computer wins!"
+//     : playerOne3 === "rock" && computer3 === "paper"
+//     ? "Computer wins!"
+//     : "PlayerOne wins!";
+// console.log(result3);
 
 //Tutorial Video No 10 - User Input (Popups)
 // alert("Hello");
@@ -307,47 +307,109 @@ console.log(result3);
 
 //Tutorial Video No 11 - First Interactive Game (Rock,  Paper, Scissors)
 console.clear();
-let playGame = confirm("Shall we play rock, paper, or scissors?");
+// let playGame = confirm("Shall we play rock, paper, or scissors?");
 
-if (playGame) {
-  console.log("game started");
-  let playerChoice = prompt(
-    "Please choose between:\n  R (Rock)\n  P (Paper)\n  S (Scissors)"
-  );
+// if (playGame) {
+//   console.log("game started");
+//   let playerChoice = prompt(
+//     "Please choose between:\n  R (Rock)\n  P (Paper)\n  S (Scissors)"
+//   );
 
-  if (playerChoice) {
-    playerChoice = playerChoice.toUpperCase().trim();
-    if (playerChoice === "R" || playerChoice === "P" || playerChoice == "S") {
-      let choice =
-        playerChoice === "R"
-          ? "rock"
-          : playerChoice === "P"
-          ? "paper"
-          : "scissors";
-      let rng = Math.random();
-      let randomRPC = Math.floor(rng * 3);
-      let computerChoice =
-        randomRPC === 0 ? "rock" : randomRPC === 1 ? "paper" : "scissors";
+//   if (playerChoice) {
+//     playerChoice = playerChoice.toUpperCase().trim();
+//     if (playerChoice === "R" || playerChoice === "P" || playerChoice == "S") {
+//       let choice =
+//         playerChoice === "R"
+//           ? "rock"
+//           : playerChoice === "P"
+//           ? "paper"
+//           : "scissors";
+//       let rng = Math.random();
+//       let randomRPC = Math.floor(rng * 3);
+//       let computerChoice =
+//         randomRPC === 0 ? "rock" : randomRPC === 1 ? "paper" : "scissors";
 
-      let playerOne4 = choice;
-      let computer4 = computerChoice;
-      let result4 =
-        playerOne4 === computer4
-          ? "It's a tie!"
-          : playerOne4 === "scissors" && computer4 === "rock"
-          ? "Computer wins!"
-          : playerOne4 === "paper" && computer4 === "scissors"
-          ? "Computer wins!"
-          : playerOne4 === "rock" && computer4 === "paper"
-          ? "Computer wins!"
-          : "PlayerOne wins!";
-      alert(` PlayerOne:  ${playerOne4}\n Computer: ${computer4}\n ${result4}`);
-      let playAgain = confirm("Play again?");
-      playAgain ? location.reload() : alert("Ok, thanks for playing!");
-    }
-  } else {
-    alert("You didn't enter R, P, or S!");
+//       let playerOne4 = choice;
+//       let computer4 = computerChoice;
+//       let result4 =
+//         playerOne4 === computer4
+//           ? "It's a tie!"
+//           : playerOne4 === "scissors" && computer4 === "rock"
+//           ? "Computer wins!"
+//           : playerOne4 === "paper" && computer4 === "scissors"
+//           ? "Computer wins!"
+//           : playerOne4 === "rock" && computer4 === "paper"
+//           ? "Computer wins!"
+//           : "PlayerOne wins!";
+//       alert(` PlayerOne:  ${playerOne4}\n Computer: ${computer4}\n ${result4}`);
+//       let playAgain = confirm("Play again?");
+//       playAgain ? location.reload() : alert("Ok, thanks for playing!");
+//     }
+//   } else {
+//     alert("You didn't enter R, P, or S!");
+//   }
+// } else {
+//   alert("Ok, goodbye!");
+// }
+
+//Tutorial Video No 12 - Loops
+
+//While Loop
+// let initNumber = 0;
+// while (initNumber < 50) {
+//   console.log(initNumber);
+//   initNumber++;
+// }
+
+//Do-While Loop
+// let initNumber2 = 0;
+// do {
+//   initNumber2++;
+//   console.log(initNumber2);
+// } while (initNumber2 < 1);
+
+//For-Loop
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+// for (let i2 = 1; i2 <= 10; ) {
+//   console.log(i2++);
+// }
+
+// let i3 = 0;
+// for (; i3 < 10; ) {
+//   console.log(++i3);
+// }
+
+// let actualName = "Alex";
+// for (let c = 0; c < actualName.length; c++) {
+//   console.log(actualName.charAt(c));
+// }
+
+//Infinite Loop with break statement
+// let anotherName = "Tina";
+// let counter = 0;
+// let myLetter;
+// while (true) {
+//   myLetter = anotherName[counter];
+//   console.log(myLetter);
+//   if (myLetter === "n") {
+//     break;
+//   }
+//   counter++;
+// }
+let anotherName2 = "Tina";
+let counter2 = 0;
+let myLetter2;
+while (counter2 <= 3) {
+  myLetter2 = anotherName2[counter2];
+  console.log(myLetter2);
+  if (counter2 === 1) {
+    counter2 += 2;
+    continue;
   }
-} else {
-  alert("Ok, goodbye!");
+  if (myLetter2 === "n") {
+    break;
+  }
+  counter2++;
 }
