@@ -419,7 +419,7 @@ console.clear();
 //"Alex".toLowerCase();
 //Math.random();
 
-//Function Decalaration Syntax:
+//Function Declaration Syntax:
 // function sum() {
 //   return 2 + 2;
 // }
@@ -528,3 +528,127 @@ console.clear();
 // console.log(`global: ${x}`);
 // console.log(`global: ${y}`);
 // console.log(`global: ${z}`);
+
+//Tutorial Video No 15 - Arrays
+const myArray = [];
+
+//add elements to an arary
+myArray[0] = "Alex";
+myArray[1] = 1001;
+myArray[2] = false;
+
+//refer to an array
+console.log(myArray);
+console.log(myArray.length);
+console.log(myArray[myArray.length - 1]);
+console.log(myArray[1]);
+
+//add more elements to an existing array
+myArray.push("school");
+console.log(myArray);
+
+//remove something
+myArray.pop();
+console.log(myArray);
+const lastItem = myArray.pop();
+console.log(lastItem);
+
+//unshift() pushes to the first position of an array
+myArray.unshift(42);
+console.log(myArray);
+
+//shift() pops first item
+const firstItem = myArray.shift();
+const firstItem2 = myArray.shift();
+console.log(firstItem);
+console.log(firstItem2);
+console.log(myArray);
+
+//delete element
+myArray[0] = "Alex";
+myArray[1] = 1001;
+myArray[2] = false;
+delete myArray[1];
+console.log(myArray);
+//output:(3) ['Alex', empty, false]
+console.log(myArray[1]);
+//output: undefined
+
+//splice() - remove amount of elements on specific position
+//splice() - start, deleteCount, items
+myArray.splice(1, 1);
+console.log(myArray);
+//output: (2) ['Alex', false]
+//splice() replace element on that position
+myArray.splice(1, 1, 42);
+console.log(myArray);
+//output: (2) ['Alex', 42]
+//without deleting
+myArray.splice(1, 0, 91);
+console.log(myArray);
+
+let someLetters = ["A", "B", "C", "D", "E", "F"];
+const newLetters = someLetters.slice(2);
+console.log(someLetters);
+console.log(newLetters);
+//output: (4) ['C', 'D', 'E', 'F']
+const newLetters25 = someLetters.slice(2, 5);
+console.log(newLetters25);
+//output: (3) ['C', 'D', 'E']
+
+//reverse()
+console.log(someLetters.reverse());
+//output: (6) ['F', 'E', 'D', 'C', 'B', 'A']
+
+//join()
+someLetters = ["A", "B", "C", "D", "E", "F"];
+const newString = someLetters.join();
+console.log(newString);
+console.log(typeof newString);
+//output: A,B,C,D,E,F -> string
+console.log(newString.split(","));
+console.log(typeof newString.split(","));
+//output (6) ['A', 'B', 'C', 'D', 'E', 'F'] -> object
+
+//concat() and spread operator (newer way)
+const myArrayA = ["A", "B", "C"];
+const myArrayB = ["D", "E", "F"];
+
+const newArrayBA = myArrayB.concat(myArrayA);
+console.log(newArrayBA);
+
+//Spread Operator
+const newArrayAB = [...myArrayA, ...myArrayB];
+console.log(newArrayAB);
+//output: (6) ['A', 'B', 'C', 'D', 'E', 'F']
+
+//Nested Arrays
+const newArrayArray = [myArrayA, myArrayB];
+console.log(newArrayArray);
+//output: (2) [Array(3), Array(3)]^
+
+const equipShelfA = ["baseball", "football", "volleyball"];
+const equipShelfB = ["basketball", "golf balls", "tennis balls"];
+const clothesShelfA = ["tank tops", "t-shirts", "jerseys"];
+const clothesShelfB = ["sweat tops", "sweat pants", "hoodies"];
+
+console.log(equipShelfA[1]);
+//output: football
+console.log(clothesShelfB[0]);
+//output: sweat tops
+
+const equipDept = [equipShelfA, equipShelfB];
+const clothesDetp = [clothesShelfA, clothesShelfB];
+
+console.log(equipDept[0][1]);
+//output: football
+console.log(clothesDetp[1][0]);
+//output: sweat tops
+
+const sportsStore = [equipDept, clothesDetp];
+console.log(sportsStore);
+//output: (2) [Array(2), Array(2)]
+console.log(sportsStore[0][0][1]);
+//output: football
+console.log(sportsStore[1][1][0]);
+//output: sweat tops
