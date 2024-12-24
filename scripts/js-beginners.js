@@ -398,18 +398,133 @@ console.clear();
 //   }
 //   counter++;
 // }
-let anotherName2 = "Tina";
-let counter2 = 0;
-let myLetter2;
-while (counter2 <= 3) {
-  myLetter2 = anotherName2[counter2];
-  console.log(myLetter2);
-  if (counter2 === 1) {
-    counter2 += 2;
-    continue;
-  }
-  if (myLetter2 === "n") {
-    break;
-  }
-  counter2++;
-}
+// let anotherName2 = "Tina";
+// let counter2 = 0;
+// let myLetter2;
+// while (counter2 <= 3) {
+//   myLetter2 = anotherName2[counter2];
+//   console.log(myLetter2);
+//   if (counter2 === 1) {
+//     counter2 += 2;
+//     continue;
+//   }
+//   if (myLetter2 === "n") {
+//     break;
+//   }
+//   counter2++;
+// }
+
+//Tutorial Video No 13 - Functions
+//Methods = Build-in functions!
+//"Alex".toLowerCase();
+//Math.random();
+
+//Function Decalaration Syntax:
+// function sum() {
+//   return 2 + 2;
+// }
+// console.log(sum());
+// function sum(num1, num2) {
+//   return num1 + num2;
+// }
+// console.log(sum(2, 6));
+// function getUserNameFromEmail(email) {
+//   return email.slice(0, email.indexOf("@"));
+// }
+
+// function getSecondLevelDomain(email) {
+//   return email.slice(email.indexOf("@") + 1, email.indexOf(".com"));
+// }
+
+// function getTopLevelDomain(email) {
+//   return email.slice(email.indexOf("."), email.length);
+// }
+
+// console.log(getUserNameFromEmail("playerOne@someRandomEmail.com"));
+// console.log(getSecondLevelDomain("playerOne@someRandomEmail.com"));
+// console.log(getTopLevelDomain("playerOne@someRandomEmail.com"));
+
+//anonymus function - function without a name
+// const getUserNameFromEmail2 = function (email) {
+//   return email.slice(0, email.indexOf("@"));
+// };
+// console.log(getUserNameFromEmail2("playerTwo@someRandomEmail.com"));
+
+//arrow function
+// const getUserNameFromEmail3 = (email) => {
+//   return email.slice(0, email.indexOf("@"));
+// };
+// console.log(getUserNameFromEmail3("playerThree@someRandomEmail.com"));
+
+// const toProperCase = (nameForProperCase) => {
+//   return (
+//     nameForProperCase.charAt(0).toUpperCase() +
+//     nameForProperCase.slice(1).toLowerCase()
+//   );
+// };
+// console.log(toProperCase("aLEx"));
+
+//Tutorial Video No 14 - Scope (var, let, const), Global, Local, Function, Block -> Scope
+//var, let and const
+//using "var" was common till 2015, legacy code
+//no error thrown
+// var x = 1;
+// var x = 2;
+
+//Uncaught SyntaxError: Identifier 'y' has already been declared
+// let y = 1;
+// let y = 2;
+
+//reassignment ok
+// let z = 1;
+// z = 2;
+
+//Uncaught TypeError: Assignment to constant variable.
+// const xyz = 1;
+// xyz = 2;
+
+//Scope
+//Global Scope
+// var x = 1;
+// let y = 2;
+// const z = 3;
+
+//Local Scope
+//Block Scope
+// {
+//   let y = 4;
+// }
+
+//Function Scope
+// function myFunc(){
+//   const z = 5;
+// }
+
+// var x = 1;
+// let y = 2;
+// const z = 3;
+
+// console.log(`global: ${x}`);
+// console.log(`global: ${y}`);
+// console.log(`global: ${z}`);
+
+// function myFunci() {
+//   x = 10;
+//   y = 4;
+//   const z = 5;
+//   {
+//     var x = 11;
+//     const z = 6;
+//     console.log(`block: ${x}`);
+//     console.log(`block: ${y}`);
+//     console.log(`block: ${z}`);
+//   }
+//   console.log(`function: ${x}`);
+//   console.log(`function: ${y}`);
+//   console.log(`function: ${z}`);
+// }
+// myFunci();
+
+// console.log(`global: ${x}`);
+// console.log(`global: ${y}`);
+// console.log(`global: ${z}`);
