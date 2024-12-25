@@ -652,3 +652,68 @@ console.log(sportsStore[0][0][1]);
 //output: football
 console.log(sportsStore[1][1][0]);
 //output: sweat tops
+
+console.clear();
+
+//Tutorial Video No 16 - Refactoring Code | Rock Paper Scissors
+gameRockPaperScissors();
+
+function gameRockPaperScissors() {
+  const gameName = "rock, paper, or scissors";
+  const rps = ["rock", "paper", "scissors"];
+  let playGame = confirm(`Shall we play ${gameName}?`);
+
+  while (playGame) {
+    let player = playerChoice(rps);
+    let computer = computerChoice(rps);
+
+    if (player) {
+      alert(
+        `Player: ${player}\n` +
+          `Computer: ${computer}\n\n` +
+          match(player, computer)
+      );
+    }
+    playGame = confirm("Play again?");
+  }
+  alert(`Goodbye`);
+
+  function playerChoice(rps) {
+    let playerChoice = "";
+
+    do {
+      playerChoice = prompt(`Please choose between: ${gameName} `);
+      if (playerChoice === null) {
+        playerChoice = "";
+        break;
+      } else if (playerChoice === "") {
+        invalidChoice();
+      }
+      playerChoice = playerChoice.toLowerCase();
+    } while (!rps.includes(playerChoice));
+
+    return playerChoice;
+  }
+
+  function computerChoice(rps) {
+    return rps[Math.floor(Math.random() * 3)];
+  }
+
+  function match(player, computer) {
+    const winner = ["Computer wins!", "Player wins!", "It's a tie!"];
+
+    if (player === computer) {
+      return winner[2];
+    } else if (player === "rock") {
+      return computer === "paper" ? winner[0] : winner[1];
+    } else if (player === "paper") {
+      return computer === "scissors" ? winner[0] : winner[1];
+    } else {
+      return computer === "rock" ? winner[0] : winner[1];
+    }
+  }
+
+  function invalidChoice() {
+    alert(`You didn't enter ${gameName}!`);
+  }
+}
