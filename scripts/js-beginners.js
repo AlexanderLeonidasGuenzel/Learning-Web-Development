@@ -656,7 +656,7 @@ console.log(sportsStore[1][1][0]);
 console.clear();
 
 //Tutorial Video No 16 - Refactoring Code | Rock Paper Scissors
-gameRockPaperScissors();
+// gameRockPaperScissors();
 
 function gameRockPaperScissors() {
   const gameName = "rock, paper, or scissors";
@@ -717,3 +717,104 @@ function gameRockPaperScissors() {
     alert(`You didn't enter ${gameName}!`);
   }
 }
+
+//Tutorial Video No 17 - Objects
+//key-value pairs in curly braces
+const myObj = {
+  name: "Alex",
+};
+console.log(myObj);
+//output: {name: 'Alex'}
+console.log(myObj.name);
+//output: Alex
+const anotherObj = {
+  alive: true,
+  answer: 42,
+  hobbies: ["eat", "sleep", "code"],
+  beverage: {
+    morning: "coffee",
+    afternoon: "iced tea",
+  },
+  action: function () {
+    return "Hello World!";
+  },
+  action2: function () {
+    return `Time for ${this.beverage.morning}`;
+  },
+};
+//dot-notation
+console.log(anotherObj.alive);
+console.log(anotherObj.answer);
+console.log(anotherObj.hobbies);
+console.log(anotherObj.hobbies[1]);
+console.log(anotherObj.beverage);
+console.log(anotherObj.beverage.morning);
+console.log(anotherObj.action());
+console.log(anotherObj.action2());
+//bracket-notation
+console.log(anotherObj["alive"]);
+console.log(anotherObj["answer"]);
+console.log(anotherObj["hobbies"]);
+console.log(anotherObj["hobbies"][1]);
+console.log(anotherObj["beverage"]);
+console.log(anotherObj["beverage"]["morning"]);
+console.log(anotherObj["beverage"]["morning"][0]);
+console.log(anotherObj["action"]());
+console.log(anotherObj["action2"]());
+
+const vehicle = {
+  wheels: 4,
+  engine: function () {
+    return "Vrroooom!";
+  },
+};
+
+const car = Object.create(vehicle);
+car.doors = 4;
+car.engine = function () {
+  return "Whoooosh!";
+};
+console.log(car.engine());
+console.log(car.wheels);
+
+const tesla = Object.create(car);
+console.log(tesla.wheels);
+tesla.engine = function () {
+  return "Shhhh....";
+};
+console.log(tesla.engine());
+
+const band = {
+  vocals: "Robert Plant",
+  guitar: "Jimmy Page",
+  bass: "John Paul Jones",
+  drums: "John Bonham",
+};
+
+delete band.drums;
+console.log(band.hasOwnProperty("drums"));
+console.log(Object.keys(band));
+console.log(Object.values(band));
+
+for (let job in band) {
+  console.log(band[job]);
+}
+for (let job in band) {
+  console.log(`On ${job}, it's ${band[job]}`);
+}
+
+console.log(band.guitar);
+
+//destructuring objects
+const { guitar: myGuitar, bass: myBass } = band;
+console.log(myGuitar);
+console.log(myBass);
+
+const { vocals, guitar, bass, drums } = band;
+console.log(guitar);
+console.log(bass);
+
+function sings({ vocals }) {
+  return `${vocals} sings!`;
+}
+console.log(sings(band));
