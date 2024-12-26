@@ -7,55 +7,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let number_1 = "";
 let number_2 = "";
-let stack = "";
+let calc = "";
 
 function behaviour() {
   const maxLength = 14;
+  const displayLength = displayElement.value.length;
+  let element = this.innerHTML;
+
+  if (this.classList.contains("digit")) {
+    number_1 += element;
+    displayElement.value = number_1;
+    console.log("number_1: " + number_1);
+    console.log("number_2: " + number_2);
+  }
 
   if (this.classList.contains("clear")) {
     clear();
     return 0;
   }
+
   if (this.classList.contains("stepBack")) {
     stepBack();
     return 0;
-  } else if (displayElement.value.length < maxLength) {
-    if (this.classList.contains("digit")) {
-      let digit = this.innerHTML;
-      console.log(`Digit: ${digit}`);
-      addToNumber(digit);
-      displayNumber();
-    } else if (this.classList.contains("point")) {
-      let a = this.innerHTML;
-      point(a);
-    } else if (this.classList.contains("operator")) {
-      let operator = this.innerHTML;
-      clearDisplay();
-      displayOperator(operator);
-      if (operator === "+") {
-        stack += sum();
-      }
-
-      if (operator === "=") {
-        result();
-      }
-    }
   }
-}
 
-function result() {
-  console.log("unknown result");
-}
-
-function operator() {}
-
-function displayNumber() {
-  displayElement.value = number_1;
-  console.log(number_1);
-}
-
-function addToNumber(digit) {
-  number_1 += digit;
+  if (this.classList.contains("operator")) {
+    number_2 = number_1;
+    number_1 = "";
+    calc = element;
+    displayElement.value = element;
+  }
 }
 
 function sum(num1, num2) {
@@ -64,20 +45,22 @@ function sum(num1, num2) {
   return num1 + num2;
 }
 
-function displayOperator(operator) {
-  displayElement.value = operator;
-  console.log(operator);
-}
-
 function clear() {
   displayElement.value = "";
   console.clear();
+  reset();
 }
 
 function stepBack() {
-  displayElement.value = displayElement.value.slice(0, -1);
+  number_1 = displayElement.value.slice(0, -1);
+  displayElement.value = number_1;
 }
 
 function clearDisplay() {
   displayElement.value = "";
+}
+function reset() {
+  number_1 = "";
+  number_2 = "";
+  calc = "";
 }
