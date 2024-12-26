@@ -5,9 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
   buttons.forEach((button) => button.addEventListener("click", behaviour));
 });
 
-let number_1 = "";
-let number_2 = "";
-let calc = "";
+let actualNumber = "";
+let savedNumber = "";
+let operator = "";
+const operators = ["+", "-", "*", "/", "%", "="];
+const op = {
+  "+": (a, b) => a + b,
+  "-": (a, b) => a - b,
+  "×": (a, b) => a * b,
+  "÷": (a, b) => a / b,
+};
 
 function behaviour() {
   const maxLength = 14;
@@ -15,34 +22,42 @@ function behaviour() {
   let element = this.innerHTML;
 
   if (this.classList.contains("digit")) {
-    number_1 += element;
-    displayElement.value = number_1;
-    console.log("number_1: " + number_1);
-    console.log("number_2: " + number_2);
+    if (displayLength < maxLength) {
+      actualNumber += element;
+      displayElement.value = actualNumber;
+      console.log("actualNumber: " + actualNumber);
+      console.log("savedNumber: " + savedNumber);
+    }
+  }
+
+  if (this.classList.contains("operator")) {
+    const lastDisplayedContent = displayElement.value;
+    if (!operators.includes(lastDisplayedContent)) {
+      if (element === "=") {
+        console.log(operator);
+        result = op[operator](
+          Number.parseInt(savedNumber),
+          Number.parseInt(actualNumber)
+        );
+        displayElement.value = result;
+        console.log(result);
+      } else {
+        savedNumber = actualNumber;
+        actualNumber = "";
+        operator = element;
+
+        displayElement.value = element;
+      }
+    }
   }
 
   if (this.classList.contains("clear")) {
     clear();
-    return 0;
   }
 
   if (this.classList.contains("stepBack")) {
     stepBack();
-    return 0;
   }
-
-  if (this.classList.contains("operator")) {
-    number_2 = number_1;
-    number_1 = "";
-    calc = element;
-    displayElement.value = element;
-  }
-}
-
-function sum(num1, num2) {
-  num1 = Number.parseInt(num1);
-  num2 = Number.parseInt(num2);
-  return num1 + num2;
 }
 
 function clear() {
@@ -52,15 +67,12 @@ function clear() {
 }
 
 function stepBack() {
-  number_1 = displayElement.value.slice(0, -1);
-  displayElement.value = number_1;
+  actualNumber = displayElement.value.slice(0, -1);
+  displayElement.value = actualNumber;
 }
 
-function clearDisplay() {
-  displayElement.value = "";
-}
 function reset() {
-  number_1 = "";
-  number_2 = "";
-  calc = "";
+  actualNumber = "";
+  savedNumber = "";
+  operator = "";
 }
