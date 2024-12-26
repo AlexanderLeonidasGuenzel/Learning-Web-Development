@@ -1,11 +1,13 @@
 const displayElement = document.querySelector(".display");
-let number = "";
-let operator = "";
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".button");
   buttons.forEach((button) => button.addEventListener("click", behaviour));
 });
+
+let number_1 = "";
+let number_2 = "";
+let stack = "";
 
 function behaviour() {
   const maxLength = 14;
@@ -19,58 +21,56 @@ function behaviour() {
     return 0;
   } else if (displayElement.value.length < maxLength) {
     if (this.classList.contains("digit")) {
-      let a = this.innerHTML;
-      clearDisplay();
-      putIntoMemory(a);
-      // showDigit(a);
-      showNumber();
+      let digit = this.innerHTML;
+      console.log(`Digit: ${digit}`);
+      addToNumber(digit);
+      displayNumber();
     } else if (this.classList.contains("point")) {
       let a = this.innerHTML;
       point(a);
     } else if (this.classList.contains("operator")) {
-      let a = this.innerHTML;
+      let operator = this.innerHTML;
       clearDisplay();
-      showOperator(a);
+      displayOperator(operator);
+      if (operator === "+") {
+        stack += sum();
+      }
+
+      if (operator === "=") {
+        result();
+      }
     }
   }
 }
 
-// memory = memory + Number.parseInt(displayElement.value);
-function clearDisplay() {
-  displayElement.value = "";
+function result() {
+  console.log("unknown result");
 }
 
-function putIntoMemory(digit) {
-  number = number + digit;
-  console.log(number);
+function operator() {}
+
+function displayNumber() {
+  displayElement.value = number_1;
+  console.log(number_1);
 }
 
-function showNumber() {
-  displayElement.value = getFromMemory();
+function addToNumber(digit) {
+  number_1 += digit;
 }
 
-function getFromMemory() {
-  return number;
+function sum(num1, num2) {
+  num1 = Number.parseInt(num1);
+  num2 = Number.parseInt(num2);
+  return num1 + num2;
 }
 
-// function showDigit(digit) {
-//   displayElement.value = displayElement.value + digit;
-// }
-
-function showOperator(operator) {
-  // const textLength = displayElement.value.length;
-  displayElement.value = displayElement.value + operator;
-  // if (
-  //   textLength &&
-  //   !displayElement.value.charAt(textLength - 1).includes("+")
-  // ) {
-
-  // }
+function displayOperator(operator) {
+  displayElement.value = operator;
+  console.log(operator);
 }
 
 function clear() {
   displayElement.value = "";
-  number = "";
   console.clear();
 }
 
@@ -78,23 +78,6 @@ function stepBack() {
   displayElement.value = displayElement.value.slice(0, -1);
 }
 
-// function point(point) {
-//   const textLength = displayElement.value.length;
-
-//   if (!textLength) {
-//     displayElement.value = displayElement.value + "0" + point;
-//   } else if (!displayElement.value.includes(".")) {
-//     displayElement.value = displayElement.value + point;
-//   }
-// }
-
-// const lengthWhithoutWhiteSpaces = displayElement.value.replace(
-//   /\s+/g,
-//   ""
-// ).length;
-
-// if (numberValue.includes(".")) {
-//   memory = Number.parseFloat(numberValue);
-// } else {
-//   memory = Number.parseInt(numberValue);
-// }
+function clearDisplay() {
+  displayElement.value = "";
+}
