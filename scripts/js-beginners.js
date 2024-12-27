@@ -751,6 +751,7 @@ console.log(anotherObj.beverage);
 console.log(anotherObj.beverage.morning);
 console.log(anotherObj.action());
 console.log(anotherObj.action2());
+
 //bracket-notation
 console.log(anotherObj["alive"]);
 console.log(anotherObj["answer"]);
@@ -818,3 +819,149 @@ function sings({ vocals }) {
   return `${vocals} sings!`;
 }
 console.log(sings(band));
+
+//Tutorial Video No 18 - Classes & Factory Functions
+//JavaScript Classes since 2015
+class Pizza {
+  constructor(type, size, crust) {
+    this.type = type;
+    this.size = size;
+    this.crust = crust;
+    this.toppings = [];
+  }
+  bake() {
+    console.log(
+      `Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`
+    );
+  }
+  //getters and setters
+  get PizzaType() {
+    return this.type;
+  }
+  set PizzaType(type) {
+    this.type = type;
+  }
+
+  //alternative as methods
+  getType() {
+    return this.type;
+  }
+  setType(type) {
+    this.type = type;
+  }
+
+  getToppings() {
+    return this.toppings;
+  }
+  setToppings(topping) {
+    this.toppings.push(topping);
+  }
+}
+
+const myPizza = new Pizza("salame", "medium", "original");
+myPizza.PizzaType = "pepperoni";
+myPizza.bake();
+myPizza.setType("hawaii");
+console.log(myPizza.getType());
+myPizza.setToppings("mozzarella");
+myPizza.setToppings("olives");
+console.log(myPizza.getToppings());
+
+//Inheritance
+
+//Superclass
+class Pizza2 {
+  constructor(size) {
+    this.size = size;
+    this.crust = "original";
+  }
+
+  getCrust() {
+    return this.crust;
+  }
+  setCrust(crust) {
+    this.crust = crust;
+  }
+}
+
+//Childclass
+class SpecialtyPizza extends Pizza2 {
+  constructor(size) {
+    super(size);
+    this.type = "The Works";
+  }
+  slice() {
+    console.log(`Our ${this.type} ${this.size} pizza has 8 slices.`);
+  }
+}
+
+const mySpecialty = new SpecialtyPizza("medium");
+mySpecialty.slice();
+
+//Naming convention for private properties
+// _ indicates a private property
+class Pizza3 {
+  constructor(size) {
+    this._size = size;
+    this._crust = "original";
+  }
+
+  getCrust() {
+    return this.crust;
+  }
+  setCrust(crust) {
+    this._crust = crust;
+  }
+}
+
+//Factory Function
+//better way to create an object in javascript
+function pizzaFactory(pizzaSize) {
+  const crust = "original";
+  const size = pizzaSize;
+  return {
+    bake: () => console.log(`Baking a ${size} ${crust} crust pizza.`),
+  };
+}
+
+const myFactoryPizza = pizzaFactory("small");
+myFactoryPizza.bake();
+
+//New additions to JS allow public and private class fields (not supported everywhere!)
+class Pizza4 {
+  //public and private fields must be declared above the constructor!
+  //public field
+  crust = "original";
+
+  //private field
+  #sauce = "traditional";
+  #size;
+
+  constructor(size) {
+    this.#size = size;
+  }
+
+  getCrust() {
+    return this.crust;
+  }
+  setCrust(crust) {
+    this.crust = crust;
+  }
+
+  hereYouGo() {
+    console.log(
+      `Here is your ${this.crust} ${this.#sauce}${this.#size} pizza.`
+    );
+  }
+}
+
+const myPizza4 = new Pizza4("large");
+myPizza4.hereYouGo();
+console.log(myPizza4.crust);
+console.log(myPizza4.getCrust());
+//output: original (both)
+
+//console.log(myPizza4.#sauce);
+//Property '#sauce' is not accessible outside class 'Pizza4' because it has a private identifier.
+
+//Tipp: website: https://caniuse.com/
