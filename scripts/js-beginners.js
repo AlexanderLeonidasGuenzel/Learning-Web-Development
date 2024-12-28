@@ -965,3 +965,32 @@ console.log(myPizza4.getCrust());
 //Property '#sauce' is not accessible outside class 'Pizza4' because it has a private identifier.
 
 //Tipp: website: https://caniuse.com/
+
+//Tutorial Video No 19 - JSON
+//Javascript Object Notation
+/*JSON is used to send and receive data.
+ It is text format that is completly language independent.
+*/
+
+const myObjPerson = {
+  name: "Alex",
+  hobbies: ["eat", "sleep", "code"],
+  sayHello: function () {
+    console.log("Hey!");
+  },
+};
+
+console.log(myObjPerson); //{name: 'Alex', hobbies: Array(3), sayHello: ƒ}
+console.log(myObjPerson.name); //Alex
+console.log(typeof myObjPerson); //object
+myObjPerson.sayHello();
+
+//the function is not converted to JSON
+const sendJSON = JSON.stringify(myObjPerson);
+console.log(sendJSON); //{"name":"Alex","hobbies":["eat","sleep","code"]}
+console.log(typeof sendJSON); //string
+console.log(sendJSON.name); //output: undefined
+
+const receiveJSON = JSON.parse(sendJSON);
+console.log(receiveJSON);
+console.log(typeof receiveJSON);
