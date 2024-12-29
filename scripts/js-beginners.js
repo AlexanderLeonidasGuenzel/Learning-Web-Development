@@ -994,3 +994,99 @@ console.log(sendJSON.name); //output: undefined
 const receiveJSON = JSON.parse(sendJSON);
 console.log(receiveJSON);
 console.log(typeof receiveJSON);
+
+//Tutorial Video No 20 - Error Handling <Try - Catch - Finally>
+//Normal vs Strict Mode
+//Normal Mode -> no error occurs
+variable = "Alex";
+console.log(variable); //output: Alex
+
+function testStrictMode() {
+  "use strict";
+
+  variable2 = "Alex"; // Missing declaration
+  console.log(variable2); // This will throw an error
+  //Uncaught ReferenceError: variable2 is not defined
+}
+// testStrictMode();
+
+function testStrictMode2() {
+  "use strict";
+
+  const variable3 = "Alex"; // Missing declaration
+  console.log(variable3); // This will throw an error
+  //Uncaught ReferenceError: variable2 is not defined
+}
+testStrictMode2();
+
+console.clear();
+
+function testStrictMode3() {
+  "use strickt";
+  const makeError = () => {
+    try {
+      throw new customError("This is a custom error!");
+      const name = "Alex";
+      name = "Joe";
+    } catch (err) {
+      // console.log(err);
+      // console.warn(err);
+      // console.error(err);
+      // console.error(err.name);
+      // console.error(err.message);
+      console.error(err.stack);
+      // logTheError(err.stack);
+      // console.table(err);
+    }
+  };
+  makeError();
+
+  function customError(message) {
+    this.message = message;
+    this.name = "customError";
+    this.stack = `${this.name}: ${this.message}`;
+  }
+}
+testStrictMode3();
+
+function testStrictMode4() {
+  "use strickt";
+  const makeError = () => {
+    try {
+      //generic build in Error Constructor}
+
+      throw new Error("This is an error!");
+      const name = "Alex";
+      name = "Joe";
+    } catch (err) {
+      console.error(err.stack);
+    }
+  };
+  makeError();
+}
+testStrictMode4();
+
+console.clear();
+//finally block
+function testStrictMode5() {
+  "use strickt";
+  const makeError = () => {
+    for (let i = 1; i <= 5; i++) {
+      try {
+        if (i % 2 !== 0) {
+          throw new Error("Odd number!");
+        }
+        console.log("Even number!");
+      } catch (err) {
+        console.error(err.stack);
+      } finally {
+        //finally block is executed after catch block even an error is not thrown.
+        console.log("...finally " + i);
+      }
+    }
+  };
+  makeError();
+}
+testStrictMode5();
+
+console.clear();
