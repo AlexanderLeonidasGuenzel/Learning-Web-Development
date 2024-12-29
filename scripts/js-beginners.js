@@ -1090,3 +1090,6 @@ function testStrictMode5() {
 testStrictMode5();
 
 console.clear();
+
+//DOM - Document Object Model
+//Elements, Nodes, Selectors, Create, Append, Remove
