@@ -1091,5 +1091,8 @@ testStrictMode5();
 
 console.clear();
 
-//DOM - Document Object Model
-//see js-beginners-DOM.js
+//Tutorial Video No 21 - DOM (Document Object Model)
+//see js-beginners_DOM.js
+
+//Tutorial Video No 22 - Event Listeners and Events
+//see js-beginners_events.js
