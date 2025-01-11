@@ -148,7 +148,7 @@ and display:flex for the example you want to see. */
 .view2 {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -168,7 +168,7 @@ and display:flex for the example you want to see. */
 .view2 div {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -188,7 +188,7 @@ and display:flex for the example you want to see. */
 .view3 {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: none;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;

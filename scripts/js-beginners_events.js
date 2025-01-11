@@ -25,7 +25,7 @@ h2.removeEventListener("click", doSomething, false);
 //   event.target.textContent = "Clicked";
 // });
 
-//readystatechange event - dom is loaded - use bevor regular code and interacting with the page
+// readystatechange event - dom is loaded - use bevor regular code and interacting with the page
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") {
     console.log("readyState: complete");
@@ -79,45 +79,61 @@ document.addEventListener("readystatechange", (e) => {
 //     true
 //   );
 // };
-initApp = () => {
-  const view = document.querySelector("#view2");
-  const div = view.querySelector("div");
-  const h2 = div.querySelector("h2");
-  view.addEventListener(
-    "click",
-    (event) => {
-      event.stopPropagation();
-      // view.classList.add("purple");
-      // view.classList.remove("darkblue");
-      view.classList.toggle("purple");
-      view.classList.toggle("darkblue");
-    },
-    false
-  );
-  div.addEventListener(
-    "click",
-    (event) => {
-      div.classList.toggle("blue");
-      div.classList.toggle("black");
-    },
-    false
-  );
-  h2.addEventListener(
-    "click",
-    (event) => {
-      const myText = event.target.textContent;
-      event.target.textContent = myText.includes("My 2nd View")
-        ? "Clicked"
-        : "My 2nd View";
-    },
-    false
-  );
+// initApp = () => {
+//   const view = document.querySelector("#view2");
+//   const div = view.querySelector("div");
+//   const h2 = div.querySelector("h2");
+//   view.addEventListener(
+//     "click",
+//     (event) => {
+//       event.stopPropagation();
+//       view.classList.add("purple");
+//       view.classList.remove("darkblue");
+//       view.classList.toggle("purple");
+//       view.classList.toggle("darkblue");
+//     },
+//     false
+//   );
+//   div.addEventListener(
+//     "click",
+//     (event) => {
+//       div.classList.toggle("blue");
+//       div.classList.toggle("black");
+//     },
+//     false
+//   );
+//   h2.addEventListener(
+//     "click",
+//     (event) => {
+//       const myText = event.target.textContent;
+//       event.target.textContent = myText.includes("My 2nd View")
+//         ? "Clicked"
+//         : "My 2nd View";
+//     },
+//     false
+//   );
 
-  const nav = document.querySelector("nav");
-  nav.addEventListener("mouseover", () => {
-    nav.classList.add("height100");
-  });
-  nav.addEventListener("mouseout", () => {
-    nav.classList.remove("height100");
+//   const nav = document.querySelector("nav");
+//   nav.addEventListener("mouseover", () => {
+//     nav.classList.add("height100");
+//   });
+//   nav.addEventListener("mouseout", () => {
+//     nav.classList.remove("height100");
+//   });
+// };
+
+//Form
+//Default Form Action is to reload the page when submitting
+const initApp = () => {
+  const view3 = document.querySelector("#view3");
+  const myForm = view3.querySelector("#myForm");
+  myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("submit event");
+    console.log(e);
+    console.log(e.timeStamp);
+    console.log(e.target[0]);
+    console.log(e.target[0].value);
+    console.log(e.target[1]);
   });
 };
