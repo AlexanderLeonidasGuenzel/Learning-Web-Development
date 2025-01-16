@@ -1096,3 +1096,95 @@ console.clear();
 
 //Tutorial Video No 22 - Event Listeners and Events
 //see js-beginners_events.js
+
+//Tutorial Video No 23 - Localstorage Sessionstorage Persistant Data
+// Web Storage API
+
+//Not part of the DOM - refers to the Window API
+//Available to JS via the global variable: window
+
+//you don't have to type "window"
+
+// const myObject = {
+//   name: "Alex",
+//   logName: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// myObject.logName();
+
+const myArrayStorage = ["eat", "sleep", "code"];
+
+//session storage data will be lost after closing the session
+
+//send item to session store
+//sessionStorage.setItem("mySessionStore", myObject);
+//Chrome: Dev Tools -> Application Tab -> Session storage
+//output: Key: mySessionStore Value: [object Object]
+
+//retrieve item from session store
+// const mySessionData = sessionStorage.getItem("mySessionStore");
+// console.log(mySessionData);
+//output: [object Object] -> that is not what we want to retrieve!
+
+// console.log(myArrayStorage);
+//sessionStorage.setItem("mySessionStore2", myArrayStorage);
+// const mySessionData2 = sessionStorage.getItem("mySessionStore2");
+// console.log(mySessionData2);
+//output: eat,sleep,code
+// console.log(typeof mySessionData2);
+//output: string
+
+const myObject2 = {
+  name: "Alex",
+  hobbies: ["eat", "sleep", "code"],
+  logName: function () {
+    // console.log(this.name);
+  },
+};
+
+//sessionStorage.setItem("mySessionStore3", JSON.stringify(myObject2));
+// const mySessionData3 = sessionStorage.getItem("mySessionStore3");
+// console.log(mySessionData3);
+//output: {"name":"Alex","hobbies":["eat","sleep","code"]} -> function is lost because of JSON format
+
+// const mySessionData4 = JSON.parse(sessionStorage.getItem("mySessionStore3"));
+// console.log(mySessionData4);
+//{name: 'Alex', hobbies: Array(3)} -> Object, function is still lost
+
+//sessionStorage.setItem("mySessionStore4", JSON.stringify(myArrayStorage));
+// const mySessionData5 = sessionStorage.getItem("mySessionStore4");
+// console.log(mySessionData5);
+// console.log(typeof mySessionData5);
+//output: ["eat","sleep","code"] -> string
+
+//sessionStorage.setItem("mySessionStore4", JSON.stringify(myArrayStorage));
+// const mySessionData6 = JSON.parse(sessionStorage.getItem("mySessionStore4"));
+// console.log(mySessionData6);
+// console.log(typeof mySessionData6);
+//(3) ['eat', 'sleep', 'code'] -> object
+
+//local storage stores persistent data and continues to store that data in the browser
+//it is not attached to the open tab or browser window
+// localStorage.setItem("mylocalStore", JSON.stringify(myArrayStorage));
+// const mylocalData = JSON.parse(localStorage.getItem("mylocalStore"));
+// console.log(mylocalData);
+// console.log(typeof mylocalData);
+//removes a single item
+// localStorage.removeItem("mylocalStore");
+
+// const mylocalData2 = JSON.parse(localStorage.getItem("mylocalStore"));
+// console.log(mylocalData2);
+// console.log(typeof mylocalData2);
+//cleares whole local storage
+// localStorage.clear();
+
+//using a key
+// localStorage.setItem("mylocalStore", JSON.stringify(myArrayStorage));
+// const key = localStorage.key(0);
+// console.log(key);
+//output: mylocalStore
+
+// const storeLength = localStorage.length;
+// console.log(storeLength);
