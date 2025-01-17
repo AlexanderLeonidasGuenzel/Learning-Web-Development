@@ -76,7 +76,160 @@ header {
 }
 
 /* Main */
-/* responsivness*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-details {
+  display: flex;
+  gap: 40px;
+}
+/* Product gallery*/
+.product-gallery {
+  flex: 1;
+}
+
+.product-gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.gallery-thumbnails img {
+  width: 60px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+.gallery-thumbnails img:hover {
+  border: 2px solid #ffa500;
+}
+.product-path,
+.product-code {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+/* Product Info*/
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  color: #e0e0e0;
+  font-size: 2.5rem;
+}
+.price {
+  font-size: 2rem;
+  color: #ffa500;
+  margin: 10px 0;
+}
+
+.rating {
+  color: #56dab9;
+  font-size: 1.2rem;
+}
+
+.product-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+/* Product Options*/
+.product-options {
+  margin: 20px 0;
+}
+
+#color,
+#quantity {
+  width: 100px;
+}
+
+.product-options label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.product-options select,
+.product-options input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.add-to-cart,
+.add-to-wishlist {
+  padding: 15px 30px;
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: 0.5s;
+}
+.add-to-cart:hover {
+  background-color: #269674;
+}
+.add-to-wishlist {
+  border: 2px solid #ffa500;
+  color: #ffa500;
+}
+
+.add-to-wishlist:hover {
+  color: white;
+}
+
+.delivery {
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.product-specs {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  border-bottom: 2px solid #333;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.tabs li {
+  font-weight: bold;
+  color: #777;
+  cursor: pointer;
+}
+
+.specs-content p {
+  color: #b0b0b0;
+}
+
+/* Responsivness*/
 @media (max-width: 1024px) {
   .top-bar {
     flex-direction: column;
@@ -85,5 +238,18 @@ header {
   }
   .logo h1 {
     margin: 0;
+  }
+  .product-details {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .tabs li {
+    font-size: 0.9rem;
   }
 }
