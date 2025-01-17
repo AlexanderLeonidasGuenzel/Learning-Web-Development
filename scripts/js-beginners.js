@@ -1114,7 +1114,7 @@ console.clear();
 
 // myObject.logName();
 
-const myArrayStorage = ["eat", "sleep", "code"];
+// const myArrayStorage = ["eat", "sleep", "code"];
 
 //session storage data will be lost after closing the session
 
@@ -1136,13 +1136,13 @@ const myArrayStorage = ["eat", "sleep", "code"];
 // console.log(typeof mySessionData2);
 //output: string
 
-const myObject2 = {
-  name: "Alex",
-  hobbies: ["eat", "sleep", "code"],
-  logName: function () {
-    // console.log(this.name);
-  },
-};
+// const myObject2 = {
+//   name: "Alex",
+//   hobbies: ["eat", "sleep", "code"],
+//   logName: function () {
+//     console.log(this.name);
+//   },
+// };
 
 //sessionStorage.setItem("mySessionStore3", JSON.stringify(myObject2));
 // const mySessionData3 = sessionStorage.getItem("mySessionStore3");
@@ -1188,3 +1188,5 @@ const myObject2 = {
 
 // const storeLength = localStorage.length;
 // console.log(storeLength);
+
+//Tutorial Video No 24- Modules Export Import
