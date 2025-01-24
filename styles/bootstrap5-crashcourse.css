@@ -1,0 +1,9 @@
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgb(141, 137, 137);
+  background-image: url("/assets/img/bootstrap5-crashcourse/mapbox-boston.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
