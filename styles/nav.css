@@ -1,29 +1,28 @@
+:root {
+  --text-color: #424242;
+  --text-bg: #f7f7f7;
+  --text-color-hover: #f7f7f7;
+  --text-bg-hover: #424242;
+  --border-color: #b9b9b9;
+}
+
 nav {
   padding: 10px 0;
 }
 
-a {
-  font-size: min(1.4rem, 24px);
-}
-
-.link-nav {
-  margin-block-start: 1.2rem;
-  margin-block-end: 1.2rem;
-}
-
 .link-nav a,
 .link-nav a:visited {
-  color: var(--nav-blue);
-  background-color: var(--nav-white);
+  color: var(--text-color);
+  background-color: var(--text-bg);
   display: inline-table;
   text-decoration: none;
   padding: 5px 10px;
   margin: 5px 0;
-  border: 1px solid var(--nav-border);
+  border: 1px solid var(--border-color);
 }
 
 .link-nav a:hover,
 .link-nav a:focus {
-  color: var(--nav-white);
-  background-color: var(--nav-blue);
+  color: var(--text-color-hover);
+  background-color: var(--text-bg-hover);
 }
