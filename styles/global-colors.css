@@ -1,22 +1,17 @@
 :root {
   --aqua-green: #00ffbb;
-
   --blue-home: rgb(16, 63, 133);
-  --blue-transparent: rgba(87, 156, 236, 0.664);
   --blue: rgb(40, 88, 175);
   --blue2: rgb(87, 156, 236);
   --code-color: #749abb;
   --cofe-brown: rgb(143, 71, 23);
   --columns-header: #0c70c9;
   --cyan: rgb(27, 185, 185);
-  --dark-red-transparent: rgba(247, 97, 60, 0.774);
   --footer-bg: rgba(63, 39, 17, 0.801);
-  --green-transparent: rgba(22, 197, 22, 0.671);
   --green: rgb(21, 179, 153);
   --grey: rgb(54, 54, 54);
   --header-h3-blue: #2586b3;
   --header-h4-blue: #53aed8;
-  --iron-transparent: rgba(148, 148, 153, 0.63);
   --iron: #333;
   --light-blue: rgb(206, 229, 255);
   --menu-hover: whitesmoke;
@@ -30,7 +25,5 @@
   --red: rgb(223, 57, 28);
   --section-blue: #f2f7fc;
   --table-border: #77a1c5;
-  --white: white;
-  --yellow: rgb(255, 238, 0);
   --yellow: rgba(248, 227, 38, 0.897);
 }
