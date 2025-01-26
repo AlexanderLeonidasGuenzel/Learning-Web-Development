@@ -1,14 +1,16 @@
 :root {
   --text-color: #333;
-  --border-color: #333;
-  --box-text-color: rgb(248, 248, 248);
-  --inner-container-bg: rgb(32, 31, 31);
-  --light-blue: #cee5ff;
-  --box-color-static: rgba(148, 148, 153, 0.63);
-  --box-color-absolute: rgb(10, 81, 161);
-  --box-color-relative: rgb(190, 45, 9);
-  --box-color-fixed: rgb(22, 197, 22);
-  --box-color-sticky: rgb(255, 217, 0);
+  --border-color: #353434;
+  --box-text-color: #ffffff;
+  --box-outline-color: #ececec;
+  --box-border-color: #070707;
+  --inner-container-bg: rgb(56, 56, 56);
+  --outer-container-bg: #cee5ff;
+  --box-color-static: #949499a1;
+  --box-color-absolute: #0a51a1;
+  --box-color-relative: #be2d09;
+  --box-color-fixed: #16c516;
+  --box-color-sticky: #ffc400;
 }
 
 body {
@@ -19,38 +21,36 @@ body {
   padding: 20px;
   margin: 0;
 }
-
 .outer-container {
-  background-color: var(--light-blue);
-  border: 3px dashed var(--iron);
-  margin: 40px auto;
-  width: 75vw;
-  max-width: 100%;
+  background-color: var(--outer-container-bg);
+  border: 3px dashed var(--border-color);
+  width: 100%;
   position: relative;
 }
 .inner-container {
-  border: 2px solid var(--iron);
-  width: 40vw;
-  min-width: 250px;
+  margin: 50px auto;
+  width: clamp(320px, 30vw, 500px);
   height: 50vh;
-  margin: 200px auto;
   background-color: var(--inner-container-bg);
+  padding: 10px;
   position: relative;
 }
 
 .box {
   width: 100px;
   height: 100px;
-  margin: 10px;
   display: grid;
   place-content: center;
-
   border-radius: 5px;
-  h3 {
+  border: 1px solid var(--box-border-color);
+  box-sizing: border-box;
+  outline: 1px solid var(--box-outline-color);
+  outline-offset: -7px;
+  p {
     color: var(--box-text-color);
-    font-size: 0.8em;
+    font-size: 1em;
+    font-weight: bold;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 3px #333;
   }
 }
 
@@ -63,6 +63,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  margin: 10px;
 }
 
 .relative {
@@ -82,8 +83,6 @@ body {
 .sticky {
   background-color: var(--box-color-sticky);
   position: sticky;
-  top: 0;
+  top: 10px;
   margin-left: auto;
-  margin-right: 10px;
-  z-index: 2;
 }
