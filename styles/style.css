@@ -1,96 +1,98 @@
-body{
-    padding: 20px 40px;
-    min-width: fit-content;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body {
+  padding: 20px 40px;
+  min-width: fit-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-article{
-    border: 3px solid var(--mid-blue);
-    padding: 10px 20px;
-    margin: 10px 0;  
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+article {
+  border: 3px solid var(--mid-blue);
+  padding: 10px 20px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-section{
-    background-color: var(--section-blue);
-    padding: 5px  50px  25px;
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+section {
+  background-color: var(--section-blue);
+  padding: 5px 50px 25px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-p{
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
-p, ul, ol{
-    color: var(--mid-blue);
+p,
+ul,
+ol {
+  color: var(--mid-blue);
 }
 
 h1 {
-    text-align: center;
-    color: var(--mid-blue);
+  text-align: center;
+  color: var(--mid-blue);
 }
 
 h2 {
-    color: var(--nav-blue);
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
+  color: var(--nav-blue);
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
-h3, h4 {
-    color: var(--header-h3-blue);
-    margin-block-start: 0.5em;
-    margin-block-end: 0;
+h3,
+h4 {
+  color: var(--header-h3-blue);
+  margin-block-start: 0.5em;
+  margin-block-end: 0;
 }
 
-code{
-    color: var(--code-color);
-    font-size: 0.8em;
+code {
+  color: var(--code-color);
+  font-size: 0.8em;
 }
 
-mark{
-    color: #ffffff;
-    background-color: #ffd17d;
-    padding: 2px 4px;
+mark {
+  color: #ffffff;
+  background-color: #ffd17d;
+  padding: 2px 4px;
 }
 
-ul, ol {
-    margin-left: 1.5rem;
+ul,
+ol {
+  margin-left: 1.5rem;
 }
 
-table, tr, td, th {
-    border: 2px solid var(--table-border);
-    color: var(--mid-blue);
-    border-collapse: collapse;
-    padding: 0.5em;
+table,
+tr,
+td,
+th {
+  border: 2px solid var(--table-border);
+  color: var(--mid-blue);
+  border-collapse: collapse;
+  padding: 0.5em;
 }
 
 table {
-    min-width: 50%;
+  min-width: 50%;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-img{
-    display: block;
+img {
+  display: block;
 }
-
-
-
-
-

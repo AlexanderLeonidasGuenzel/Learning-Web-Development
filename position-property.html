@@ -1,77 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles/global-colors.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/position-property.css">
-    <link rel="stylesheet" href="styles/nav.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/position-property.css" />
     <title>Position Property</title>
-</head>
-<body>
-    <h1>Position Property</h1>
-    <section class="position-examples">
-        <div class="outer-container">
-            <div class="inner-container">
-                <div class="box static">
-                    <h3>Static</h3>
-                </div>
-                <div class="box absolute">
-                    <h3>Absolute</h3>
-                    <p>Bottom of viewport.</p>
-                </div> 
-                <div class="box relative">
-                    <h3>Relative</h3>
-                </div>
-                <div class="box sticky">
-                    <h3>Sticky</h3>
-                </div> 
-                <div class="box fixed">
-                    <h3>Fixed</h3>
-                </div>
-            </div>
+  </head>
+  <body>
+    <div class="position-examples">
+      <h1>Position Property</h1>
+      <div class="outer-container">
+        <div class="box absolute">
+          <p>Absolute</p>
         </div>
-        <div class="outer-container2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas temporibus quae laborum sapiente quidem tempore consequatur amet quis officiis impedit unde accusamus placeat modi, vitae quam aliquid vero exercitationem accusantium autem. Ipsum, eius repellendus ab minima, illum nostrum cumque, aspernatur provident vero recusandae voluptate adipisci! Quibusdam laudantium nam ut dolorem.</p>
-            <div class="inner-container">
-                <div class="box sticky">
-                    <h3>Sticky</h3>
-                </div>
-                <div class="box absolute">
-                    <h3>Absolute</h3>                   
-                    <p>Container is relative.</p>
-                </div>
-                <div class="box relative">
-                    <h3>Relative</h3>
-                </div>
-            </div>
+        <div class="inner-container">
+          <div class="box sticky">
+            <p>Sticky</p>
+          </div>
+          <div class="box static">
+            <p>Static</p>
+          </div>
+          <div class="box absolute">
+            <p>Absolute</p>
+          </div>
+          <div class="box relative">
+            <p>Relative</p>
+          </div>
+          <div class="box fixed">
+            <p>Fixed</p>
+          </div>
         </div>
-    </section>
-    <section class="explanation">
-        <div class="text-container">
-            <h2>Explanation</h2>
-            <p>The default position is static.</p>
-            <h3>Absolute</h3>
-            <p>Just applying <i> postion: absolute</i>, doesn't change anything.
-               At least one value for: top, right, bottom or left must be set.
-               Absolute positioning needs an <i>relative</i> parent! If it doesn't have an
-               ancestor element set to relative, it will use the viewport.
-               Use <b>html { position: relative; }</b> to position an absolute element on the bottom of page.
-            </p>
-        </div>
-    </section>
-    <hr>
-    <footer>
-        <div class="nav-container">
-            <nav aria-label="links-for-list-styles" class="link-nav">
-                <a href="index.html">HOME</a>
-                <a href="#top">TOP</a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">MDN Position</a>
-            </nav>    
-        </div>
-    </footer>
-</body>
+      </div>
+    </div>
+  </body>
 </html>

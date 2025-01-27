@@ -1,119 +1,88 @@
-body{
-    min-height: 200vh;
-    min-width: 80vw;
-    color: var(--iron);
-    font-size: 1rem;
-    box-sizing: border-box;
-    margin: 100px;
-    border: 1px solid black;
+:root {
+  --text-color: #333;
+  --border-color: #353434;
+  --box-text-color: #ffffff;
+  --box-outline-color: #ececec;
+  --box-border-color: #070707;
+  --inner-container-bg: rgb(56, 56, 56);
+  --outer-container-bg: #cee5ff;
+  --box-color-static: #949499a1;
+  --box-color-absolute: #0a51a1;
+  --box-color-relative: #be2d09;
+  --box-color-fixed: #16c516;
+  --box-color-sticky: #ffc400;
 }
 
-h1, h2, h3, h4{
-    text-align: left; 
-    color: var(--iron);
-    margin: 0;
+body {
+  min-height: 200dvh;
+  color: var(--text-color);
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0;
+}
+.outer-container {
+  background-color: var(--outer-container-bg);
+  border: 3px dashed var(--border-color);
+  width: 100%;
+  position: relative;
+}
+.inner-container {
+  margin: 50px auto;
+  width: clamp(320px, 30vw, 500px);
+  height: 50vh;
+  background-color: var(--inner-container-bg);
+  padding: 10px;
+  position: relative;
 }
 
-p{
-    color: var(--iron);
+.box {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+  border-radius: 5px;
+  border: 1px solid var(--box-border-color);
+  box-sizing: border-box;
+  outline: 1px solid var(--box-outline-color);
+  outline-offset: -7px;
+  p {
+    color: var(--box-text-color);
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
 }
 
-.box p, .box h3{
-    display: flex;
-    align-self: center;
-    margin-inline: 15px;
-    color: var(--white);
+.static {
+  background-color: var(--box-color-static);
 }
 
-.outer-container{
-    background-color: var(--light-blue);
-    width: 75vw;
-    min-height: 85vh;
-    border: 3px dashed var(--iron);
-    margin: 40px auto;
+.absolute {
+  background-color: var(--box-color-absolute);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 10px;
 }
 
-.outer-container2{
-    background-color: var(--light-blue);
-    position: relative;
-    width: 75vw;
-    height: 85vh;
-    border: 3px dashed var(--iron);
-    margin: 40px auto;
+.relative {
+  background-color: var(--box-color-relative);
+  position: relative;
+  top: 50px;
+  left: 200px;
 }
 
-.outer-container2 > p{
-    position: absolute;
-    margin-inline-start: 20px;
+.fixed {
+  background-color: var(--box-color-fixed);
+  position: fixed;
+  top: 300px;
+  right: 150px;
 }
 
-.inner-container{
-    border: 2px solid var(--iron);
-    width: 40vw;
-    min-width: 250px;
-    height: 50vh;
-    margin: 200px auto;
-    background-color: white;
+.sticky {
+  background-color: var(--box-color-sticky);
+  position: sticky;
+  top: 10px;
+  margin-left: auto;
 }
-
-.box{
-    width: 150px;
-    height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 0.8em;
-    border-radius: 10px;
-}
-
-.box h3{
-    margin-block: 1em;
-    margin-block-start: 0.5em;
-    margin-block-end: 0;
-}
-
-.static{
-    background-color: var(--iron-transparent);
-}
-
-.absolute{
-    background-color: var(--blue-transparent);
-    position: absolute;
-    left: 0; 
-    bottom: 0;
-}
-
-.relative{
-    background-color: var(--dark-red-transparent);
-    position: relative;
-    top: 50px; 
-    left: 200px;
-    margin-bottom: 50px;
-}
-
-.fixed{
-    background-color: var(--green-transparent);
-    position: fixed;
-    top: 20px;
-    right: 150px;
-    z-index: 2;
-}
-
-.sticky{
-    background-color: var(--yellow);
-    position: sticky;
-    top: 0;
-}
-
-.explanation{
-    width: 75vw;
-    margin: 50px auto;
-    border: 1px solid var(--iron);
-    border-radius: 20px;
-}
-
-.text-container{
-    display: inline-block;
-    margin: 50px;
-    text-align: justify;
-}
-
