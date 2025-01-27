@@ -1,29 +1,27 @@
 :root {
   --aqua-green: #00ffbb;
-  --blue-home: rgb(16, 63, 133);
-  --blue: rgb(40, 88, 175);
-  --blue2: rgb(87, 156, 236);
+  --blue-home: #103f85;
+
+  --blue2: #579cec;
   --code-color: #749abb;
-  --cofe-brown: rgb(143, 71, 23);
+  --cofe-brown: #8f4717;
   --columns-header: #0c70c9;
-  --cyan: rgb(27, 185, 185);
-  --footer-bg: rgba(63, 39, 17, 0.801);
-  --green: rgb(21, 179, 153);
-  --grey: rgb(54, 54, 54);
+  --cyan: #1bb9b9;
+  --footer-bg: #3f2711cc;
+
+  --grey: #363636;
   --header-h3-blue: #2586b3;
   --header-h4-blue: #53aed8;
   --iron: #333;
-  --light-blue: rgb(206, 229, 255);
+  --light-blue: #cee5ff;
   --menu-hover: whitesmoke;
   --mid-blue: #19588f;
   --dark-blue: #083053;
   --neu-gold: #d39714;
-  --orange: #ffa200;
+
   --orange: orange;
   --pink: #ff0095;
-  --purple: purple;
-  --red: rgb(223, 57, 28);
+
   --section-blue: #f2f7fc;
   --table-border: #77a1c5;
-  --yellow: rgba(248, 227, 38, 0.897);
 }
