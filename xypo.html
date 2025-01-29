@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Complete Website Design Using HTML and CSS</title>
+    <link rel="stylesheet" href="styles/xypo.css" />
+    <link rel="icon" href="assets/img/xypo/logo.png" type="image/png" />
+  </head>
+  <body>
+    <section id="header">
+      <div class="container">
+        <img src="assets/img/xypo/logo.png" class="logo" />
+        <div class="header-text">
+          <h1>The purpose is to <br />teach, bring learning to people</h1>
+          <span class="square"></span>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+            harum sit consectetur sunt hic magni eos deleniti nesciunt quae
+            dicta eveniet vitae quidem veritatis nobis, neque a porro ad ipsa
+            quod possimus alias totam nam fuga! Eius iusto reiciendis
+            praesentium facilis est molestiae nulla, optio voluptates hic quis
+            corrupti laboriosam?
+          </p>
+          <button class="common-btn">Read more</button>
+          <div class="line">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+            <span class="line-3"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav id="sideNav">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">FEATURES</a></li>
+        <li><a href="#">COURSES</a></li>
+        <li><a href="#">OFFER</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    <img src="assets/img/xypo/menu.png" id="menuBtn" />
+
+    <!-- about-->
+    <section id="about">
+      <div class="about-left-col">
+        <img src="assets/img/xypo/about.png" />
+      </div>
+
+      <div class="about-right-col">
+        <div class="about-text">
+          <h1></h1>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var menuBtn = document.getElementById("menuBtn");
+      var sideNav = document.getElementById("sideNav");
+
+      sideNav.style.right = "-250px";
+      menuBtn.onclick = function () {
+        if (sideNav.style.right == "-250px") {
+          sideNav.style.right = "0";
+        } else {
+          sideNav.style.right = "-250px";
+        }
+      };
+    </script>
+  </body>
+</html>
