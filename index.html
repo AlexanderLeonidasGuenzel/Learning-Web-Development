@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body style="background-color: rgb(234, 238, 241)">
+  <body class="bg-light">
     <header>
       <h1
         class="h1 text-center py-5 m-0 text-dark font-monospace"
@@ -23,6 +23,7 @@
         💻 Learning Web Development 🍕
       </h1>
     </header>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-gradient ps-3">
       <div class="container-fluid">
         <button
@@ -149,7 +150,6 @@
                 </li>
               </ul>
             </li>
-
             <li class="nav-item dropdown" id="css-basiscs">
               <a
                 class="nav-link dropdown-toggle"
@@ -316,11 +316,11 @@
     </nav>
     <!-- Main Content -->
     <main class="bg-light text-secondary p-4 m-4 shadow p-lg-5">
-      <div class="row">
-        <h1 class="text-dark text-center text-md-start mb-lg-4">
+      <div class="row g-3">
+        <h1 class="text-dark text-center text-md-start">
           Welcome to My Website
         </h1>
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-12 col-lg-4 bg-dark text-light">
           <p>
             This is the main content area. You can add articles, images, or
             anything you'd like here.
@@ -340,7 +340,7 @@
             consectetur nostrum, id est quaerat eum?
           </p>
         </div>
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-12 col-lg-4 bg-secondary text-dark">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque eos
             deserunt ex libero ullam accusamus voluptatem nostrum ducimus eaque
@@ -354,8 +354,12 @@
             posuere erat a ante.
           </p>
         </div>
-        <div class="col-lg-4">
-          <img src="assets/img/Matt.Png" alt="" class="w-100" />
+        <div class="col-sm-12 col-lg-4">
+          <img
+            src="assets/img/Matt.Png"
+            alt="web developer photo"
+            class="w-100"
+          />
         </div>
       </div>
     </main>
