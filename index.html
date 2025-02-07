@@ -13,6 +13,11 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <style>
+      #photo {
+        transform: translateY(5px);
+      }
+    </style>
   </head>
   <body class="bg-light">
     <header>
@@ -316,35 +321,46 @@
     </nav>
     <!-- Main Content -->
     <main class="bg-light text-secondary p-4 m-4 shadow p-lg-5">
-      <h1 class="text-dark text-center text-md-start mb-md-3">
+      <h1 class="text-dark text-center text-md-start mb-5">
         Welcome to My Website
       </h1>
 
       <div class="row" style="text-align: justify">
-        <div class="col-sm-12 col-md-6" id="photo-container">
-          <div class="p-2 bg-dark d-none d-md-block w-50" id="photo">
+        <div class="col-md-6" id="photo-container">
+          <div
+            class="col-sm-8 col-md-6 float-md-start mx-sm-auto mb-4 mb-md-0"
+            id="photo"
+          >
             <img
               src="assets/img/Matt.Png"
               alt="web developer photo"
-              class="w-100 rounded-circle"
+              class="w-75 rounded-circle d-block mb-0 mx-auto"
             />
           </div>
-          <div class="col-sm-12" id="text-photo">
+          <div class="col-md-12" id="text-photo">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
-              eos deserunt ex libero ullam accusamus voluptatem nostrum ducimus
-              eaque atque officiis dolorem necessitatibus voluptate alias
-              corrupti laudantium, quasi voluptatum ipsam sapiente mollitia illo
-              vitae quae quod magni! Suscipit officia ratione eligendi hic
-              beatae voluptate. Culpa aperiam ducimus deleniti ex corrupti.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              posuere erat a ante.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              recusandae cupiditate delectus nulla aliquam sint voluptates
+              deserunt officiis molestias repellat, sed necessitatibus cum optio
+              possimus minus ab. Hic nemo quas quo corporis ipsam sapiente,
+              nobis soluta. Et consequuntur dicta, minima temporibus repellat
+              voluptas velit explicabo sequi quibusdam, ab iusto? Eius,
+              similique odit iure delectus voluptas reprehenderit blanditiis
+              velit. Soluta quibusdam ut voluptas vel, iusto placeat dolor
+              expedita dignissimos rerum et animi doloremque eum nisi natus
+              reiciendis earum dolores ratione, debitis laborum nihil aspernatur
+              nemo repellendus. Eveniet minus cum rem exercitationem fuga
+              tempora repudiandae ullam, quae soluta at nulla laborum! Rem,
+              quasi. Officia nemo nulla quam dicta eius quas repudiandae nisi
+              eum temporibus? Earum illum maiores ab nulla, cupiditate assumenda
+              veniam fuga, quo voluptatibus amet at! Reiciendis ex eveniet
+              dolor! Doloribus amet saepe atque! Neque ratione sit, porro
+              quibusdam corrupti eveniet! Et unde iste accusamus cumque earum
+              doloremque tempore dolorem magni?
             </p>
           </div>
         </div>
-        <div class="col-sm-12" id="text-container">
+        <div class="col-md-6" id="text-container">
           <p>
             This is the main content area. You can add articles, images, or
             anything you'd like here.
