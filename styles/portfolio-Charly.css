@@ -1,0 +1,117 @@
+:root {
+  --text-color-1: rgb(241, 238, 238);
+  --text-color-2: black;
+  --home-btn-color: rgb(0, 110, 255);
+  --home-btn-color: linear-gradient(rgb(5, 112, 252), rgb(6, 75, 167));
+  --home-btn-color-active: linear-gradient(rgb(5, 109, 245), rgb(2, 55, 126));
+  --home-btn-border: rgba(241, 238, 238, 0.534);
+
+  --home-bg-image: url("/assets/img/Charly/code.png");
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  text-align: justify;
+}
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(39, 160, 15, 0.452);
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+  gap: clamp(5px, 2dvw, 1rem);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+textarea {
+  color: var(--text-color-1);
+  background-color: rgb(32, 32, 32);
+  resize: none;
+}
+
+nav {
+  background-color: rebeccapurple;
+}
+
+header * {
+  color: var(--text-color-1);
+}
+
+main {
+}
+
+.footer {
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home * {
+  color: var(--text-color-1);
+}
+
+.home {
+  background-color: rgb(26, 26, 26);
+  background-image: var(--home-bg-image);
+  background-size: cover;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  max-width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+#btn-to-projects {
+  background: var(--home-btn-color);
+  border: 1px solid var(--home-btn-border);
+}
+
+#btn-to-projects:active {
+  background: var(--home-btn-color-active);
+}
+
+.welcome-text {
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
