@@ -26,13 +26,6 @@ function slowScrollTo(targetSelector, duration = 1000) {
 
   requestAnimationFrame(scrollAnimation);
 }
-
-window.onload = () => {
-  setTimeout(() => {
-    document.querySelector("#home")?.scrollIntoView({ behavior: "instant" });
-  }, 0);
-};
-
 const colors = ["w", "x", "y", "z", "a"];
 const persons = [
   "Sarah Weber",
@@ -44,6 +37,9 @@ const persons = [
 ];
 
 window.onload = () => {
+  setTimeout(() => {
+    document.querySelector("#home")?.scrollIntoView({ behavior: "instant" });
+  }, 0);
   const rN = Math.floor(Math.random() * colors.length);
   const rP = Math.floor(Math.random() * persons.length);
   const all = document.querySelectorAll(".portfolio");

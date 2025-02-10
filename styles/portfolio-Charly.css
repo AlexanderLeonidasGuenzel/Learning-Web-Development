@@ -44,7 +44,7 @@ header {
 
 .header-container {
   margin-left: 10%;
-  width: 90%;
+  width: 80%;
   padding: min(2dvh, 10px) 0;
   display: flex;
   flex-wrap: wrap;
