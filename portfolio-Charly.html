@@ -3,33 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title class="portfolio"></title>
     <link rel="stylesheet" href="styles/portfolio-Charly.css" />
+    <link rel="icon" href="assets/img/Charly/cp.png" />
+    <script src="scripts/portfolio-Charly.js"></script>
   </head>
   <body>
-    <!-- <header>
-      <h1>Charly Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header> -->
+    <!-- header -->
+    <header>
+      <div class="header-container">
+        <h1 class="nowrap header__h1">
+          <span class="portfolio"></span>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <main>
+      <!-- home -->
       <div class="home" id="home">
+        <div class="home-filter"></div>
         <div class="welcome-text">
-          <h1>Charly Portfolio</h1>
+          <h1>
+            <span class="portfolio" id="portfolio"></span>
+          </h1>
           <h2>Full Stack Developer</h2>
         </div>
 
-        <button class="button" type="button" id="btn-to-projects">
-          Go to Projects ⬇
+        <button
+          class="button"
+          type="button"
+          id="btn-to-projects"
+          onclick="slowScrollTo('#projects', 3000)"
+        >
+          <span class="btn-text">Go to Projects ⬇</span>
         </button>
       </div>
+
+      <!-- about -->
       <div id="about">
         <img
           src="assets/img/Charly/charly.jpg"
@@ -48,6 +67,8 @@
           similique rem?
         </p>
       </div>
+
+      <!-- skills -->
       <div class="skills" id="skills">
         <h2>My Skills</h2>
         <div class="skill">HTML</div>
@@ -57,6 +78,8 @@
         <div class="skill">React.js</div>
         <div class="skill">Node.js</div>
       </div>
+
+      <!-- projects -->
       <div class="projects" id="projects">
         <h2>My Projects</h2>
         <div class="project-card" id="1">
@@ -106,6 +129,8 @@
           </div>
         </div>
       </div>
+
+      <!-- contact -->
       <div class="contact" id="contact">
         <h2>Contact me</h2>
         <form action="">
@@ -142,6 +167,8 @@
         </form>
       </div>
     </main>
+
+    <!-- footer -->
     <footer class="footer">
       <h2>Charly Portfolio</h2>
       <div class="social-media">

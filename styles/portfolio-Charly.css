@@ -1,7 +1,8 @@
 :root {
-  --text-color-1: rgb(241, 238, 238);
+  --text-color-1: rgb(250, 250, 250);
   --text-color-2: black;
   --home-btn-color: rgb(0, 110, 255);
+  --home-btn-color-active: rgb(2, 89, 202);
   --home-btn-color: linear-gradient(rgb(5, 112, 252), rgb(6, 75, 167));
   --home-btn-color-active: linear-gradient(rgb(5, 109, 245), rgb(2, 55, 126));
   --home-btn-border: rgba(241, 238, 238, 0.534);
@@ -14,6 +15,8 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  font-size: 1rem;
 }
 
 p {
@@ -32,23 +35,60 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: rgba(39, 160, 15, 0.452);
+  border-bottom: 2px solid #1a580b;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  padding-top: 10px;
+  z-index: 4;
+}
+
+.header-container {
+  margin-left: 10%;
+  width: 90%;
+  padding: min(2dvh, 10px) 0;
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  width: 500px;
+  max-width: 80%;
+  height: 75px;
+  display: flex;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-size: clamp(1rem, 80%, 100%);
+}
+
+header * {
+  color: var(--text-color-1);
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 ul {
   list-style: none;
   padding-inline-start: 0;
-  gap: clamp(5px, 2dvw, 1rem);
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+}
+li {
+  display: flex;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
+a:-webkit-any-link:hover {
   text-decoration: underline;
 }
 
@@ -56,17 +96,6 @@ textarea {
   color: var(--text-color-1);
   background-color: rgb(32, 32, 32);
   resize: none;
-}
-
-nav {
-  background-color: rebeccapurple;
-}
-
-header * {
-  color: var(--text-color-1);
-}
-
-main {
 }
 
 .footer {
@@ -82,12 +111,23 @@ main {
 }
 
 .home {
-  background-color: rgb(26, 26, 26);
+  background-color: rgb(49, 69, 82);
   background-image: var(--home-bg-image);
   background-size: cover;
   height: 100dvh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  text-shadow: 3px 1px 3px rgba(85, 84, 84, 0.966), 2px 1px 5px rgb(24, 24, 24);
+}
+
+.home-filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 70, 145, 0.267);
+  backdrop-filter: blur(3px) opacity(1);
+  z-index: 2;
 }
 
 .button {
@@ -101,6 +141,10 @@ main {
 #btn-to-projects {
   background: var(--home-btn-color);
   border: 1px solid var(--home-btn-border);
+  position: absolute;
+  bottom: 12dvh;
+  align-self: center;
+  z-index: 3;
 }
 
 #btn-to-projects:active {
@@ -108,10 +152,45 @@ main {
 }
 
 .welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4dvh 0;
+  margin-left: 10%;
+  justify-content: space-evenly;
+  font-size: clamp(1rem, 200%, 4dvw);
+  z-index: 3;
+}
+
+.welcome-text::before {
+  content: "Welcome 👋 to";
+}
+
+#portfolio::after {
+  content: "'s Portfolio";
+  color: var(--text-color-1);
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
+}
+
+.w {
+  color: #f35005;
+}
+
+.x {
+  color: #e4c723;
+}
+
+.y {
+  color: #1476b8;
+}
+.z {
+  color: #23d40b;
+}
+.a {
+  color: #f88b0e;
 }
