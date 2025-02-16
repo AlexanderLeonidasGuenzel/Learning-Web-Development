@@ -1,0 +1,25 @@
+.red {
+  color: #d82404;
+}
+
+.yellow {
+  color: #f7d515;
+}
+
+.blue {
+  color: #508bda;
+}
+.green {
+  color: #11bb6b;
+}
+.orange {
+  color: #ff8801;
+}
+
+.white {
+  color: rgb(228, 228, 228);
+}
+
+.bg-black {
+  background-color: #1d1d1d;
+}
