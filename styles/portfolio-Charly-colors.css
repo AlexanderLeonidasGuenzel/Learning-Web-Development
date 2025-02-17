@@ -1,18 +1,22 @@
-.red {
+span {
+  display: inline-block;
+}
+
+.red span::first-letter {
   color: #d82404;
 }
 
-.yellow {
+.yellow ::first-letter {
   color: #f7d515;
 }
 
-.blue {
+.blue ::first-letter {
   color: #508bda;
 }
-.green {
+.green ::first-letter {
   color: #11bb6b;
 }
-.orange {
+.orange ::first-letter {
   color: #ff8801;
 }
 
@@ -22,4 +26,8 @@
 
 .bg-black {
   background-color: #1d1d1d;
+}
+
+.bg-transparent {
+  background-color: transparent;
 }

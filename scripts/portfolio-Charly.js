@@ -27,37 +27,47 @@ function slowScrollTo(targetSelector, duration = 1000) {
   requestAnimationFrame(scrollAnimation);
 }
 const colors = ["red", "yellow", "blue", "green", "orange"];
-const person = "Charly Portmann";
+// const person = "Charly Yen Portmann";
+const person = "Alexander Leonidas Günzel";
 const firstName = person.slice(0, person.indexOf(" "));
-const lastName = person.slice(person.indexOf(" ") + 1, person.length);
+const secondName = person.slice(
+  person.indexOf(" ") + 1,
+  person.lastIndexOf(" ")
+);
+const lastName = person.slice(person.lastIndexOf(" ") + 1, person.length);
+console.clear();
 console.log(firstName);
+console.log(secondName);
 console.log(lastName);
 
 window.onload = () => {
   setTimeout(() => {
     document.querySelector("#home")?.scrollIntoView({ behavior: "instant" });
   }, 0);
+
   const rN = Math.floor(Math.random() * colors.length);
   const devName = document.querySelectorAll(".developer-name");
+  const webdev = "Web Development";
+  const title = document.querySelector(".title");
+  title.innerHTML = lastName + "\u00A0" + webdev;
+  const header__h1 = document.querySelector(".header__h1");
+  h1_span = document.createElement("span");
+  h1_span.textContent = webdev;
+  header__h1.classList.add(colors[rN]);
+  header__h1.appendChild(h1_span);
+
   devName.forEach((e) => {
+    e.classList.add(colors[rN]);
     let nameLetters = [];
+
     nameLetters[0] = document.createElement("span");
-    nameLetters[0].textContent = firstName.charAt(0);
-    nameLetters[0].classList.add(colors[rN]);
+    nameLetters[0].textContent = firstName + "\u00A0";
 
     nameLetters[1] = document.createElement("span");
-    nameLetters[1].textContent = firstName.slice(1);
-    nameLetters[1].classList.add("white");
+    nameLetters[1].textContent = secondName + "\u00A0";
 
     nameLetters[2] = document.createElement("span");
-    nameLetters[2].textContent = " " + lastName.charAt(0);
-    nameLetters[2].classList.add(colors[rN]);
-
-    nameLetters[3] = document.createElement("span");
-    nameLetters[3].textContent = lastName.slice(1);
-    nameLetters[3].classList.add("white");
-
-    e.innerHTML = "";
+    nameLetters[2].textContent = lastName;
 
     for (let i = 0; i < nameLetters.length; i++) {
       e.appendChild(nameLetters[i]);

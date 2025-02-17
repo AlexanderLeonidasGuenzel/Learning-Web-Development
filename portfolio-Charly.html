@@ -3,29 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="developer-name"></title>
+
+    <title class="title"></title>
     <link rel="stylesheet" href="styles/portfolio-Charly.css" />
     <link rel="stylesheet" href="styles/portfolio-Charly-colors.css" />
     <link rel="icon" href="assets/img/Charly/cp.png" />
-    <script src="scripts/portfolio-Charly.js"></script>
+    <script defer src="scripts/portfolio-Charly.js"></script>
   </head>
   <body>
     <!-- header -->
-    <header class="bg-black">
-      <div class="header-container">
-        <h1 class="nowrap header__h1">
-          <span class="developer-name"></span>
-        </h1>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header class="bg-black header-container">
+      <h1 class="nowrap header__h1"></h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -33,13 +30,10 @@
       <div class="home" id="home">
         <div class="home-filter"></div>
         <div class="welcome-text">
-          <h1>
-            <span
-              class="developer-name protest-revolution-regular"
-              id="developer-name"
-            ></span>
-          </h1>
-          <h2 class="">Fullstack Developer</h2>
+          <h1 class="developer-name protest-revolution-regular"></h1>
+          <h2 class="nowrap fullstack-developer">
+            <span>Fullstack Developer</span>
+          </h2>
         </div>
 
         <button
@@ -52,128 +46,130 @@
         </button>
       </div>
 
-      <!-- about -->
-      <div id="about">
-        <img
-          src="assets/img/Charly/charly.jpg"
-          alt=""
-          width="854"
-          height="1280"
-        />
-        <h1>About me</h1>
-        <h2>Full Stack Developer</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tempore
-          beatae ratione et illo, facilis velit asperiores error iste molestiae
-          porro voluptatem alias, aspernatur in laudantium, incidunt fugit cum
-          modi accusamus ad. Molestiae repellendus quos sit ratione modi dicta
-          sed voluptates. Quasi, in quisquam. Deleniti iusto eaque animi
-          similique rem?
-        </p>
-      </div>
-
-      <!-- skills -->
-      <div class="skills" id="skills">
-        <h2>My Skills</h2>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">TypeScript</div>
-        <div class="skill">React.js</div>
-        <div class="skill">Node.js</div>
-      </div>
-
-      <!-- projects -->
-      <div class="projects" id="projects">
-        <h2>My Projects</h2>
-        <div class="project-card" id="1">
-          <div class="card-head">
-            <span class="icon"></span>
-            <h3>Web Development</h3>
-            <div class="card-body">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-                quibusdam, et laudantium numquam at perspiciatis enim minus
-                veritatis neque placeat. Ut accusantium recusandae iste itaque
-                sit earum possimus, reiciendis dolorem.
-              </p>
-              <button class="button">Project1</button>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" id="2">
-          <div class="card-head">
-            <span class="icon"></span>
-            <h3>Web Development</h3>
-            <div class="card-body">
-              <p>
-                Quam, laboriosam quo. Facilis fuga cumque, quibusdam, ab
-                mollitia, beatae non laborum corporis porro reiciendis
-                repellendus deserunt molestias corrupti delectus! Delectus
-                voluptate perferendis necessitatibus tenetur quam molestias sint
-                aspernatur asperiores.
-              </p>
-              <button class="button">Project2</button>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" id="3">
-          <div class="card-head">
-            <span class="icon"></span>
-            <h3>Web Development</h3>
-            <div class="card-body">
-              <p>
-                Repellendus eius inventore et explicabo reprehenderit alias vel
-                amet sit esse, dolorum tempora soluta maiores rem veniam
-                deleniti perspiciatis assumenda ad reiciendis mollitia quod
-                cumque ipsa! Non aspernatur nesciunt quasi.
-              </p>
-              <button class="button">Project3</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- contact -->
-      <div class="contact" id="contact">
-        <h2>Contact me</h2>
-        <form action="">
-          <label for="surname">surname</label>
-          <input
-            type="text"
-            name="surname"
-            id="surname"
-            placeholder="Your name"
+      <div class="display-none">
+        <!-- about -->
+        <div id="about">
+          <img
+            src="assets/img/Charly/charly.jpg"
+            alt=""
+            width="854"
+            height="1280"
           />
-          <label for="lastname">lastname</label>
-          <input
-            type="text"
-            name="lastname"
-            id="lastname"
-            placeholder="Your last name"
-          />
-          <label for="country">Country</label>
-          <select name="country" id="country">
-            <option value="ge">Germany</option>
-            <option value="uk" selected>United Kingdom</option>
-            <option value="fr">France</option>
-          </select>
-          <label for="message">Message</label>
-          <textarea
-            name="message"
-            id="message"
-            rows="10"
-            cols="50"
-            maxlength="200"
-            placeholder="Enter your message here..."
-          ></textarea>
-          <button class="button" type="submit">Submit</button>
-        </form>
+          <h1>About me</h1>
+          <h2>Full Stack Developer</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+            tempore beatae ratione et illo, facilis velit asperiores error iste
+            molestiae porro voluptatem alias, aspernatur in laudantium, incidunt
+            fugit cum modi accusamus ad. Molestiae repellendus quos sit ratione
+            modi dicta sed voluptates. Quasi, in quisquam. Deleniti iusto eaque
+            animi similique rem?
+          </p>
+        </div>
+
+        <!-- skills -->
+        <div class="skills" id="skills">
+          <h2>My Skills</h2>
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">TypeScript</div>
+          <div class="skill">React.js</div>
+          <div class="skill">Node.js</div>
+        </div>
+
+        <!-- projects -->
+        <div class="projects" id="projects">
+          <h2>My Projects</h2>
+          <div class="project-card" id="1">
+            <div class="card-head">
+              <span class="icon"></span>
+              <h3>Web Development</h3>
+              <div class="card-body">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+                  quibusdam, et laudantium numquam at perspiciatis enim minus
+                  veritatis neque placeat. Ut accusantium recusandae iste itaque
+                  sit earum possimus, reiciendis dolorem.
+                </p>
+                <button class="button">Project1</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" id="2">
+            <div class="card-head">
+              <span class="icon"></span>
+              <h3>Web Development</h3>
+              <div class="card-body">
+                <p>
+                  Quam, laboriosam quo. Facilis fuga cumque, quibusdam, ab
+                  mollitia, beatae non laborum corporis porro reiciendis
+                  repellendus deserunt molestias corrupti delectus! Delectus
+                  voluptate perferendis necessitatibus tenetur quam molestias
+                  sint aspernatur asperiores.
+                </p>
+                <button class="button">Project2</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" id="3">
+            <div class="card-head">
+              <span class="icon"></span>
+              <h3>Web Development</h3>
+              <div class="card-body">
+                <p>
+                  Repellendus eius inventore et explicabo reprehenderit alias
+                  vel amet sit esse, dolorum tempora soluta maiores rem veniam
+                  deleniti perspiciatis assumenda ad reiciendis mollitia quod
+                  cumque ipsa! Non aspernatur nesciunt quasi.
+                </p>
+                <button class="button">Project3</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- contact -->
+        <div class="contact" id="contact">
+          <h2>Contact me</h2>
+          <form action="">
+            <label for="surname">surname</label>
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              placeholder="Your name"
+            />
+            <label for="lastname">lastname</label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="Your last name"
+            />
+            <label for="country">Country</label>
+            <select name="country" id="country">
+              <option value="ge">Germany</option>
+              <option value="uk" selected>United Kingdom</option>
+              <option value="fr">France</option>
+            </select>
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              cols="50"
+              maxlength="200"
+              placeholder="Enter your message here..."
+            ></textarea>
+            <button class="button" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
     </main>
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer display-none">
       <h2>Charly developer-name</h2>
       <div class="social-media">
         <button class="button social-media">Facebook</button>
