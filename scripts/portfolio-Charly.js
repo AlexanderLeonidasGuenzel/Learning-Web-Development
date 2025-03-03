@@ -27,7 +27,6 @@ function slowScrollTo(targetSelector, duration = 1000) {
   requestAnimationFrame(scrollAnimation);
 }
 const colors = ["red", "yellow", "blue", "green", "orange"];
-// const person = "Charly Yen Portmann";
 const person = "Alexander Leonidas Günzel";
 const firstName = person.slice(0, person.indexOf(" "));
 const secondName = person.slice(
