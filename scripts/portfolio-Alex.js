@@ -41,7 +41,7 @@ console.log(lastName);
 
 window.onload = () => {
   setTimeout(() => {
-    document.querySelector("#home")?.scrollIntoView({ behavior: "instant" });
+    document.querySelector("#about")?.scrollIntoView({ behavior: "instant" });
   }, 0);
 
   const rN = Math.floor(Math.random() * colors.length);

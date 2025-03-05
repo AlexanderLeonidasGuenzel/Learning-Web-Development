@@ -1,33 +1,53 @@
-span {
-  display: inline-block;
+:root {
+  --white: #e0e0e0;
+  --black: #1d1d1d;
+  --red: #d82404;
+  --yellow: #f7d515;
+  --blue: #508bda;
+  --green: #11bb6b;
+  --orange: #ff8801;
+  --transparent: transparent;
+
+  --home-filter: #082e6831;
 }
 
-.red span::first-letter {
-  color: #d82404;
+/* Text Colors */
+.tx-white * {
+  color: var(--white);
 }
 
-.yellow ::first-letter {
-  color: #f7d515;
+.tx-black * {
+  color: var(--black);
 }
 
-.blue ::first-letter {
-  color: #508bda;
-}
-.green ::first-letter {
-  color: #11bb6b;
-}
-.orange ::first-letter {
-  color: #ff8801;
-}
-
-.white {
-  color: rgb(228, 228, 228);
-}
-
+/* BG Colors */
 .bg-black {
-  background-color: #1d1d1d;
+  background-color: var(--black);
 }
 
 .bg-transparent {
-  background-color: transparent;
+  background-color: var(--transparent);
+}
+
+.home-filter {
+  background-color: var(--home-filter);
+}
+
+/* First Letter Colors */
+.red span::first-letter {
+  color: var(--red);
+}
+
+.yellow ::first-letter {
+  color: var(--yellow);
+}
+
+.blue ::first-letter {
+  color: var(--blue);
+}
+.green ::first-letter {
+  color: var(--green);
+}
+.orange ::first-letter {
+  color: var(--orange);
 }

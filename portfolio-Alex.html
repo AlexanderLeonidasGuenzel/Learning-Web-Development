@@ -12,8 +12,8 @@
   </head>
   <body>
     <!-- header -->
-    <header class="bg-black header-container">
-      <h1 class="nowrap header__h1"></h1>
+    <header class="header-container bg-black tx-white">
+      <h1 class="header__h1 nowrap"></h1>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
@@ -27,7 +27,7 @@
 
     <main>
       <!-- home -->
-      <div class="home" id="home">
+      <div class="home bg-black tx-white" id="home">
         <div class="home-filter"></div>
         <div class="welcome-text">
           <h1 class="developer-name protest-revolution-regular"></h1>
@@ -37,34 +37,30 @@
         </div>
 
         <button
-          class="button"
+          class="button tx-white"
           type="button"
           id="btn-to-projects"
           onclick="slowScrollTo('#projects', 2000)"
         >
-          <span class="btn-text">Go to Projects ⬇</span>
+          <span>Go to Projects</span>
         </button>
       </div>
 
       <!-- about -->
-      <div id="about">
-        <img
-          id="profile-picture"
-          src="assets/img/Alex/Alex.jpg"
-          alt=""
-          width="854"
-          height="1280"
-        />
-        <h1>About me</h1>
-        <h2>Full Stack Developer</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tempore
-          beatae ratione et illo, facilis velit asperiores error iste molestiae
-          porro voluptatem alias, aspernatur in laudantium, incidunt fugit cum
-          modi accusamus ad. Molestiae repellendus quos sit ratione modi dicta
-          sed voluptates. Quasi, in quisquam. Deleniti iusto eaque animi
-          similique rem?
-        </p>
+      <div id="about" class="about bg-black tx-white">
+        <div class="container-about-image"></div>
+        <div class="container-about-text">
+          <h1>About me</h1>
+          <h2>Full Stack Developer</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+            tempore beatae ratione et illo, facilis velit asperiores error iste
+            molestiae porro voluptatem alias, aspernatur in laudantium, incidunt
+            fugit cum modi accusamus ad. Molestiae repellendus quos sit ratione
+            modi dicta sed voluptates. Quasi, in quisquam. Deleniti iusto eaque
+            animi similique rem?
+          </p>
+        </div>
       </div>
 
       <!-- skills -->
@@ -168,12 +164,12 @@
     </main>
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer bg-black tx-white">
       <h2 class="developer-name"></h2>
       <div class="social-media">
-        <button class="button social-media">Facebook</button>
-        <button class="button social-media">Instagram</button>
-        <button class="button social-media">Youtube</button>
+        <button class="button social-media">GitHub</button>
+        <button class="button social-media">XING</button>
+        <button class="button social-media">LinkedIn</button>
       </div>
       <h2>Copyright &copy; 2025</h2>
     </footer>

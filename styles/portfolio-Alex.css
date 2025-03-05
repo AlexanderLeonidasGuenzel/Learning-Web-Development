@@ -11,22 +11,17 @@
   --home-btn-border-b: rgb(73, 73, 73);
   --header-border-color: rgb(136, 136, 136);
 
-  /* Shadow */
+  /* Shadows */
   --home-text-shadow: 2px 1px 1px rgba(34, 34, 34, 0.966);
 
   --portfolio-text-shadow: 1px 3px 1px rgba(228, 227, 227, 0.678),
     3px 2px 2px rgb(119, 119, 119);
 
-  /* Image */
+  /* Images */
   --home-bg-image: url("/assets/img/Alex/code.png");
 }
 
-header *,
-.home * {
-  color: var(--text-color-1);
-}
-
-/* Font */
+/* Fonts */
 .lugrasimo-regular {
   font-family: "Lugrasimo", serif;
   font-weight: 400;
@@ -39,23 +34,16 @@ header *,
   font-style: normal;
 }
 
+/* Texts */
+p {
+  text-align: justify;
+}
+
+/* General */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  font-size: 1rem;
-  position: relative;
-}
-
-p {
-  text-align: justify;
 }
 
 img {
@@ -64,6 +52,24 @@ img {
   padding: 0;
   max-width: 100%;
   height: auto;
+}
+
+.button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  max-width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+/* Body */
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  font-size: 1rem;
+  position: relative;
 }
 
 /* Header */
@@ -85,11 +91,9 @@ nav {
   display: flex;
   width: 100%;
   padding: 10px 0;
-
   text-transform: uppercase;
   font-size: clamp(12px, 4vw, 100%);
   transition: 0.5s ease-out;
-
   transform: scale(0.9);
 }
 
@@ -110,19 +114,14 @@ a {
   text-decoration: none;
 }
 
-.developer-name {
-  letter-spacing: 1px;
-}
-
+/* Section Home */
 .home {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  /* scroll-margin-bottom: 50px; */
-  background-color: rgb(18, 40, 65);
   background-image: var(--home-bg-image);
   background-size: cover;
   background-position: center;
@@ -131,9 +130,7 @@ a {
 .home-filter {
   width: 100%;
   height: 100%;
-
   position: absolute;
-  background-color: rgba(8, 46, 104, 0.253);
   backdrop-filter: blur(5px);
   z-index: 2;
 }
@@ -148,41 +145,12 @@ a {
   transform: scale(0.9);
 }
 
-.welcome-text::before {
-  display: none;
-}
-
 .welcome-text h2 {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-.nowrap {
-  white-space: nowrap;
-}
-
-textarea {
-  color: var(--text-color-1);
-  background-color: rgb(32, 32, 32);
-  resize: none;
-}
-
-.footer {
-  min-height: 200px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.button {
-  border-radius: 20px;
-  padding: 10px 20px;
-  max-width: fit-content;
-  border: none;
-  cursor: pointer;
-}
-
+/* Button: go to projects */
 #btn-to-projects {
   display: none;
   font-weight: 500;
@@ -194,6 +162,43 @@ textarea {
   background: var(--home-btn-color-active);
 }
 
+/* Section About */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10vh 1fr 10vh;
+  height: 100vh;
+  justify-items: center;
+}
+.container-about-text {
+  padding: 20px;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.container-about-image {
+  background-image: url("/assets/img/Alex/Alex.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  background-position: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  margin: 50px;
+}
+
+/* Footer */
+.footer {
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Responsive */
 @media screen and (min-width: 950px) {
   header {
     justify-content: space-evenly;
@@ -258,6 +263,18 @@ textarea {
   }
 }
 
+/* Utils */
+span {
+  display: inline-block;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
 .display-none {
   display: none;
+}
+
+.developer-name {
+  letter-spacing: 1px;
 }
