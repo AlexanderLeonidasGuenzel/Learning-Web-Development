@@ -5,10 +5,20 @@
   /* Colors */
   --text-color-1: rgb(240, 240, 240);
   --text-color-2: black;
+
+  /* BTN Projects */
+  /* grey */
   --home-btn-color: linear-gradient(rgb(133, 133, 133), rgb(37, 37, 37));
   --home-btn-color-active: linear-gradient(rgb(110, 110, 110), rgb(32, 32, 32));
   --home-btn-border: rgba(241, 238, 238, 0.336);
   --home-btn-border-b: rgb(73, 73, 73);
+
+  /* orange */
+  --home-btn-color: linear-gradient(rgb(133, 133, 133), rgb(37, 37, 37));
+  --home-btn-color-active: linear-gradient(rgb(110, 110, 110), rgb(32, 32, 32));
+  --home-btn-border: rgba(241, 238, 238, 0.336);
+  --home-btn-border-b: rgb(73, 73, 73);
+
   --header-border-color: rgb(136, 136, 136);
 
   /* Shadows */
@@ -150,6 +160,10 @@ a {
   text-transform: uppercase;
 }
 
+.developer-name {
+  letter-spacing: 1px;
+}
+
 /* Button: go to projects */
 #btn-to-projects {
   display: none;
@@ -273,8 +287,4 @@ span {
 
 .display-none {
   display: none;
-}
-
-.developer-name {
-  letter-spacing: 1px;
 }
