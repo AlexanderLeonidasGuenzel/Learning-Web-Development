@@ -1,39 +1,64 @@
 let websiteOwnerName;
+let actualColor;
+const fullName = "Alexander Leonidas Günzel";
 const webdev = "Web Development";
 
 window.onload = () => {
-  // Page Refresh Scroll Into View
+  viewPosition();
+  actualColor = randomColor();
+  websiteOwnerName = getArrayOf(fullName);
+  createWebsiteOwnerName();
+  createTitle(websiteOwnerName, webdev);
+  createHeaderLogo();
+};
+
+// WebsiteOwnerName
+const createWebsiteOwnerName = () => {
+  const nameOccurrence = document.querySelectorAll(".websiteOwnerName");
+  nameOccurrence.forEach((e) => {
+    e.classList.add(actualColor);
+
+    websiteOwnerName.forEach((i) => {
+      const namePart = document.createElement("span");
+      namePart.textContent = `${i}\u00A0`;
+      e.appendChild(namePart);
+    });
+  });
+};
+
+// Page Refresh Scroll Into View
+const viewPosition = () => {
   setTimeout(() => {
     document.querySelector("#home")?.scrollIntoView({ behavior: "instant" });
   }, 0);
+};
 
-  websiteOwnerName = setWebsiteOwnerName("Alexander Leonidas Günzel");
-  setTitle(websiteOwnerName, webdev);
+// Random Color from fix collection
+const randomColor = () => {
+  const colors = ["red", "yellow", "blue", "green", "orange"];
+  const element = Math.floor(Math.random() * colors.length);
+  return colors[element];
+};
 
-  const header__h1 = document.querySelector(".header__h1");
-  h1_span = document.createElement("span");
-  h1_span.textContent = webdev;
-  header__h1.classList.add(randomColor());
-  header__h1.appendChild(h1_span);
+// String to Array
+const getArrayOf = (name) => {
+  return name.split(" ");
+};
 
-  const devName = document.querySelectorAll(".developer-name");
-  devName.forEach((e) => {
-    e.classList.add(colors[rN]);
-    let nameLetters = [];
+// Create Webpage Title
+const createTitle = (name, text) => {
+  const title = document.querySelector(".title");
+  const lastName = name.length - 1;
+  title.innerHTML = `${name[lastName]}\u00A0${text}`;
+};
 
-    nameLetters[0] = document.createElement("span");
-    nameLetters[0].textContent = firstName + "\u00A0";
-
-    nameLetters[1] = document.createElement("span");
-    nameLetters[1].textContent = secondName + "\u00A0";
-
-    nameLetters[2] = document.createElement("span");
-    nameLetters[2].textContent = lastName;
-
-    for (let i = 0; i < nameLetters.length; i++) {
-      e.appendChild(nameLetters[i]);
-    }
-  });
+// Create Header Logo
+const createHeaderLogo = () => {
+  const logo = document.querySelector(".logo");
+  logoText = document.createElement("span");
+  logoText.textContent = `${webdev}`;
+  logo.classList.add(actualColor);
+  logo.appendChild(logoText);
 };
 
 // Scroll Animation
@@ -65,21 +90,3 @@ function slowScrollTo(targetSelector, duration = 1000) {
 
   requestAnimationFrame(scrollAnimation);
 }
-
-// Generate Color Function
-const randomColor = () => {
-  const colors = ["red", "yellow", "blue", "green", "orange"];
-  const element = Math.floor(Math.random() * colors.length);
-  return colors[element];
-};
-
-const setWebsiteOwnerName = (name) => {
-  return name.split(" ");
-};
-
-// Create Webpage Title
-const setTitle = (name, text) => {
-  const title = document.querySelector(".title");
-  const lastName = name.length - 1;
-  title.innerHTML = `${name[lastName]}\u00A0${text}`;
-};

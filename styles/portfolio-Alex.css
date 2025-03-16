@@ -93,7 +93,7 @@ header {
   position: fixed;
 }
 
-.header__h1 {
+.logo {
   display: none;
 }
 
@@ -160,7 +160,7 @@ a {
   text-transform: uppercase;
 }
 
-.developer-name {
+.websiteOwnerName {
   letter-spacing: 1px;
 }
 
@@ -227,7 +227,7 @@ a {
     gap: 2em;
   }
 
-  .header__h1 {
+  .logo {
     display: flex;
   }
 }

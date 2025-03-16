@@ -37,11 +37,9 @@
 .red span::first-letter {
   color: var(--red);
 }
-
 .yellow ::first-letter {
   color: var(--yellow);
 }
-
 .blue ::first-letter {
   color: var(--blue);
 }
