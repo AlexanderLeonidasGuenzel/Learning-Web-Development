@@ -34,18 +34,41 @@
 }
 
 /* First Letter Colors */
-.red span::first-letter {
+:is(.websiteOwnerName, .logo).red span::first-letter {
   color: var(--red);
 }
-.yellow ::first-letter {
+:is(.websiteOwnerName, .logo).yellow ::first-letter {
   color: var(--yellow);
 }
-.blue ::first-letter {
+:is(.websiteOwnerName, .logo).blue ::first-letter {
   color: var(--blue);
 }
-.green ::first-letter {
+:is(.websiteOwnerName, .logo).green ::first-letter {
   color: var(--green);
 }
-.orange ::first-letter {
+:is(.websiteOwnerName, .logo).orange ::first-letter {
   color: var(--orange);
+}
+
+.button.red {
+  background: linear-gradient(var(--red), 60%, #832818);
+}
+#btn-to-projects.yellow {
+  background: linear-gradient(var(--yellow), #a18901);
+}
+:is(#btn-to-projects).yellow *,
+.orange * {
+  color: white;
+}
+#btn-to-projects.blue {
+  background-color: var(--blue);
+  background: linear-gradient(var(--blue), #2d60a1);
+}
+#btn-to-projects.green {
+  background-color: var(--green);
+  background: linear-gradient(var(--green), 60%, #05864a);
+}
+#btn-to-projects.orange {
+  background-color: var(--orange);
+  background: linear-gradient(var(--orange), #854a06);
 }

@@ -6,19 +6,6 @@
   --text-color-1: rgb(240, 240, 240);
   --text-color-2: black;
 
-  /* BTN Projects */
-  /* grey */
-  --home-btn-color: linear-gradient(rgb(133, 133, 133), rgb(37, 37, 37));
-  --home-btn-color-active: linear-gradient(rgb(110, 110, 110), rgb(32, 32, 32));
-  --home-btn-border: rgba(241, 238, 238, 0.336);
-  --home-btn-border-b: rgb(73, 73, 73);
-
-  /* orange */
-  --home-btn-color: linear-gradient(rgb(133, 133, 133), rgb(37, 37, 37));
-  --home-btn-color-active: linear-gradient(rgb(110, 110, 110), rgb(32, 32, 32));
-  --home-btn-border: rgba(241, 238, 238, 0.336);
-  --home-btn-border-b: rgb(73, 73, 73);
-
   --header-border-color: rgb(136, 136, 136);
 
   /* Shadows */
@@ -72,13 +59,16 @@ img {
   cursor: pointer;
 }
 
+html {
+  font-size: 1rem;
+}
 /* Body */
 body {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  font-size: 1rem;
+
   position: relative;
 }
 
@@ -102,7 +92,7 @@ nav {
   width: 100%;
   padding: 10px 0;
   text-transform: uppercase;
-  font-size: clamp(12px, 4vw, 100%);
+  font-size: clamp(0.75rem, 4vw, 1.1rem);
   transition: 0.5s ease-out;
   transform: scale(0.9);
 }
@@ -164,16 +154,10 @@ a {
   letter-spacing: 1px;
 }
 
-/* Button: go to projects */
 #btn-to-projects {
   display: none;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: 1s ease-out;
-}
-
-#btn-to-projects:active {
-  background: var(--home-btn-color-active);
+  border: 1px solid rgba(202, 199, 199, 0.829);
+  background-color: rgb(22, 22, 22);
 }
 
 /* Footer */
@@ -226,14 +210,11 @@ a {
 @media screen and (min-height: 600px) {
   #btn-to-projects {
     display: block;
-    background: var(--home-btn-color);
-    border: 1px solid var(--home-btn-border);
-    border-bottom: 1px solid var(--home-btn-border-b);
     position: absolute;
     bottom: clamp(40px, 15%, 100px);
     align-self: center;
     z-index: 3;
-    transition: 2s ease-out;
+    text-transform: uppercase;
   }
 
   nav {

@@ -10,6 +10,7 @@ window.onload = () => {
   createWebsiteOwnerName();
   createTitle(websiteOwnerName, webdev);
   createHeaderLogo();
+  createBtnColor();
 };
 
 // WebsiteOwnerName
@@ -59,6 +60,12 @@ const createHeaderLogo = () => {
   logoText.textContent = `${webdev}`;
   logo.classList.add(actualColor);
   logo.appendChild(logoText);
+};
+
+// Create Button Color
+const createBtnColor = () => {
+  const btn = document.querySelector("#btn-to-projects");
+  btn.classList.add(actualColor);
 };
 
 // Scroll Animation
