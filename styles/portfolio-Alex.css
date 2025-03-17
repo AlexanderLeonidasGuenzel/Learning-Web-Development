@@ -176,33 +176,6 @@ a {
   background: var(--home-btn-color-active);
 }
 
-/* Section About */
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 10vh 1fr 10vh;
-  height: 100vh;
-  justify-items: center;
-}
-.container-about-text {
-  padding: 20px;
-  grid-row-start: 2;
-  grid-column-start: 2;
-}
-
-.container-about-image {
-  background-image: url("/assets/img/Alex/Alex.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: aliceblue;
-  grid-row-start: 2;
-  grid-column-start: 1;
-  background-position: center;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  margin: 50px;
-}
-
 /* Footer */
 .footer {
   min-height: 200px;
@@ -213,6 +186,24 @@ a {
 }
 
 /* Responsive */
+
+@media screen and (min-width: 500px) {
+  nav {
+    transform: scale(1);
+  }
+  .home {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .welcome-text {
+    gap: 10px 0;
+    padding-left: 10%;
+    justify-content: center;
+    transform: scale(1.1);
+  }
+}
+
 @media screen and (min-width: 950px) {
   header {
     justify-content: space-evenly;
@@ -229,23 +220,6 @@ a {
 
   .logo {
     display: flex;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  nav {
-    transform: scale(1);
-  }
-  .home {
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .welcome-text {
-    gap: 10px 0;
-    padding-left: 10%;
-    justify-content: center;
-    transform: scale(1.1);
   }
 }
 
