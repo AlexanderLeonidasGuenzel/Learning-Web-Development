@@ -1,124 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-
-body{
-    font-family: "Nunito", sans-serif;
-    min-height: 100vh;
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
 }
-h1{
-    text-align: center;
-    margin-block-start: 1rem;
-    font-size: 3rem;
-}
-
-.example{
-    margin: 1rem;
-    padding: 20px;
-    border: 1px solid rgb(180, 177, 177);
+h1 {
+  text-align: center;
+  margin-block-start: 1rem;
+  font-size: 3rem;
 }
 
-.example p{
-    font-size: 1.1rem;
-    max-width: 400px;
+.example {
+  margin: 1rem;
+  padding: 20px;
+  border: 1px solid rgb(180, 177, 177);
 }
 
-.example img{
-    width: 40%; /*25% of container size not image size*/
-    height: auto;
-    display: block;
-    margin-right: 1.5rem;
+.example p {
+  font-size: 1.1rem;
+  max-width: 400px;
 }
 
-.content-container{
-    display: flex;
+.example img {
+  width: 40%; /*25% of container size not image size*/
+  height: auto;
+  display: block;
+  margin-right: 1.5rem;
 }
 
-.container{
-    background-color: rgb(111, 191, 228);
-    background-image: url("https://picsum.photos/seed/o/800"); /*plants*/
-    background-size: cover;
-    background-position: center;
-    background-position: center;
+.content-container {
+  display: flex;
 }
 
-.hero{
-    border-bottom: 2px solid black;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    background-color: rgba(3, 77, 64, 0.425);
+.container {
+  background-color: rgb(111, 191, 228);
+  background-image: url("https://picsum.photos/seed/o/800"); /*plants*/
+  background-size: cover;
+  background-position: center;
+  background-position: center;
 }
 
-.h1{
-    font-size: 7vw;
-    color: white;
-    text-shadow: 1px 2px 5px rgb(1, 16, 66);
+.hero {
+  border-bottom: 2px solid black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: rgba(3, 77, 64, 0.425);
 }
 
-.profile-pic-figure{
-    width: 35%;
+.h1 {
+  font-size: 7vw;
+  color: white;
+  text-shadow: 1px 2px 5px rgb(1, 16, 66);
 }
 
-.profile-pic-figure img{
-    width: 100%;
-    height: auto;
-    min-width: 100px;
-    border: 5px double rgba(18, 197, 11, 0.719);
-    border-radius: 50%;
+.profile-pic-figure {
+  width: 35%;
+}
+
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 5px double rgba(18, 197, 11, 0.719);
+  border-radius: 10%;
 }
 
 /*Utility Classes*/
-.nowrap{
-    white-space: nowrap;
+.nowrap {
+  white-space: nowrap;
 }
 
-.offscreen{
-    position: absolute;
-    left: -1000000px;
+.offscreen {
+  position: absolute;
+  left: -1000000px;
 }
 /*End Utility Classes*/
 
-.container-gradient{
-    height: 500px;
-    background-color: black;
-    background-image: url("../assets/img/bubbles.png"), /*pfad von css file aus gesehen!!*/
-    linear-gradient(to left, steelblue, white);
-    background-repeat: repeat-y;
-    background-position: right;
-    background-size: 20%, auto;
+.container-gradient {
+  height: 500px;
+  background-color: black;
+  background-image: url("../assets/img/bubbles.png"),
+    /*pfad von css file aus gesehen!!*/
+      linear-gradient(to left, steelblue, white);
+  background-repeat: repeat-y;
+  background-position: right;
+  background-size: 20%, auto;
 }
 
-.clip{
-    font-weight: 800;
-    font-size: 18rem;
-    text-align: center;
-    background-image: url("https://picsum.photos/seed/c/800");
-    background-size: 100%;
-    text-transform: uppercase;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+.clip {
+  font-weight: 800;
+  font-size: 18rem;
+  text-align: center;
+  background-image: url("https://picsum.photos/seed/c/800");
+  background-size: 100%;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.clip-container{
-    background-color: rgb(29, 29, 29);
+.clip-container {
+  background-color: rgb(29, 29, 29);
 }
 
-nav{
-    padding: 10px 20px;
-    border: 1px solid black;
-    background-color: rgb(53, 53, 53);
+nav {
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: rgb(53, 53, 53);
 }
 
-a, a:visited{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-size: 1.2rem;
+a,
+a:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.2rem;
 }
 
-a:hover, a:focus{
-    text-decoration: underline;
-    font-weight: 700 ;
+a:hover,
+a:focus {
+  text-decoration: underline;
+  font-weight: 700;
 }
