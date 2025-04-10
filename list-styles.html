@@ -14,37 +14,34 @@
   </head>
   <body>
     <article id="list-styles">
-      <h1>List Styles</h1>
+      <h1>List Types and Styles</h1>
       <section>
-        <h2>Ordered List</h2>
-        <ol>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ol>
+        <h2>List Types</h2>
+        <h3>Ordered List</h3>
+        <div class="container-lists">
+          <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </ol>
+        </div>
         <p>For the ordered list the default list style type is "decimal".</p>
-        <h2>Unordered List</h2>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ul>
+        <h3>Unordered List</h3>
+        <div class="container-lists">
+          <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </ul>
+        </div>
         <p>For the unordered list the default list style type is "disc".</p>
-        <h2>Change List Style Types</h2>
-        <code>
-          ol { <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: lower-alpha; <br />
-          } <br /><br />
-          ol { <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: decimal-leading-zero; <br />
-          } <br /><br />
-          ol { <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: upper-roman; <br />
-          } <br />
-        </code>
-        <br />
+      </section>
+
+      <section>
+        <h2>List Style Types</h2>
+        <h3>Example 1 - Ordered Lists</h3>
         <div class="container">
-          <div class="flexbox-change-list-style-types" id="grid-auto">
+          <div class="container-lists">
             <ol style="list-style-type: lower-alpha">
               <li>One</li>
               <li>Two</li>
@@ -60,6 +57,36 @@
               <li>Two</li>
               <li>Three</li>
             </ol>
+          </div>
+        </div>
+        <div class="container">
+          <code>
+            <div class="code-block">
+              <div class="code-line">ol {</div>
+              <div class="code-line">list-style-type: lower-alpha;</div>
+              <div class="code-line">}</div>
+            </div>
+            <div class="code-block">
+              <div class="code-line">ol {</div>
+              <div class="code-line">
+                list-style-type: decimal-leading-zero;
+              </div>
+              <div class="code-line">}</div>
+            </div>
+            <div class="code-block">
+              <div class="code-line">ol {</div>
+              <div class="code-line">list-style-type: upper-roman;</div>
+              <div class="code-line">}</div>
+            </div>
+          </code>
+          <p>
+            With the attribute "start", you can set the starting value like
+            start="3". Additional attribute is "reversed". It is used to turn
+            the order arround.
+          </p>
+        </div>
+        <div class="container">
+          <div class="container-lists">
             <ol start="3" style="list-style-type: upper-roman">
               <li>One</li>
               <li>Two</li>
@@ -72,69 +99,65 @@
             </ol>
           </div>
         </div>
-        <p>
-          With the attribute "start", you can set the starting value like
-          start="3". Additional attribute is "reversed". It is used to turn the
-          order arround.
-        </p>
-        <code>
-          .second-child li:nth-child(2){ <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
-          } <br />
-          .odd li:nth-child(odd){ <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;color: orange; <br />
-          } <br />
-        </code>
-        <code>
-          .green-hooks{ <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: disc; <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;line-height: 2; <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;list-style-image:
-          url("../assets/img/green.png"); <br />
-          } <br />
-        </code>
+        <h3>Example 2 - Unordered Lists</h3>
+
         <div class="container">
-          <div class="flexbox-change-list-style-types only">
-            <ul class="second-child">
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-            </ul>
-            <ul class="odd">
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-            </ul>
-            <ul class="green-hooks">
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-            </ul>
-            <ul id="only-5-dollars">
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-            </ul>
+          <div class="container-lists">
+            <div class="wrapper">
+              <ul id="second-child">
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+              </ul>
+              <ul id="odd">
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+              </ul>
+            </div>
+            <div class="wrapper">
+              <ul id="green-hooks">
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+              </ul>
+              <ul id="only-5-dollars">
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <p>
-          You can make further changes with text-align: center;
-          list-style-position: outside; Changing the "color" property, changes
-          color of the text and marker.
-        </p>
+        <div class="container">
+          <code>
+            <div class="code-block">
+              <div class="code-line">.second-child li:nth-child(2) {</div>
+              <div class="code-line">color: red;</div>
+              <div class="code-line">}</div>
+            </div>
+            <div class="code-block">
+              <div class="code-line">.odd li:nth-child(odd) {</div>
+              <div class="code-line">color: orange;</div>
+              <div class="code-line">}</div>
+            </div>
+            <div class="code-block">
+              <div class="code-line">.green-hooks{</div>
+              <div class="code-line">list-style-type: disc;</div>
+              <div class="code-line">line-height: 2;</div>
+              <div class="code-line">
+                list-style-image: url("../assets/img/green.png");
+              </div>
+              <div class="code-line">}</div>
+            </div>
+          </code>
+        </div>
       </section>
-      <hr />
-      <nav aria-label="links-for-list-styles" class="link-nav">
-        <a href="index.html">HOME</a>
-        <a href="#top">TOP</a>
-        <a
-          href="https://www.youtube.com/watch?v=jcThx0U066w&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=9"
-          target="_blank"
-          >List Styles - CSS Tutorial</a
-        >
-      </nav>
     </article>
+    <nav aria-label="links-for-list-styles" class="link-nav">
+      <a href="index.html">HOME</a>
+    </nav>
   </body>
 </html>

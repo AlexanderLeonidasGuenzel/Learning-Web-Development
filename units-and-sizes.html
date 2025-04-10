@@ -1,152 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/global-colors.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/units-and-sizes.css">
-    <link rel="stylesheet" href="styles/nav.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/global-colors.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/units-and-sizes.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
     <title>Units & Sizes</title>
-</head>
-<body>
+  </head>
+  <body>
     <article id="units-and-sizes">
-        <h1>Units & Sizes</h1>
-        <section>
-            <h2>Absolute Value</h2>
-            <p>Pixels are an absolute value. It is better not to use a fixed font-size.</p>
-            <code>
-                html { <br>
-                &nbsp;&nbsp;&nbsp;font-size: 16px; <br>
-                }<br>
-            </code>
-            <p><b>Browsers have a default font-size of 16px.</b> In the browsers settings 
-                the font-size can be adjusted. If the website has an absolute value for the font-size,
-                browser adjustments can't change the font-size preferences.
-            </p>
-            <h2>Relative Values</h2>
-            <p>With using relative units wisely, you can make elements to scale relatively to everything else on the page.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Unit</th>
-                        <th>Relative to</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>em</td>
-                        <td>Font size of the parent...</td>
-                    </tr>
-                    <tr>
-                        <td>rem</td>
-                        <td>Font size of the root element.</td>
-                    </tr>
-                    <tr>
-                        <td>vw</td>
-                        <td>1% of the viewport's width.</td>
-                    </tr>
-                    <tr>
-                        <td>vh</td>
-                        <td>1% of the viewport's height</td>
-                    </tr>
-                </tbody>
-            </table>    
-            <h4>Percentages</h4>
-            <p>The h1 element has a default width of 100%. If you change it to 50% like this,
-                it will take up half of the width of the body.</p>
-            <code>
-                h1 { <br>
-                &nbsp;&nbsp;&nbsp;width: 50% <br>
-                }<br>
-                &lt;body&gt;<br>
-                &nbsp;&nbsp;&lt;h1&gt; Heading &lt;/h1&gt;<br>
-                &lt;/body&gt;<br>
-            </code>
-            <p>If we put the h1 element into an header with an own width of 50%, 
-                it will affect the width of the h1 element. In total it will be just 25% of the body width.</p>
-            <code>
-                header {<br>
-                &nbsp;&nbsp;&nbsp;width: 50% <br>
-                }<br>
-                h1 { <br>
-                &nbsp;&nbsp;&nbsp;width: 50% <br>
-                }<br>
-                &lt;body&gt; <br>
-                &nbsp; &nbsp;&lt;header&gt; <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt; Heading &lt;/h1&gt; <br>
-                &nbsp;&nbsp;&lt;/header&gt; <br>
-                &lt;/body&gt; <br>
-            </code>
-            <p>Remember: Setting a percentage for the width means that you are making it relative to the parent. It's only using  what it has available to it.</p>
-            <h4>rem</h4>
-            <p>This is the unit that is typically used for font size and it relates to the font size of the root (html) element</p>
-            <p>If the browser has the default value of 16px, than the paragraph has an font-size of 32px.</p>
-            <code>
-                p {<br>
-                &nbsp; &nbsp;font-size: 2rem;<br>
-                }<br>
-            </code>
-            <p>This has no effect because the font size of the paragraph looks for the root element, not the parent (main).</p>
-            <code>
-                main { <br>
-                &nbsp; &nbsp;font-size: 2rem; <br>
-                } <br><br>
-                p { <br> 
-                &nbsp; &nbsp;font-size: 2rem; <br>
-                } <br>
-            </code>
-            <h4>em</h4>
-            <p>Now the font size of the paragraph becomes 64px, because the paragraph doubles the font size of its parent the main element.</p>
-            <code>
-                main { <br>
-                &nbsp; &nbsp;font-size: 2rem; <br>
-                } <br> <br>
-                p { <br>
-                &nbsp; &nbsp;font-size: 2<mark>em</mark>; <br>
-                } <br>
-            </code>
-            <p>But em is better for margin or padding. Em for font size can suddenly amplify to much.</p>
-            <h4>Viewport Height - vh</h4>
-            <p>When we want the body element to be the full height of the page even if we don't have enough content.
-                Using the height: 100vh, would limit the page and the content could outgrow. Taking min-height property
-                allows teh viewport to grow with the content and at the same time it is the full page.</p>
-            <code>
-                body { <br>
-                &nbsp;&nbsp;<mark>min-height: 100vh;</mark> <br>
-                } <br>
-            </code>
-        </section>
-        <section>
-            <h2>Tipps and Tricks</h2>
-            <h4>Generating Lorem Ipsum in VS Code</h4>
-            <p>It's an Emmet abbreviation</p>
-            <code>
-            p*10>lorem
-            </code>
-            <h4>CSS reset</h4>
-            <code>
-                * { <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;margin: 0; <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;padding: 0; <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box; <br>
-                }
-            </code>
-            <h4>Browser Styles - User Agent</h4>
-            <p>It is turned of by default in the browser. Go to browser: <br>
-            Settings -> Inspector, enable 'Show Browser Syles"</p>
-        </section>
-        <hr>
-        <nav aria-label="links-for-units-and-sizes" class="link-nav">
-            <a href="index.html">HOME</a>
-            <a href="#top">TOP</a>
-            <a href="https://www.youtube.com/watch?v=_ybQREu-NU0&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=4" target="_blank">Units & Sizes - CSS Tutorial</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank">MDN Values and Units</a>
-            <a href="https://www.youtube.com/watch?v=spK_S0HfzFw" target="_blank">Browsers styles, Normalization - MDN Youtube</a>
-        </nav>
+      <h1>Units & Sizes</h1>
+      <section>
+        <h2>Absolute Value</h2>
+        <p>
+          Pixels are an absolute value. It is better not to use a fixed
+          font-size.
+        </p>
+        <code>
+          html { <br />
+          &nbsp;&nbsp;&nbsp;font-size: 16px; <br />
+          }<br />
+        </code>
+        <p>
+          <b>Browsers have a default font-size of 16px.</b> In the browsers
+          settings the font-size can be adjusted. If the website has an absolute
+          value for the font-size, browser adjustments can't change the
+          font-size preferences.
+        </p>
+        <h2>Relative Values</h2>
+        <p>
+          With using relative units wisely, you can make elements to scale
+          relatively to everything else on the page.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Unit</th>
+              <th>Relative to</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>em</td>
+              <td>Font size of the parent...</td>
+            </tr>
+            <tr>
+              <td>rem</td>
+              <td>Font size of the root element.</td>
+            </tr>
+            <tr>
+              <td>vw</td>
+              <td>1% of the viewport's width.</td>
+            </tr>
+            <tr>
+              <td>vh</td>
+              <td>1% of the viewport's height</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Percentages</h4>
+        <p>
+          The h1 element has a default width of 100%. If you change it to 50%
+          like this, it will take up half of the width of the body.
+        </p>
+        <code>
+          h1 { <br />
+          &nbsp;&nbsp;&nbsp;width: 50% <br />
+          }<br />
+          &lt;body&gt;<br />
+          &nbsp;&nbsp;&lt;h1&gt; Heading &lt;/h1&gt;<br />
+          &lt;/body&gt;<br />
+        </code>
+        <p>
+          If we put the h1 element into an header with an own width of 50%, it
+          will affect the width of the h1 element. In total it will be just 25%
+          of the body width.
+        </p>
+        <code>
+          header {<br />
+          &nbsp;&nbsp;&nbsp;width: 50% <br />
+          }<br />
+          h1 { <br />
+          &nbsp;&nbsp;&nbsp;width: 50% <br />
+          }<br />
+          &lt;body&gt; <br />
+          &nbsp; &nbsp;&lt;header&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt; Heading &lt;/h1&gt; <br />
+          &nbsp;&nbsp;&lt;/header&gt; <br />
+          &lt;/body&gt; <br />
+        </code>
+        <p>
+          Remember: Setting a percentage for the width means that you are making
+          it relative to the parent. It's only using what it has available to
+          it.
+        </p>
+        <h4>rem</h4>
+        <p>
+          This is the unit that is typically used for font size and it relates
+          to the font size of the root (html) element
+        </p>
+        <p>
+          If the browser has the default value of 16px, than the paragraph has
+          an font-size of 32px.
+        </p>
+        <code>
+          p {<br />
+          &nbsp; &nbsp;font-size: 2rem;<br />
+          }<br />
+        </code>
+        <p>
+          This has no effect because the font size of the paragraph looks for
+          the root element, not the parent (main).
+        </p>
+        <code>
+          main { <br />
+          &nbsp; &nbsp;font-size: 2rem; <br />
+          } <br /><br />
+          p { <br />
+          &nbsp; &nbsp;font-size: 2rem; <br />
+          } <br />
+        </code>
+        <h4>em</h4>
+        <p>
+          Now the font size of the paragraph becomes 64px, because the paragraph
+          doubles the font size of its parent the main element.
+        </p>
+        <code>
+          main { <br />
+          &nbsp; &nbsp;font-size: 2rem; <br />
+          } <br />
+          <br />
+          p { <br />
+          &nbsp; &nbsp;font-size: 2<mark>em</mark>; <br />
+          } <br />
+        </code>
+        <p>
+          But em is better for margin or padding. Em for font size can suddenly
+          amplify to much.
+        </p>
+        <h4>Viewport Height - vh</h4>
+        <p>
+          When we want the body element to be the full height of the page even
+          if we don't have enough content. Using the height: 100vh, would limit
+          the page and the content could outgrow. Taking min-height property
+          allows teh viewport to grow with the content and at the same time it
+          is the full page.
+        </p>
+        <code>
+          body { <br />
+          &nbsp;&nbsp;<mark>min-height: 100vh;</mark> <br />
+          } <br />
+        </code>
+      </section>
+      <section>
+        <h2>Tipps and Tricks</h2>
+        <h4>Generating Lorem Ipsum in VS Code</h4>
+        <p>It's an Emmet abbreviation</p>
+        <code> p*10>lorem </code>
+        <h4>CSS reset</h4>
+        <code>
+          * { <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;margin: 0; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;padding: 0; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box; <br />
+          }
+        </code>
+        <h4>Browser Styles - User Agent</h4>
+        <p>
+          It is turned of by default in the browser. Go to browser: <br />
+          Settings -> Inspector, enable 'Show Browser Syles"
+        </p>
+      </section>
     </article>
-</body>
+    <nav aria-label="links-for-units-and-sizes" class="link-nav">
+      <a href="index.html">HOME</a>
+      <a href="https://www.youtube.com/watch?v=spK_S0HfzFw" target="_blank"
+        >Video: Browsers styles, Normalization - MDN</a
+      >
+    </nav>
+  </body>
 </html>

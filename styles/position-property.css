@@ -22,18 +22,19 @@ body {
   margin: 0;
 }
 .outer-container {
+  position: relative;
   background-color: var(--outer-container-bg);
   border: 3px dashed var(--border-color);
   width: 100%;
-  position: relative;
+  min-height: 700px;
 }
 .inner-container {
+  position: relative;
   margin: 50px auto;
   width: clamp(320px, 30vw, 500px);
-  height: 50vh;
+  height: 500px;
   background-color: var(--inner-container-bg);
   padding: 10px;
-  position: relative;
 }
 
 .box {
