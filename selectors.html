@@ -17,19 +17,14 @@
       <h1>CSS Selectors</h1>
       <section>
         <h2>Overview</h2>
-        <ul>
-          <li>Element Selector</li>
-          <li>Class</li>
-          <li>ID</li>
-        </ul>
-        <h2>Element Selector</h2>
+        <h3>Element Selector</h3>
         <code>
           <mark>body, p, h1, section, ...</mark><br />
           {<br />
           &nbsp;&nbsp;property: value;<br />
           }
         </code>
-        <h2>Class Selector</h2>
+        <h3>Class Selector</h3>
         <code>
           <mark>.className</mark><br />
           {property: value;}
@@ -38,7 +33,7 @@
           Classes are more specific and overrule the element selector. They are
           the most common type of selector with css.
         </p>
-        <h2>ID Selector</h2>
+        <h3>ID Selector</h3>
         <code>
           <mark>#idName</mark><br />
           {property: value;}
@@ -51,19 +46,19 @@
       </section>
       <section>
         <h2>Multiple Selection and Inheritance</h2>
-        <h4>Grouping</h4>
+        <h3>Grouping</h3>
         <p>You can address multiple selectors at once, with a comma between.</p>
         <code>
           h1, h2, ... <br />
           {property: value;}
         </code>
-        <h4>Nesting</h4>
+        <h3>Nesting</h3>
         <p>All &lt;span&gt; in a &lt;p&gt; are selected.</p>
         <code>
           p span <br />
           {property: value;}
         </code>
-        <h4>Universal Selector</h4>
+        <h3>Universal Selector</h3>
         <p>It selects <span class="uppercase">everything</span> on the page!</p>
         <code>
           * <br />
@@ -72,7 +67,7 @@
         <p>
           It is typically used for a <span class="uppercase">css reset</span>.
         </p>
-        <h4>Inheritance</h4>
+        <h3>Inheritance</h3>
         <p>
           An element can inherit the settings or properties from its parent
           elment. All other elements inherit the font-size from body. <br />
