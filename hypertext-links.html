@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/global-colors.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/hypertext-links.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/global-colors.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/hypertext-links.css" />
     <title>Hypertext links</title>
-</head>
-<body>
+  </head>
+  <body>
     <article id="hypertext-links">
-        <h1>Hypertext Links</h1>
-        <section>
-            <h2>CSS Order</h2>
-            <p>It is important to take care of the order of css rules. Otherwise some properties are overridden.</p>
-            <code>
-                a { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;cursor: pointer; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;color: blue; <br>
-                } <br>
-            </code>
-            <code>
-                a:visited { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;color: purple; <br>
-                } <br>
-            </code>
-            <code>
-                a:hover, a:focus { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;color: dodgerblue; <br>
-                } <br>
-            </code>
-            <p>You should use the <b>focus</b> because it is important for screenreaders. Don't forget accessibility!</p>
-            <code>
-                a:active { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;color: red; <br>
-                } <br>
-            </code>
-        </section>
-        <hr>
-        <nav aria-label="links-for-hypertext-links" class="link-nav">
-            <a href="index.html">HOME</a>
-            <a href="#top">TOP</a>
-            <a href="https://www.youtube.com/watch?v=sORF-Awir70&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=7" target="_blank">Hypertext Links - CSS Tutorial</a>
-        </nav>
+      <h1>Hypertext Links</h1>
+      <section>
+        <h2>CSS Order</h2>
+        <p>
+          It is important to take care of the order of css rules. Otherwise some
+          properties are overridden.
+        </p>
+        <code>
+          a { <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;cursor: pointer; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;color: blue; <br />
+          } <br />
+        </code>
+        <code>
+          a:visited { <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;color: purple; <br />
+          } <br />
+        </code>
+        <code>
+          a:hover, a:focus { <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;color: dodgerblue; <br />
+          } <br />
+        </code>
+        <p>
+          You should use the <b>focus</b> because it is important for
+          screenreaders. Don't forget accessibility!
+        </p>
+        <code>
+          a:active { <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;color: red; <br />
+          } <br />
+        </code>
+      </section>
     </article>
-</body>
+    <nav aria-label="links-for-hypertext-links" class="link-nav">
+      <a href="index.html">HOME</a>
+    </nav>
+  </body>
 </html>

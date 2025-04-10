@@ -1,5 +1,6 @@
 :root {
   --blue: #2858af;
+  --blue-home: #133e8d;
   --red: #df391c;
   --green: #15b399;
   --yellow: #f8e326e5;
@@ -9,6 +10,10 @@
   --purple: purple;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,7 +21,6 @@ html {
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 section {
@@ -56,10 +60,11 @@ section:last-of-type {
 
 header,
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--white);
-  text-align: center;
   height: 100px;
-  padding-top: 10px;
 }
 
 header {
@@ -73,10 +78,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
   gap: 1.5rem;
-  align-items: center;
   font-size: 1.4rem;
 }
 

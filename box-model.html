@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/global-colors.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/box-model.css">
-    <link rel="stylesheet" href="styles/nav.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/global-colors.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/box-model.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
     <title>Box Model</title>
-</head>
-<body>
+  </head>
+  <body>
     <article id="box-model">
-        <h1>Box Model</h1>
-        <section>
-            <h2>What is the CSS box model?</h2>
-            <p>The CSS Box Model is a fundamental concept that defines the structure and layout of HTML elements.</p>
-            <h4>Four main components</h4>
-            <div class="list-box-model-overview">
-                <ul>
-                    <li style="color: rgb(12, 126, 202)">Content</li>
-                    <li style="color: rgb(12, 199, 105)">Padding</li>
-                    <li style="color: rgb(240, 203, 41)">Border</li>
-                    <li style="color: rgb(255, 145, 0)">Margin</li>
-                </ul>     
-                <figure>
-                    <img src="assets/img/boxmodel.png" alt="picture of box model" width="224" height="171">
-                    <figcaption>Box Model</figcaption>        
-                </figure>
-            </div>
-            <h3>Box Sizing</h3>
-            <h4>Content Box</h4>
-            <p>You can see the box model in the browser's inspector in the computed section.
-            The default setting is content-box.
-            This setting applies to the size of the content only. 
-            A width of 400px would just be for the content, excluding padding and border. 
-            Therefore, it isn't the total width of the element.</p>
-            <h4>Border Box</h4>
-            <p>This setting includes padding and border in the width calculation, but not the margin.
-            It is beneficial to include this setting in a CSS reset or normalization using the universal selector.</p>
+      <h1>Box Model</h1>
+      <section>
+        <h2>What is the CSS box model?</h2>
+        <p>
+          The CSS Box Model is a fundamental concept that defines the structure
+          and layout of HTML elements.
+        </p>
+        <h4>Four main components</h4>
+        <div class="list-box-model-overview">
+          <ul>
+            <li style="color: rgb(12, 126, 202)">Content</li>
+            <li style="color: rgb(12, 199, 105)">Padding</li>
+            <li style="color: rgb(240, 203, 41)">Border</li>
+            <li style="color: rgb(255, 145, 0)">Margin</li>
+          </ul>
+          <figure>
+            <img
+              src="assets/img/boxmodel.png"
+              alt="picture of box model"
+              width="224"
+              height="171"
+            />
+            <figcaption>Box Model</figcaption>
+          </figure>
+        </div>
+        <h3>Box Sizing</h3>
+        <h4>Content Box</h4>
+        <p>
+          You can see the box model in the browser's inspector in the computed
+          section. The default setting is content-box. This setting applies to
+          the size of the content only. A width of 400px would just be for the
+          content, excluding padding and border. Therefore, it isn't the total
+          width of the element.
+        </p>
+        <h4>Border Box</h4>
+        <p>
+          This setting includes padding and border in the width calculation, but
+          not the margin. It is beneficial to include this setting in a CSS
+          reset or normalization using the universal selector.
+        </p>
+        <code>
+          { <br />
+          &nbsp;&nbsp;box-sizing: border-box; <br />
+          } <br />
+        </code>
+      </section>
+      <section>
+        <h3>Additional Content</h3>
+        <h4>Outline</h4>
+        <p>
+          The outline is not part of the box model and is not calculated in the
+          box model equation.
+        </p>
+        <div class="outline-container">
+          <div class="outline-offset-positive">
             <code>
-                { <br>
-                    &nbsp;&nbsp;box-sizing: border-box; <br>
-                } <br>
-            </code>  
-        </section>
-        <section>
-            <h3>Additional Content</h3>
-            <h4>Outline</h4>
-            <p>The outline is not part of the box model and is not calculated in the box model equation.</p>
-            <div class="outline-container">
-                <div class="outline-offset-positive">
-                    <code>
-                        .outline-offset-positive { <br>
-                            &nbsp;&nbsp;  outline: 5px solid purple; <br>
-                            &nbsp;&nbsp;  outline-offset: 0.5em; <br>
-                        } <br>
-                    </code>
-                </div>
-                <div class="outline-offset-negative">
-                    <code>
-                        .outline-offset-negative { <br>
-                            &nbsp;&nbsp;  outline: 5px solid purple; <br>
-                            &nbsp;&nbsp;  outline-offset: -1em; <br>
-                        } <br>
-                    </code>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <nav aria-label="links-for-box-model" class="link-nav">
-            <a href="index.html">HOME</a>
-            <a href="#top">TOP</a>
-            <a href="https://www.youtube.com/watch?v=L9khsrjMwKw&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit&index=5" target="_blank">Box Model - CSS Tutorial</a>
-        </nav>
+              .outline-offset-positive { <br />
+              &nbsp;&nbsp; outline: 5px solid purple; <br />
+              &nbsp;&nbsp; outline-offset: 0.5em; <br />
+              } <br />
+            </code>
+          </div>
+          <div class="outline-offset-negative">
+            <code>
+              .outline-offset-negative { <br />
+              &nbsp;&nbsp; outline: 5px solid purple; <br />
+              &nbsp;&nbsp; outline-offset: -1em; <br />
+              } <br />
+            </code>
+          </div>
+        </div>
+      </section>
     </article>
-</body>
+    <nav aria-label="links-for-box-model" class="link-nav">
+      <a href="index.html">HOME</a>
+    </nav>
+  </body>
 </html>
