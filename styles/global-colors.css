@@ -1,27 +1,25 @@
 :root {
   --aqua-green: #00ffbb;
   --blue-home: #103f85;
-
   --blue2: #579cec;
   --code-color: #749abb;
   --cofe-brown: #8f4717;
   --columns-header: #0c70c9;
   --cyan: #1bb9b9;
   --footer-bg: #3f2711cc;
-
   --grey: #363636;
-  --header-h3-blue: #2586b3;
-  --header-h4-blue: #53aed8;
+  --h1-color: #1f5d94;
+  --h2-color: #176bb4;
+  --h3-color: #2586b3;
+  --h4-color: #53aed8;
   --iron: #333;
   --light-blue: #cee5ff;
   --menu-hover: whitesmoke;
   --mid-blue: #19588f;
   --dark-blue: #083053;
   --neu-gold: #d39714;
-
   --orange: orange;
   --pink: #ff0095;
-
   --section-blue: #f2f7fc;
   --table-border: #77a1c5;
 }
