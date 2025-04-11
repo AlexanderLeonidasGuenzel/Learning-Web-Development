@@ -6,56 +6,50 @@
 
 :root {
   /* || COLORS*/
-  --BODY-BGCOLOR: #130720;
-  --HEADER-COLOR: rgb(210, 185, 224);
+  --BODY-BG-COLOR: #0c0420;
+  --HEADER-COLOR: rgb(215, 216, 216);
   --LINK-COLOR: rgba(255, 255, 255, 0.151);
-  --BOX-BGCOLOR: #130720;
+  --BOX-BGCOLOR: #0c0c0c;
   --CONIC-COLOR-2: #fd004c;
   --CONIC-COLOR-1: #059ff8;
 
-  --HEADER-PADDING: 1rem;
-  --FOOTER-PADDING: 1em;
-  --BOX-SIZE: 200px;
-  --BLUR: 80px;
-  --ANIMATION-DURATION: 3s;
-  --BORDER-RADIUS: 50%;
-  --BORDER: 5px solid var(--HEADER-COLOR);
-  --ANIMATION-BORDER-PADDING: 5px;
+  --BOX-SIZE: 250px;
+  --BORDER-RADIUS: 20px;
+  --BLUR: 10px;
+  --ANIMATION-DURATION: 10s;
+  --ANIMATION-BORDER-PADDING: 2px;
 }
 
 body {
-  background-color: var(--BODY-BGCOLOR);
-  color: var(--HEADER-COLOR);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  min-height: 100vh;
+  color: var(--HEADER-COLOR);
+  background-color: var(--BODY-BG-COLOR);
 }
 
 .header {
-  text-align: center;
-  display: grid;
-  place-items: center;
-  padding: var(--HEADER-PADDING);
-}
-
-.header__h1 {
-  padding: var(--HEADER-PADDING);
-  border-bottom: var(--BORDER);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100px;
+  font-size: 1.2rem;
 }
 
 .main {
   flex: 1;
   min-width: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
   position: relative;
-  width: var(--BOX-SIZE);
-  height: var(--BOX-SIZE);
+  width: min(30vw, var(--BOX-SIZE));
+  height: min(30vw, var(--BOX-SIZE));
 }
 
 .box,
@@ -85,8 +79,6 @@ body {
     from var(--angle),
     var(--CONIC-COLOR-1),
     var(--CONIC-COLOR-2),
-    var(--CONIC-COLOR-1),
-    var(--CONIC-COLOR-2),
     var(--CONIC-COLOR-1)
   );
   animation: rotate var(--ANIMATION-DURATION) ease-in-out infinite;
@@ -110,10 +102,4 @@ a:any-link {
 
 a {
   text-decoration: none;
-}
-
-.footer {
-  display: flex;
-  justify-content: flex-end;
-  padding: var(--FOOTER-PADDING);
 }
